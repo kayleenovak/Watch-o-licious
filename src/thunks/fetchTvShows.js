@@ -1,4 +1,5 @@
 import { isLoading, hasErrored, hasErrored} from '../actions/index.js'
+import { tvShowsCleaner } from '../cleaners/tvShowsCleaner.js'
 
 export const fetchTvShows = (url) => {
   return async (dispatch) => {
@@ -10,7 +11,8 @@ export const fetchTvShows = (url) => {
       }
       dispatch(isLoading(false))
       const tvShows = await response.json()
-      dispatch(fetchDataSuccess(tvShows))
+      const cleanedTvShows = await tvShowsCleaner(tvShows)
+      dispatch(fetchDataSuccess(cleanedTvShows))
     } catch (error) {
       dispatch(hasErrored(true))
     }
