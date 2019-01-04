@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 export default class TvShowCard extends Component {
   render() {
     const { title, network, rating, image} = this.props
-    console.log(this.props)
     return (
       <article>
       <img src={image} />
