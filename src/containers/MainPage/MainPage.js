@@ -5,7 +5,10 @@ import FeaturedTvShow from '../FeaturedTvShow/FeaturedTvShow.js'
 export class MainPage extends Component {
   render() {
     if(this.props.tvShows.length) {
-      return <FeaturedTvShow />
+      return (
+        <FeaturedTvShow />
+        <CardContainer />
+      )
     } else {
       return <div>Loading...</div>
     }
