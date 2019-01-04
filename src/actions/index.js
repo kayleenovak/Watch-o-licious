@@ -1,6 +1,6 @@
-export const dataFetchSuccess = (data) => ({
+export const dataFetchSuccess = (tvShows) => ({
   type: 'FETCH_DATA_SUCCESS',
-  data
+  tvShows
 })
 
 export const isLoading = (check) => ({
