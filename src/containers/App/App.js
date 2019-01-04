@@ -9,12 +9,7 @@ import { connect } from 'react-redux'
 export class App extends Component {
 
   async componentDidMount() {
-    const cakeUrl = 'http://api.tvmaze.com/search/shows?q=cake'
-    const bakeUrl = 'http://api.tvmaze.com/search/shows?q=bake'
-    const bakingUrl = 'http://api.tvmaze.com/search/shows?q=baking'
-    await this.props.fetchTvShows(cakeUrl)
-    await this.props.fetchTvShows(bakeUrl)
-    await this.props.fetchTvShows(bakingUrl)
+    await this.props.fetchTvShows()
   }
 
   render() {
@@ -27,7 +22,7 @@ export class App extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchCakeShows: (url) => dispatch(fetchTvShows(url))
+  fetchTvShows: (url) => dispatch(fetchTvShows(url))
 })
 
 export default connect(null, mapDispatchToProps)(App)

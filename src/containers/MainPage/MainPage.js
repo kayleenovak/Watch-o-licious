@@ -4,7 +4,7 @@ import FeaturedMovie from '../FeaturedMovie/FeaturedMovie.js'
 
 export class MainPage extends Component {
   render() {
-    if(this.props.tvShows.length > 20) {
+    if(this.props.tvShows.length) {
       return <FeaturedMovie />
     } else {
       return <div>Loading...</div>
