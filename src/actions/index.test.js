@@ -12,4 +12,16 @@ describe('actions', () => {
 
     expect(result).toEqual(expected)
   })
+
+  it('isLoading should return an object with a type of IS_LOADING and a check', () => {
+    const check = false
+    const expected = {
+      type: 'IS_LOADING',
+      check
+    }
+
+    const result = isLoading(check)
+
+    expect(result).toEqual(expected)
+  })
 })
