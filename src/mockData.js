@@ -129,7 +129,7 @@ export const mockBakeShows = [
       language: "English",
       genres: [
         "Food"
-      ]
+      ],
       status: "Running",
       runtime: 75,
       premiered: "2010-08-17",
@@ -233,7 +233,7 @@ export const mockBakeShows = [
   }
 ]
 
-const mockBakingDate = [
+export const mockBakingShows = [
   {
     score: 14.738542,
     show: {
@@ -251,7 +251,7 @@ const mockBakingDate = [
       premiered: "2015-02-02",
       officialSite: "http://www.foodnetwork.com/shows/kids-baking-championship",
       schedule: {
-        time: "21:00"
+        time: "21:00",
         days: [
             "Monday"
         ]
@@ -283,7 +283,7 @@ const mockBakingDate = [
       updated: 1545491445,
       links: {
         self: {
-            href": "http://api.tvmaze.com/shows/1549"
+            href: "http://api.tvmaze.com/shows/1549"
         },
         previousepisode: {
             href: "http://api.tvmaze.com/episodes/1508163"
@@ -350,3 +350,4 @@ const mockBakingDate = [
       }
     }
   }
+]
