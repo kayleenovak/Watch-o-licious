@@ -5,7 +5,7 @@ import CardContainer from '../CardContainer/CardContainer.js'
 
 export class MainPage extends Component {
   render() {
-    if(this.props.tvShows.length) {
+    if(this.props.tvShows) {
       return (
         <div>
           <FeaturedTvShow />
