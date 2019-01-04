@@ -1,34 +1,34 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-export class FeaturedMovie extends Component {
+export class FeaturedTvShow extends Component {
   constructor() {
     super()
     this.state = {
-      featuredMovie: {}
+      featuredTvShow: {}
     }
   }
 
   componentDidMount() {
-    this.findRandomMovie()
+    if(this.props.tvShows) {
+      this.findRandomMovie()
+    }
   }
 
   findRandomMovie = () => {
-    console.log(this.props.tvShows)
     const max = this.props.tvShows.length - 1
     const min = 0
     const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min
     this.setState({
-      featuredMovie: this.props.tvShows[randomNumber]
+      featuredTvShow: this.props.tvShows[randomNumber]
     })
   }
 
   render() {
-    console.log(this.state.featuredMovie)
-    const {title, runtime, premiered, rating, summary, image} = this.state.featuredMovie
-    if(this.props.tvShows.length) {
+    if(this.state.featuredTvShow !== undefined && this.state.featuredTvShow.id) {
+      const {title, runtime, premiered, rating, summary, image} = this.state.featuredTvShow
       return (
-        <section>
+        <section className='featured-tv-show'>
           <h3>{title}</h3>
           <p>{summary}</p>
           <p>{runtime}</p>
@@ -38,7 +38,7 @@ export class FeaturedMovie extends Component {
         </section>
       )
     } else {
-      return <div></div>
+      return <div>Loading...</div>
     }
   }
 }
@@ -47,4 +47,4 @@ export const mapStateToProps = (state) => ({
   tvShows: state.tvShows
 })
 
-export default connect(mapStateToProps)(FeaturedMovie)
+export default connect(mapStateToProps)(FeaturedTvShow)
