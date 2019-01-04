@@ -11,7 +11,7 @@ export const tvShowsCleaner = (cakeShows, bakeShows, bakingShows) => {
       rating: tvShow.show.rating.average,
       network: tvShow.show.network.name,
       summary: newSummary,
-      images: tvShow.show.image
+      image: tvShow.show.image.medium
     }
   })
   return cleanedTvShows

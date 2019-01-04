@@ -24,7 +24,8 @@ export class FeaturedMovie extends Component {
   }
 
   render() {
-    const {title, runtime, premiered, rating, summary} = this.state.featuredMovie
+    console.log(this.state.featuredMovie)
+    const {title, runtime, premiered, rating, summary, image} = this.state.featuredMovie
     if(this.props.tvShows.length) {
       return (
         <section>
@@ -33,6 +34,7 @@ export class FeaturedMovie extends Component {
           <p>{runtime}</p>
           <p>{premiered}</p>
           <p>{rating}</p>
+          <img src={image} />
         </section>
       )
     } else {
