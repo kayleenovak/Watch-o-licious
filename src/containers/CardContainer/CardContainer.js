@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import tvShowCard from '../tvShowCard/tvShowCard'
+import TvShowCard from '../TvShowCard/TvShowCard'
 
 export class CardContainer extends Component {
   
   render() {
     const tvCards = this.props.tvShows.map(tvShow => {
-      return <tvShowCard {...tvShow} />
+      return <TvShowCard {...tvShow} />
     })
     return (
-
+      tvCards
     )
   }
 }
