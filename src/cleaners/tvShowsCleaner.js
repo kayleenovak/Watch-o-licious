@@ -2,7 +2,7 @@ export const tvShowsCleaner = (tvShows) => {
   const cleanedTvShows = tvShows.map(tvShow => {
     return {
       id: tvShow.id,
-      name: tvShow.show.name,
+      title: tvShow.show.name,
       runtime: tvShow.show.runtime,
       premiered: tvShow.show.premiered,
       schedule: tvShow.show.schedule,

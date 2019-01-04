@@ -1,7 +1,19 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import FeaturedMovie from '../FeaturedMovie/FeaturedMovie.js'
 
-export default class MainPage extends Component {
+export class MainPage extends Component {
   render() {
-    return <div>Watch-o-licious</div>
+    if(this.props.tvShows.length > 20) {
+      return <FeaturedMovie />
+    } else {
+      return <div>Loading...</div>
+    }
   }
 }
+
+export const mapStateToProps = (state) => ({
+  tvShows: state.tvShows
+})
+
+export default connect(mapStateToProps)(MainPage)
