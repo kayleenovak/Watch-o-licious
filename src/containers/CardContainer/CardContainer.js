@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import TvShowCard from '../TvShowCard/TvShowCard'
+import './CardContainer.css'
 
 export class CardContainer extends Component {
   
@@ -9,7 +10,9 @@ export class CardContainer extends Component {
       return <TvShowCard {...tvShow} />
     })
     return (
-      tvCards
+      <section class='card-container'>
+        {tvCards}
+      </section>
     )
   }
 }
