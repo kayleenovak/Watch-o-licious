@@ -27,7 +27,7 @@ export class App extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchTvShows: (url) => dispatch(fetchTvShows(url))
+  fetchCakeShows: (url) => dispatch(fetchTvShows(url))
 })
 
 export default connect(null, mapDispatchToProps)(App)
