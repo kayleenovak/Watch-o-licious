@@ -11,8 +11,8 @@ export default class FeaturedTvShow extends Component {
         <article className='featured-info'>
           <h3 className='featured-title'>{title}</h3>
           <p className='featured-summary'>{summary}</p>
-          <p className='featured-runtime'>{runtime}</p>
-          <p className='featured-date'>{premiered}</p>
+          <p className='featured-runtime'>Runtime: {runtime} minutes</p>
+          <p className='featured-date'>Premiere date: {premiered}</p>
           <p className='featured-rating'>{rating}</p>
         </article>
         <img className='featured-img' src={image} />

@@ -1,19 +1,11 @@
-
-
 .app {
   margin: 0;
   width: 100%;
   padding: 10px;
   position: relative;
-  background:     linear-gradient(
+  background: linear-gradient(
       rgba(166, 212, 211, 0.41), 
       rgba(166, 212, 211, 0.41)
     ),
     url('/background.png');
-}
-
-.background {
-  background-color: #A6D4D3;
-  background-position: right;
-  background-repeat: no-repeat;
 }

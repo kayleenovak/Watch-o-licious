@@ -5,21 +5,40 @@
 }
 
 .featured-info {
-  width: 500px;
+  width: 600px;
 }
 
 .featured-title {
   font-size: 35px;
   margin: 0 0 15px 0;
-  font-family: 'Shadows Into Light Two', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .featured-summary {
   font-family: 'Raleway', sans-serif;
+  border-radius: 3px;
+  cursor: default;
+  overflow: auto;
+  height: 150px;
+  transition: border 500ms;
+  padding: 5px;
+  border: 2px solid transparent;
+}
+
+.featured-runtime,
+.featured-date,
+.featured-rating {
+  margin-left: 5px;
+}
+
+.featured-summary:hover {
+  border: 2px solid #AEA7B9;
+  box-shadow: inset 0 -45px 130px -55px #AEA7B9;
 }
 
 .featured-img {
   height: 295px;
   width: 210px;
   margin-left: 25px;
+  box-shadow: -2px 4px 25px black;
 }
