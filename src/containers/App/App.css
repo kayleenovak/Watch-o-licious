@@ -8,4 +8,5 @@
       rgba(166, 212, 211, 0.41)
     ),
     url('/background.png');
+    background-size: cover;
 }

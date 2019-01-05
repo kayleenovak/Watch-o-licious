@@ -1,0 +1,21 @@
+.tv-show-card {
+  width: 275px;
+  height: 405px;
+}
+
+.tv-card-title {
+  width: 210px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 7px;
+  font-size: 17px;
+}
+
+.tv-card-img {
+  box-shadow: 2px 2px 10px black;
+}
+
+.tv-card-network {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
