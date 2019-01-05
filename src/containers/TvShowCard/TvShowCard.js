@@ -11,7 +11,7 @@ export class TvShowCard extends Component {
       <article className='tv-show-card' onClick={() => fetchShowInfo(this.props.id)}>
         <Link to={`/tvshow/${this.props.id}`} key ={this.props.id}>
           <img src={image} className='tv-card-img'/>
-        </Link
+        </Link>
         <h3 className='tv-card-title'>{title}</h3>
         <p className='tv-card-network'>Network: {network}</p>
       </article>

@@ -8,5 +8,5 @@ export const rootReducer = combineReducers({
   hasErrored: hasErroredReducer,
   isLoading: isLoadingReducer,
   tvShows: tvShowsReducer,
-  tvShowInfo: showInfoReducer
+  tvShowEpisodes: showInfoReducer
 })

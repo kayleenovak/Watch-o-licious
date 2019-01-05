@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import MainPage from '../../containers/MainPage/MainPage'
 import { fetchTvShows } from '../../thunks/fetchTvShows.js'
 import { connect } from 'react-redux'
@@ -15,12 +15,14 @@ export class App extends Component {
   render() {
     return (
       <div className="app">
-        <Route exact to='/' component={ MainPage } />
-        <Route path='/tvshow/:id' render={({ match }) => {
-          const { id } = match.params
-              return <TvShowModal {...this.props.tvShowInfo} />
-          }} 
-        />
+        <Switch>
+          <Route exact path='/' component={ MainPage } />
+          <Route path='/tvshow/:id' render={({ match }) => {
+            const { id } = match.params
+            return <TvShowModal id={ id }/>
+            }} 
+          />
+        </Switch>
       </div>
     );
   }
@@ -28,10 +30,6 @@ export class App extends Component {
 
 export const mapDispatchToProps = (dispatch) => ({
   fetchTvShows: (url) => dispatch(fetchTvShows(url))
-})
-
-export const mapStateToProps = (state) => ({
-  tvShowInfo: state.tvShowInfo
 })
 
 export default connect(null, mapDispatchToProps)(App)
