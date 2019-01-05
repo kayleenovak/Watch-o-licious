@@ -1,6 +1,6 @@
 import { isLoading, hasErrored, dataFetchSuccess } from '../actions/index.js'
 import { tvShowsCleaner } from '../cleaners/tvShowsCleaner.js'
-import { fetchCall } from './fetchCall.js'
+import { fetchCall } from '../APICalls/fetchCall.js'
 
 export const fetchTvShows = () => {
     const cakeUrl = 'http://api.tvmaze.com/search/shows?q=cake'
