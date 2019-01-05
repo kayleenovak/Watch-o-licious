@@ -17,3 +17,7 @@ export const tvShowFetchSuccess = (show) => ({
   type: 'SHOW_FETCH_SUCCESS',
   show
 })
+
+export const removeShow = () => ({
+  type: 'REMOVE_SHOW'
+})
