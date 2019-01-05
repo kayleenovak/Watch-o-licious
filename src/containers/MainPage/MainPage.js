@@ -6,9 +6,12 @@ import CardContainer from '../CardContainer/CardContainer.js'
 export class MainPage extends Component {
   render() {
     if(this.props.tvShows) {
+      const max = this.props.tvShows.length - 1
+      const min = 0
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min
       return (
         <div>
-          <FeaturedTvShow />
+          <FeaturedTvShow {...this.props.tvShows[randomNumber]} />
           <CardContainer />
         </div>
       )

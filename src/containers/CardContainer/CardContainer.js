@@ -10,7 +10,7 @@ export class CardContainer extends Component {
       return <TvShowCard {...tvShow} />
     })
     return (
-      <section class='card-container'>
+      <section className='card-container'>
         {tvCards}
       </section>
     )
