@@ -13,7 +13,7 @@ export const tvShowCleaner = (tvShow) => {
     tvShow.forEach(episode => {
       if(episode.season === season) {
         const cleanEpisode = {
-          name: episode.name,
+          title: episode.name,
           episode: episode.number,
           runtime: episode.runtime,
           summary: episode.summary
