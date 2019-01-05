@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import './FeaturedTvShow.css'
 
 export default class FeaturedTvShow extends Component {
 
@@ -7,12 +8,14 @@ export default class FeaturedTvShow extends Component {
     const {title, runtime, premiered, rating, summary, image} = this.props
     return (
       <section className='featured-tv-show'>
-        <h3>{title}</h3>
-        <p>{summary}</p>
-        <p>{runtime}</p>
-        <p>{premiered}</p>
-        <p>{rating}</p>
-        <img src={image} />
+        <article className='featured-info'>
+          <h3 className='featured-title'>{title}</h3>
+          <p className='featured-summary'>{summary}</p>
+          <p className='featured-runtime'>{runtime}</p>
+          <p className='featured-date'>{premiered}</p>
+          <p className='featured-rating'>{rating}</p>
+        </article>
+        <img className='featured-img' src={image} />
       </section>
     )
   }

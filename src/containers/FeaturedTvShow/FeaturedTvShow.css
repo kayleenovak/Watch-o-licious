@@ -1,0 +1,25 @@
+.featured-tv-show {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 50px 0;
+}
+
+.featured-info {
+  width: 500px;
+}
+
+.featured-title {
+  font-size: 35px;
+  margin: 0 0 15px 0;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+.featured-summary {
+  font-family: 'Raleway', sans-serif;
+}
+
+.featured-img {
+  height: 295px;
+  width: 210px;
+  margin-left: 25px;
+}

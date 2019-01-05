@@ -5,7 +5,6 @@ import FeaturedTvShow from '../FeaturedTvShow/FeaturedTvShow.js'
 import CardContainer from '../CardContainer/CardContainer.js'
 import { mockCleanCakeShows } from '../../mockCleanData.js'
 
-
 describe('MainPage', () => {
   it('should render a FeaturedTvShow and CardContainer component if there are tvShows', () => {
     const wrapper = shallow(<MainPage tvShows={ mockCleanCakeShows } />)

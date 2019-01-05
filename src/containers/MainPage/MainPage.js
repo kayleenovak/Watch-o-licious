@@ -16,7 +16,7 @@ export class MainPage extends Component {
     if(this.props.tvShows) {
       const randomTvShow = this.randomFeaturedTvShow()
       return (
-        <div>
+        <div className='main-page'>
           {
             randomTvShow
           }
