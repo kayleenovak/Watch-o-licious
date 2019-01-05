@@ -5,7 +5,6 @@ import MainPage from '../../containers/MainPage/MainPage'
 import { fetchTvShows } from '../../thunks/fetchTvShows.js'
 import { connect } from 'react-redux'
 import TvShowModal from '../TvShowModal/TvShowModal.js'
-// import { CardContainer } from '../../containers/CardContainer/CardContainer'
 
 export class App extends Component {
 
