@@ -8,7 +8,7 @@ export class TvShowCard extends Component {
   render() {
     const { title, network, image, fetchShowInfo } = this.props
     return (
-      <article className='tv-show-card' onClick={() => fetchShowInfo(this.props.id)}>
+      <article className='tv-show-card'>
         <Link to={`/tvshow/${this.props.id}`} key ={this.props.id}>
           <img src={image} className='tv-card-img'/>
         </Link>
