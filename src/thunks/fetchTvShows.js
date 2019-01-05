@@ -3,9 +3,9 @@ import { tvShowsCleaner } from '../cleaners/tvShowsCleaner.js'
 import { fetchCall } from '../APICalls/fetchCall.js'
 
 export const fetchTvShows = () => {
-    const cakeUrl = 'http://api.tvmaze.com/search/shows?q=cake'
-    const bakeUrl = 'http://api.tvmaze.com/search/shows?q=bake'
-    const bakingUrl = 'http://api.tvmaze.com/search/shows?q=baking'
+  const cakeUrl = 'http://api.tvmaze.com/search/shows?q=cake'
+  const bakeUrl = 'http://api.tvmaze.com/search/shows?q=bake'
+  const bakingUrl = 'http://api.tvmaze.com/search/shows?q=baking'
   return async (dispatch) => {
     try {
       dispatch(isLoading(true))

@@ -12,3 +12,8 @@ export const hasErrored = (check) => ({
   type: 'HAS_ERRORED',
   check
 })
+
+export const tvShowFetchSuccess = (show) => ({
+  type: 'SHOW_FETCH_SUCCESS',
+  show
+})
