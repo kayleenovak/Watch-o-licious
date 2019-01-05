@@ -1,7 +1,7 @@
 export const tvShowCleaner = (tvShow) => {
-  const seasons = tvShows.reduce((epsiode, acc) => {
+  const seasons = tvShow.reduce((acc, episode) => {
     if (!acc.includes(episode.season)) {
-      acc.push(epsiode.season)
+      acc.push(episode.season)
     }
     return acc
   }, [])
@@ -15,7 +15,6 @@ export const tvShowCleaner = (tvShow) => {
         const cleanEpisode = {
           name: episode.name,
           episode: episode.number,
-          image: episode.image.medium,
           runtime: episode.runtime,
           summary: episode.summary
         }

@@ -1,8 +1,9 @@
 import { isLoading, hasErrored, tvShowFetchSuccess } from '../actions/index.js'
 import { tvShowCleaner } from '../cleaners/tvShowCleaner.js'
+import { fetchCall } from '../APICalls/fetchCall.js'
 
 export const fetchTvShowInfo = (id) => {
-  const tvShowUrl = `http://api.tvmaze.com/shows/${id}/episodes`
+  const tvShowUrl = 'http://api.tvmaze.com/shows/' + id + '/episodes'
   return async (dispatch) => {
     try {
       dispatch(isLoading(true))
