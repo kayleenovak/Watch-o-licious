@@ -12,11 +12,12 @@ export const tvShowCleaner = (tvShow) => {
     }
     tvShow.forEach(episode => {
       if(episode.season === season) {
+        const newSummary = episode.summary.replace(/(<([^>]+)>)/ig,"")
         const cleanEpisode = {
           title: episode.name,
           episode: episode.number,
           runtime: episode.runtime,
-          summary: episode.summary,
+          summary: newSummary,
           airdate: episode.airdate,
           favorite: {
             favorite: false,
