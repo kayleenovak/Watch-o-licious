@@ -3,6 +3,7 @@ import { fetchTvShowInfo } from '../../thunks/fetchTvShowInfo.js'
 import { connect } from 'react-redux'
 import { withRouter, Redirect } from 'react-router-dom'
 import { removeShow } from '../../actions/index.js'
+import Episode from '../../components/Episode/Episode.js'
 
 export class TvShowModal extends Component {
   constructor() {
@@ -43,7 +44,8 @@ export class TvShowModal extends Component {
       return season.season === parseInt(this.state.season)
     }) 
     const episodes = season.episodes.map(episode => {
-      return <p>{episode.title}</p>
+      console.log(episode)
+      return <Episode {...episode}/>
     })
     return episodes
   }
