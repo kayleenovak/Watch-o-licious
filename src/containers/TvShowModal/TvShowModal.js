@@ -44,7 +44,6 @@ export class TvShowModal extends Component {
       return season.season === parseInt(this.state.season)
     }) 
     const episodes = season.episodes.map(episode => {
-      console.log(episode)
       return <Episode {...episode}/>
     })
     return episodes

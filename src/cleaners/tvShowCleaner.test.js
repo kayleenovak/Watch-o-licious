@@ -35,7 +35,7 @@ describe('tvShowCleaner', () => {
           airdate: '2013-06-24',
           favorite: {
             favorite: false,
-            watchList: false,
+            watchlist: false,
             watched: false
           }
         }]

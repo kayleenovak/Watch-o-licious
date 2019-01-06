@@ -21,7 +21,7 @@ export const tvShowCleaner = (tvShow) => {
           airdate: episode.airdate,
           favorite: {
             favorite: false,
-            watchList: false,
+            watchlist: false,
             watched: false
           }
         }
