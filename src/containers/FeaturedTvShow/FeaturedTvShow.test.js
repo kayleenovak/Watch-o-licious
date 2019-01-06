@@ -24,6 +24,7 @@ describe('FeaturedTvShow', () => {
     const wrapper = shallow(<FeaturedTvShow {...featuredTvShow } />)
 
     expect(wrapper.find('section').length).toEqual(1)
+    expect(wrapper.find('article').length).toEqual(1)
     expect(wrapper.find('h3').length).toEqual(1)
     expect(wrapper.find('p').length).toEqual(4)
     expect(wrapper.find('img').length).toEqual(1)
