@@ -17,7 +17,12 @@ export const tvShowCleaner = (tvShow) => {
           episode: episode.number,
           runtime: episode.runtime,
           summary: episode.summary,
-          airdate: episode.airdate
+          airdate: episode.airdate,
+          favorite: {
+            favorite: false,
+            watchList: false,
+            watched: false
+          }
         }
         cleanSeason.episodes.push(cleanEpisode)
       }
