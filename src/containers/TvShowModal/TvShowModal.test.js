@@ -4,6 +4,7 @@ import { TvShowModal, mapStateToProps, mapDispatchToProps } from './TvShowModal.
 import { fetchShowInfo } from '../../thunks/fetchTvShowInfo.js'
 import { removeShow } from '../../actions/index.js'
 import { mockCleanCakeShows } from '../../mockCleanData.js'
+import Episode from '../../components/Episode/Episode.js'
 
 describe('TvShowModal', () => {
   let emptyWrapper
@@ -73,5 +74,43 @@ describe('TvShowModal', () => {
   it('should invoke fetchShowInfo on componentDidMount', () => {
 
     expect(mockFetch).toHaveBeenCalled()
+  })
+
+  it('findTvShow should return the matching show', () => {
+    const result = wrapper.instance().findTvShow()
+
+    expect(result).toEqual(mockCleanCakeShows[0])
+  })
+
+  it('updateSeason should update state', () => {
+    const mockEvent = {
+      preventDefault: () => {},
+      target: {
+        innerText: 1
+      }
+    }
+
+    wrapper.instance().updateSeason(mockEvent)
+
+    expect(wrapper.state('season')).toEqual(1)
+  })
+
+  it('displaySeasons to return an h5 for each season', () => {
+
+    expect(wrapper.find('h5').length).toEqual(1)
+  })
+
+  it('displayEpisodes should return an episode for each episode', () => {
+
+    expect(wrapper.find(Episode).length).toEqual(1)
+  })
+
+  it('collapseModal should invoke removeShow and push / into the history array', () => {
+    const expected = ['/']
+
+    wrapper.instance().collapseModal()
+
+    expect(mockRemoveShow).toHaveBeenCalled()
+    expect(wrapper.instance().props.history).toEqual(expected)
   })
 })
