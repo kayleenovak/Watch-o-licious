@@ -41,5 +41,14 @@ describe('Episode', () => {
 
       expect(wrapper.state().expanded).toEqual(false)
     })
+
+    it('should invoke expandEpisode on click', () => {
+      const spyExpandEpisode = jest.spyOn(wrapper.instance(), 'expandEpisode')
+      wrapper.instance().forceUpdate()
+
+      wrapper.find('.episode').simulate('click')
+
+      expect(spyExpandEpisode).toHaveBeenCalled()
+    })
   })
 })
