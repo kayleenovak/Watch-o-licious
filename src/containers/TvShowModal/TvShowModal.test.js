@@ -113,4 +113,36 @@ describe('TvShowModal', () => {
     expect(mockRemoveShow).toHaveBeenCalled()
     expect(wrapper.instance().props.history).toEqual(expected)
   })
+
+  describe('mapStateToProps', () => {
+    it('should return an object wih tvShows, and tvShowEpisodes', () => {
+      const mockShows = [{title: 'Cake Boss'}, {title: 'Cakes'}]
+      const mockState = {
+        isLoading: false,
+        hasErrored: false,
+        tvShows: mockShows,
+        tvShowEpisodes: []
+      }
+      const expected = {
+        tvShows: mockShows,
+        tvShowEpisodes: []
+      }
+
+      const result = mapStateToProps(mockState)
+
+      expect(result).toEqual(expected)
+    })
+  })
+
+  describe('mapDispatchToProps', () => {
+    it('should call dispatch with the correct params', () => {
+      const mockDispatch = jest.fn()
+      
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.fetchShowInfo(1)
+      mappedProps.removeShow()
+
+      expect(mockDispatch).toHaveBeenCalledTimes(2)
+    })
+  })
 })
