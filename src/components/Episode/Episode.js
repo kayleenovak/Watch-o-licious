@@ -47,7 +47,7 @@ export class Episode extends Component {
   }
 
   render() {
-    const { episode, runtime, summary, title, airdate } = this.props.episode
+    const { episode, runtime, summary, title, airdate, image } = this.props.episode
     return (
       <section className='episode' onClick={() => this.expandEpisode()}>
         <h3>Episode {episode}: {title}</h3>

@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { withRouter, Redirect } from 'react-router-dom'
 import { removeShow } from '../../actions/index.js'
 import Episode from '../../components/Episode/Episode.js'
+import './TvShowModal.css'
 
 export class TvShowModal extends Component {
   constructor() {
@@ -62,17 +63,29 @@ export class TvShowModal extends Component {
       const episodes = this.displayEpisodes()
       return (
         <section className='tv-show-modal'>
-          <h3>{tvShowInfo.title}</h3>
-          <p>{tvShowInfo.summary}</p>
-          <button onClick={() => this.collapseModal()} className='collapse-modal'>X</button>
-          <div>
-            <h3>Seasons</h3>
-            {seasons}
+          <div className='image-container'>
+            <img className='series-background' src={tvShowInfo.image} />
+            <div className='overlay'></div>
           </div>
-          <div className='episodes'>
-            {episodes}
-          </div>
-          <img src={tvShowInfo.image} />
+          <article className='series-info'>
+            <div className='seasons'>
+              <h3 className='series-title'>{tvShowInfo.title}</h3>
+              <p className='series-summary'>{tvShowInfo.summary}</p>
+              <button onClick={() => this.collapseModal()} className='collapse-modal'>X</button>
+              <div>
+                <h3>Seasons</h3>
+                {seasons}
+              </div>
+            </div>
+            <div className='episodes'>
+              <div className='image-wrapper'>
+                <img src={tvShowInfo.largeImage} className='series-image'/>
+              </div>
+              <div className='episodes'>
+                {episodes}
+              </div>
+            </div>
+          </article>
         </section>
       )
     } else {

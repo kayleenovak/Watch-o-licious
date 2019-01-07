@@ -9,7 +9,7 @@ export class TvShowCard extends Component {
     const { title, network, image, fetchShowInfo } = this.props
     return (
       <article className='tv-show-card'>
-        <Link to={`/tvshow/${this.props.id}`} key ={this.props.id}>
+        <Link to={`/tvshow/${this.props.id}`} key={this.props.id}>
           <img src={image} className='tv-card-img'/>
         </Link>
         <h3 className='tv-card-title'>{title}</h3>

@@ -24,7 +24,6 @@ export class CardContainer extends Component {
     const { pathname } = this.props.location
     if(pathname === '/favorites' || pathname === '/watched' || pathname === '/watchlist') {
       const locationString = this.splitLocation(pathname)
-      console.log(locationString)
       const trackedEpisodes = this.props.trackedEpisodes.filter(episode => {
       console.log(episode.tracked[locationString])
         return episode.tracked[locationString] === true
