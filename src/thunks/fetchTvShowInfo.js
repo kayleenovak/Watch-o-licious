@@ -9,9 +9,10 @@ export const fetchTvShowInfo = (id) => {
       dispatch(isLoading(true))
       const tvShow = await fetchCall(tvShowUrl)
       dispatch(isLoading(false))
-      const cleanedShow = await tvShowCleaner(tvShow)
+      const cleanedShow = await tvShowCleaner(tvShow, id)
       dispatch(tvShowFetchSuccess(cleanedShow))
     } catch (error) {
+      console.log(error)
       dispatch(hasErrored(true))
     }
   }

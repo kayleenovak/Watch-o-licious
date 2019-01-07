@@ -20,7 +20,7 @@ export default class Episode extends Component {
       <section className='episode' onClick={() => this.expandEpisode()}>
         <h3>Episode {episode}: {title}</h3>
         {
-          !this.state.expanded ? null : <div><p>{summary}</p><p>Runtime: {runtime} minutes</p><p>Original airdate: {airdate}</p></div>
+          !this.state.expanded ? null : <div><p>{summary}</p><p>Runtime: {runtime} minutes</p><p>Original airdate: {airdate}</p><button>Favorite</button><button>Watch List</button><button>Watched</button></div>
         }
       </section>
     )
