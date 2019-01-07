@@ -32,32 +32,17 @@ export const removeFromTracked = () => ({
   episode
 })
 
-export const addFavorite = (episode) => ({
-  type: 'ADD_FAVORITE',
+export const toggleFavorite = (episode) => ({
+  type: 'TOGGLE_FAVORITE',
   episode
 })
 
-export const removeFavorite = (episode) => ({
-  type: 'REMOVE_FAVORITE',
+export const toggleWatched = (episode) => ({
+  type: 'TOGGLE_WATCHED',
   episode
 })
 
-export const addWatched = (episode) => ({
-  type: 'ADD_WATCHED',
-  episode
-})
-
-export const removeWatched = (episode) => ({
-  type: 'REMOVE_WATCHED',
-  episode
-})
-
-export const addWatchList = (episode) => ({
-  type: 'ADD_WATCH_LIST',
-  episode
-})
-
-export const removeWatchList = (episode) => ({
-  type: 'REMOVE_WATCH_LIST'.
+export const toggleWatchList = (episode) => ({
+  type: 'TOGGLE_WATCH_LIST',
   episode
 })
