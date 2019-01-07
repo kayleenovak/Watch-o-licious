@@ -41,12 +41,29 @@
   color: white;
   font-size: 30px;
   margin: 0 0 10px 0;
+  font-family: 'Raleway', sans-serif;
 }
 
 .series-summary {
   color: white;
   height: 150px;
   overflow: auto;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.2;
+}
+
+.watchlist-button,
+.watched-button,
+.favorite-button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.watchlist-icon,
+.watched-icon,
+.favorite-icon {
+  height: 20px;
 }
 
 .image-wrapper {

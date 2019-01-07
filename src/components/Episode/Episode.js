@@ -48,16 +48,20 @@ export class Episode extends Component {
   }
 
   render() {
-    const { episode, runtime, summary, title, airdate, image } = this.props.episode
+    const { episode, runtime, summary, title, airdate, image, tracked } = this.props.episode
     const episodeStyle = this.state.expanded ? 'expanded-episode' : 'collapsed-episode' 
     const arrow = this.state.expanded ? 'arrow-up' : 'arrow'
+    const watched = tracked.watched ? 'Remove from Watched' : 'Add to Watched'
+    const watchlist = tracked.watchlist ? 'Remove from Watch List' : 'Add to Watch List'
+    const favoriteIcon = tracked.favorites ? '/favorite.svg' : '/unfavorite.svg'
+
     return (
-      <section className={episodeStyle} onClick={() => this.expandEpisode()}>
+      <section className={episodeStyle}>
         <h3 className='episode-title'>Episode {episode}: {title}</h3>
-        <button onClick={(e) => this.handleTrackedEpisode(e)} value='favorite'>Favorite</button>
-        <button onClick={(e) => this.handleTrackedEpisode(e)} value='watchlist'>Watch List</button>
-        <button onClick={(e) => this.handleTrackedEpisode(e)} value='watched'>Watched</button>
-        <img src='/down-arrow.svg' className={arrow}/>
+        <button className='favorite-button' onClick={(e) => this.handleTrackedEpisode(e)} value='favorite'><img className='favorite-icon' src={favoriteIcon} />sss</button>
+        <button className='watched-button' onClick={(e) => this.handleTrackedEpisode(e)} value='watched'>{watched}</button>
+        <button className='watchlist-button' onClick={(e) => this.handleTrackedEpisode(e)} value='watchlist'>{watchlist}</button>
+        <img src='/down-arrow.svg' className={arrow} onClick={() => this.expandEpisode()}/>
         {
           !this.state.expanded ? null : <div><p>{summary}</p><p>Runtime: {runtime} minutes</p><p>Original airdate: {airdate}</p></div>
         }

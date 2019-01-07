@@ -1,25 +1,33 @@
 .expanded-episode {
-  background: #0094A4;
-  opacity: .8;
-  cursor: pointer;
+  background: rgba(174, 167, 185);
   border-bottom: 2px solid #442C3E;
 }
 
 .collapsed-episode {
-  background: #AEA7B9;
-  cursor: pointer;
+  height: 80px;
+  background: #442C3E;
+  border-bottom: 2px solid #AEA7B9;
 }
 
 .episode-title {
   margin: 0;
   padding: 5px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .arrow {
   height: 20px;
+  cursor: pointer;
 }
 
 .arrow-up {
   transform: rotate(180deg);
   height: 20px;
+  cursor: pointer;
+}
+
+.watchlist-button,
+.watched-button {
+  width: 170px;
 }
