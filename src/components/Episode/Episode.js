@@ -40,7 +40,6 @@ export class Episode extends Component {
   }
 
   handleRemoveTracked = () => {
-    console.log(this.props.episode)
     const { favorite, watchlist, watched } = this.props.episode.tracked
     if (favorite === false && watchlist === false && watched === false) {
       this.props.removeFromTracked(this.props.episode)
