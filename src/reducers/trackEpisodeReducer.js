@@ -12,7 +12,7 @@ export const trackEpisodeReducer = (state = [], action) => {
     case 'TOGGLE_FAVORITE':
       const toggleFavorite = state.map(episode => {
         if(episode.url === action.episode.url) {
-          episode.tracked.favorite = !episode.tracked.favorite
+          episode.tracked.favorites = !episode.tracked.favorites
         }
         return episode
       })

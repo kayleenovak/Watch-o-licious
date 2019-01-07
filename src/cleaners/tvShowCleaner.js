@@ -25,7 +25,7 @@ export const tvShowCleaner = (tvShow, id) => {
           summary: newSummary,
           airdate: episode.airdate,
           tracked: {
-            favorite: false,
+            favorites: false,
             watchlist: false,
             watched: false
           }

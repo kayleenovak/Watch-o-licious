@@ -6,6 +6,7 @@ import { fetchTvShows } from '../../thunks/fetchTvShows.js'
 import { connect } from 'react-redux'
 import TvShowModal from '../TvShowModal/TvShowModal.js'
 import CardContainer from '../CardContainer/CardContainer'
+import Header from '../../components/Header/Header.js'
 
 export class App extends Component {
 
@@ -16,6 +17,7 @@ export class App extends Component {
   render() {
     return (
       <div className="app">
+        <Header />
         <Switch>
           <Route exact path='/' component={ MainPage } />
           <Route exact path='/tvshow/:id' render={({ match }) => {
