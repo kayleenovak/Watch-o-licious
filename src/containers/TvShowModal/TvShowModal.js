@@ -81,7 +81,7 @@ export class TvShowModal extends Component {
               <div className='image-wrapper'>
                 <img src={tvShowInfo.largeImage} className='series-image'/>
               </div>
-              <div className='episodes'>
+              <div className='series-episodes'>
                 {episodes}
               </div>
             </div>
