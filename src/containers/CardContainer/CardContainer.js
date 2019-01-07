@@ -29,7 +29,7 @@ export class CardContainer extends Component {
       console.log(episode.tracked[locationString])
         return episode.tracked[locationString] === true
       }).map(episode => {
-        return <FavoriteCard />
+        return <FavoriteCard episode={episode}/>
       })
       return (
         <section className='tracked-episodes'>
