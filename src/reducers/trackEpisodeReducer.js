@@ -21,12 +21,14 @@ export const trackEpisodeReducer = (state = [], action) => {
           episode.tracked.watched = !episode.tracked.watched
         }
       })
+      return toggleWatched
     case 'TOGGLE_WATCH_LIST':
       const toggleWatchList = state.map(episode => {
         if(episode === action.episode) {
           episode.tracked.watchlist = !episode.tracked.watchlist
         }
       })
+      return toggleWatchList
     default:
       return state
   }

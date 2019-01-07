@@ -1,4 +1,4 @@
-export const tvShowCleaner = (tvShow) => {
+export const tvShowCleaner = (tvShow, id) => {
   const seasons = tvShow.reduce((acc, episode) => {
     if (!acc.includes(episode.season)) {
       acc.push(episode.season)
@@ -17,13 +17,14 @@ export const tvShowCleaner = (tvShow) => {
           newSummary = episode.summary.replace(/(<([^>]+)>)/ig,"")
         }
         const cleanEpisode = {
-          showId: id
+          showId: id,
+          url: episode.url,
           title: episode.name,
           episode: episode.number,
           runtime: episode.runtime,
           summary: newSummary,
           airdate: episode.airdate,
-          favorite: {
+          tracked: {
             favorite: false,
             watchlist: false,
             watched: false

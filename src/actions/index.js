@@ -22,12 +22,12 @@ export const removeShow = () => ({
   type: 'REMOVE_SHOW'
 })
 
-export const addToTracked = () => ({
+export const addToTracked = (episode) => ({
   type: 'ADD_TO_TRACKED',
   episode
 })
 
-export const removeFromTracked = () => ({
+export const removeFromTracked = (episode) => ({
   type: 'REMOVE_FROM_TRACKED',
   episode
 })

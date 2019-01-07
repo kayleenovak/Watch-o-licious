@@ -12,7 +12,6 @@ export const fetchTvShowInfo = (id) => {
       const cleanedShow = await tvShowCleaner(tvShow, id)
       dispatch(tvShowFetchSuccess(cleanedShow))
     } catch (error) {
-      console.log(error)
       dispatch(hasErrored(true))
     }
   }
