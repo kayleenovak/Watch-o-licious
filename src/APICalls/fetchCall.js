@@ -3,6 +3,6 @@ export const fetchCall = async (url) => {
   if (!response.ok) {
     throw Error(response.statusText)
   }
-  const tvShows = await response.json()
-  return tvShows
+  const data = await response.json()
+  return data
 }

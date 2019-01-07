@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addToTracked, removeFromTracked, toggleFavorite, toggleWatched, toggleWatchList } from '../../actions/index.js'
+import './Episode.css'
 
 export class Episode extends Component {
   constructor() {
@@ -48,11 +49,17 @@ export class Episode extends Component {
 
   render() {
     const { episode, runtime, summary, title, airdate, image } = this.props.episode
+    const episodeStyle = this.state.expanded ? 'expanded-episode' : 'collapsed-episode' 
+    const arrow = this.state.expanded ? 'arrow-up' : 'arrow'
     return (
-      <section className='episode' onClick={() => this.expandEpisode()}>
-        <h3>Episode {episode}: {title}</h3>
+      <section className={episodeStyle} onClick={() => this.expandEpisode()}>
+        <h3 className='episode-title'>Episode {episode}: {title}</h3>
+        <button onClick={(e) => this.handleTrackedEpisode(e)} value='favorite'>Favorite</button>
+        <button onClick={(e) => this.handleTrackedEpisode(e)} value='watchlist'>Watch List</button>
+        <button onClick={(e) => this.handleTrackedEpisode(e)} value='watched'>Watched</button>
+        <img src='/down-arrow.svg' className={arrow}/>
         {
-          !this.state.expanded ? null : <div><p>{summary}</p><p>Runtime: {runtime} minutes</p><p>Original airdate: {airdate}</p><button onClick={(e) => this.handleTrackedEpisode(e)} value='favorite'>Favorite</button><button onClick={(e) => this.handleTrackedEpisode(e)} value='watchlist'>Watch List</button><button onClick={(e) => this.handleTrackedEpisode(e)} value='watched'>Watched</button></div>
+          !this.state.expanded ? null : <div><p>{summary}</p><p>Runtime: {runtime} minutes</p><p>Original airdate: {airdate}</p></div>
         }
       </section>
     )
