@@ -5,6 +5,7 @@ import MainPage from '../../containers/MainPage/MainPage'
 import { fetchTvShows } from '../../thunks/fetchTvShows.js'
 import { connect } from 'react-redux'
 import TvShowModal from '../TvShowModal/TvShowModal.js'
+import CardContainer from '../CardContainer/CardContainer'
 
 export class App extends Component {
 
@@ -22,6 +23,9 @@ export class App extends Component {
             return <TvShowModal id={ id } />
             }} 
           />
+        <Route exact to='/favorites' component={ CardContainer } />
+        <Route exact to='/watched' component={ CardContainer } />
+        <Route exact to='/watchlist' component={ CardContainer } />
         </Switch>
       </div>
     );
@@ -34,6 +38,3 @@ export const mapDispatchToProps = (dispatch) => ({
 
 export default withRouter(connect(null, mapDispatchToProps)(App))
 
-        // <Route exact to='/favorites' component={ CardContainer } />
-        // <Route exact to='/watched' component={ CardContainer } />
-        // <Route exact to='/watchlist' component={ CardContainer } />

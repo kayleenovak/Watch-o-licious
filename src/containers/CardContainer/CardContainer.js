@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import TvShowCard from '../TvShowCard/TvShowCard'
 import './CardContainer.css'
+import FavoriteCard from '../FavoriteCard/FavoriteCard.js'
 
 export class CardContainer extends Component {
 
@@ -12,22 +14,43 @@ export class CardContainer extends Component {
     }
     return tvShows
   }
+
+  splitLocation = (location) => {
+    const splitLocation = location.split('/')
+    return splitLocation[1]
+  }
   
   render() {
-    const shuffledTvShows = this.shuffleTvShows(this.props.tvShows)
-    const tvCards = shuffledTvShows.map(tvShow => {
-      return <TvShowCard {...tvShow} />
-    })
-    return (
-      <section className='card-container'>
-        {tvCards}
-      </section>
-    )
+    const { location } = this.props
+    if(location === '/favorites' || location === '/watched' || location === '/watchlist') {
+      const locationString = this.splitLocation(location)
+      const trackedEpisodes = this.props.trackedEpisodes.filter(episode => {
+        return episode.tracked[locationString] === true
+      }).map(episode => {
+        return <FavoriteCard />
+      })
+      return (
+        <section className='tracked-episodes'>
+          {trackedEpisodes}
+        </section>
+      )
+    } else {
+      const shuffledTvShows = this.shuffleTvShows(this.props.tvShows)
+      const tvCards = shuffledTvShows.map(tvShow => {
+        return <TvShowCard {...tvShow} />
+      })
+      return (
+        <section className='card-container'>
+          {tvCards}
+        </section>
+      )
+    }
   }
 }
 
 export const mapStateToProps = (state) => ({
-  tvShows: state.tvShows
+  tvShows: state.tvShows,
+  trackedEpisodes: state.tracked
 })
 
-export default connect(mapStateToProps)(CardContainer)
+export default withRouter(connect(mapStateToProps)(CardContainer))
