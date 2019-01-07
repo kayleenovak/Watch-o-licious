@@ -21,9 +21,10 @@ export class CardContainer extends Component {
   }
   
   render() {
-    const { location } = this.props
-    if(location === '/favorites' || location === '/watched' || location === '/watchlist') {
-      const locationString = this.splitLocation(location)
+    const { pathname } = this.props.location
+    if(pathname === '/favorites' || pathname === '/watched' || pathname === '/watchlist') {
+      const locationString = this.splitLocation(pathname)
+        console.log('hey')
       const trackedEpisodes = this.props.trackedEpisodes.filter(episode => {
         return episode.tracked[locationString] === true
       }).map(episode => {
@@ -35,6 +36,7 @@ export class CardContainer extends Component {
         </section>
       )
     } else {
+      console.log(pathname)
       const shuffledTvShows = this.shuffleTvShows(this.props.tvShows)
       const tvCards = shuffledTvShows.map(tvShow => {
         return <TvShowCard {...tvShow} />
