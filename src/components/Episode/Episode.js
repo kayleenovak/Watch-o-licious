@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addToTracked, removeFromTracked, toggleFavorite, toggleWatched, toggleWatchList } from '../../actions/index.js'
 
-export default class Episode extends Component {
+export class Episode extends Component {
   constructor() {
     super()
     this.state = {
@@ -16,9 +18,9 @@ export default class Episode extends Component {
 
   handleTrackedEpisode = (e) => {
     const matchedEpisode = this.props.tracked.find(episode => {
-      return this.props.url === episode.url
+      return this.props.episode.url === episode.url
     })
-    if(matchedEpisode === false) {
+    if(matchedEpisode === undefined) {
       this.props.addToTracked(this.props.episode)
       this.handleToggleTracked(e)
     } else {
@@ -34,12 +36,13 @@ export default class Episode extends Component {
     } else if (e.target.value === 'watchlist') {
       this.props.toggleWatchList(this.props.episode)
     }
-    this.props.handleRemoveTracked()
+    this.handleRemoveTracked()
   }
 
   handleRemoveTracked = () => {
+    console.log(this.props.episode)
     const { favorite, watchlist, watched } = this.props.episode.tracked
-    if (favorite === false && watchlist === false &&& watched === false) {
+    if (favorite === false && watchlist === false && watched === false) {
       this.props.removeFromTracked(this.props.episode)
     }
   }
@@ -50,7 +53,7 @@ export default class Episode extends Component {
       <section className='episode' onClick={() => this.expandEpisode()}>
         <h3>Episode {episode}: {title}</h3>
         {
-          !this.state.expanded ? null : <div><p>{summary}</p><p>Runtime: {runtime} minutes</p><p>Original airdate: {airdate}</p><button value='favorite'>Favorite</button><button value='watchlist'>Watch List</button><button value='watched'>Watched</button></div>
+          !this.state.expanded ? null : <div><p>{summary}</p><p>Runtime: {runtime} minutes</p><p>Original airdate: {airdate}</p><button onClick={(e) => this.handleTrackedEpisode(e)} value='favorite'>Favorite</button><button onClick={(e) => this.handleTrackedEpisode(e)} value='watchlist'>Watch List</button><button onClick={(e) => this.handleTrackedEpisode(e)} value='watched'>Watched</button></div>
         }
       </section>
     )
@@ -65,6 +68,8 @@ export const mapDispatchToProps = (dispatch) => ({
   addToTracked: (episode) => dispatch(addToTracked(episode)),
   removeFromTracked: (episode) => dispatch(removeFromTracked(episode)),
   toggleFavorite: (episode) => dispatch(toggleFavorite(episode)),
-  toggleWatched: (eipsode) => dispatch(toggleWatched(episode)),
+  toggleWatched: (episode) => dispatch(toggleWatched(episode)),
   toggleWatchList: (episode) => dispatch(toggleWatchList(episode))
 })
+
+export default connect(mapStateToProps, mapDispatchToProps)(Episode)
