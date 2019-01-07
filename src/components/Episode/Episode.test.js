@@ -1,12 +1,53 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Episode from './Episode.js'
+import { Episode } from './Episode.js'
 
 describe('Episode', () => {
   let wrapper
 
   beforeEach(() => {
-    wrapper = shallow(<Episode />)
+    const mockAddToTracked = jest.fn()
+    const mockRemoveFromTracked = jest.fn()
+    const mockToggleFavorite = jest.fn()
+    const mockToggleWatched = jest.fn()
+    const mockToggleWatchList = jest.fn()
+    const mockEpisode = {
+      showId: '6407',
+      url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
+      title: 'Holiday Cookie Madness',
+      episode: 1,
+      runtime: 60,
+      summary: 'This is a summary',
+      airdate: '2014-11-09',
+      tracked: {
+        favorites: false,
+        watched: false,
+        watchlist: false
+      }
+    }
+    const mockTrackedShows = [{
+      showId: '6407',
+      url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
+      title: 'Holiday Cookie Madness',
+      episode: 1,
+      runtime: 60,
+      summary: 'This is a summary',
+      airdate: '2014-11-09',
+      tracked: {
+        favorites: false,
+        watched: false,
+        watchlist: false
+      }
+    }]
+    wrapper = shallow(<Episode 
+      addToTracked={ mockAddToTracked }
+      removeFromTracked={ mockRemoveFromTracked }
+      toggleFavorite={ mockToggleFavorite }
+      toggleWatched={ mockToggleWatched }
+      toggleWatchList={ mockToggleWatchList }
+      tracked={ mockTrackedShows }
+      episode={ mockEpisode }
+    />)
   })
   
   it('should return a section and an h3 if the state is false', () => {
@@ -24,13 +65,54 @@ describe('Episode', () => {
     expect(wrapper.find('p').length).toEqual(3)
   })
 
-  describe('expandEpisode', () => {
+  describe('Episode methods', () => {
     let wrapper
 
     beforeEach(() => {
-      wrapper = shallow(<Episode />)
+      const mockAddToTracked = jest.fn()
+      const mockRemoveFromTracked = jest.fn()
+      const mockToggleFavorite = jest.fn()
+      const mockToggleWatched = jest.fn()
+      const mockToggleWatchList = jest.fn()
+      const mockEpisode = {
+        showId: '6407',
+        url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
+        title: 'Holiday Cookie Madness',
+        episode: 1,
+        runtime: 60,
+        summary: 'This is a summary',
+        airdate: '2014-11-09',
+        tracked: {
+          favorites: false,
+          watched: false,
+          watchlist: false
+        }
+      }
+      const mockTrackedShows = [{
+        showId: '6407',
+        url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
+        title: 'Holiday Cookie Madness',
+        episode: 1,
+        runtime: 60,
+        summary: 'This is a summary',
+        airdate: '2014-11-09',
+        tracked: {
+          favorites: false,
+          watched: false,
+          watchlist: false
+        }
+      }]
+      wrapper = shallow(<Episode 
+        addToTracked={ mockAddToTracked }
+        removeFromTracked={ mockRemoveFromTracked }
+        toggleFavorite={ mockToggleFavorite }
+        toggleWatched={ mockToggleWatched }
+        toggleWatchList={ mockToggleWatchList }
+        tracked={ mockTrackedShows }
+        episode={ mockEpisode }
+      />)
     })
-    it('should toggle the state of expanded', () => {
+    it('expandEipsodshould toggle the state of expanded', () => {
       const wrapper = shallow(<Episode />)
 
       wrapper.instance().expandEpisode()
@@ -46,7 +128,7 @@ describe('Episode', () => {
       const spyExpandEpisode = jest.spyOn(wrapper.instance(), 'expandEpisode')
       wrapper.instance().forceUpdate()
 
-      wrapper.find('.episode').simulate('click')
+      wrapper.find('.arrow').simulate('click')
 
       expect(spyExpandEpisode).toHaveBeenCalled()
     })
