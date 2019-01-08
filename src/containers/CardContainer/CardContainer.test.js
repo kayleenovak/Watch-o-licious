@@ -38,7 +38,8 @@ describe('CardContainer', () => {
   })
 
   it('should match the snapshot', () => {
-    const wrapper = shallow(<CardContainer tvShows={ mockCleanCakeShows } location={ mockHomeLocation }/>)
+    const mockTvShows = []
+    const wrapper = shallow(<CardContainer tvShows={ mockTvShows } location={ mockHomeLocation }/>)
 
     expect(wrapper).toMatchSnapshot()
   })

@@ -1,3 +1,5 @@
+import { toggleTracked } from '../helpers/handleToggleTracked.js'
+
 export const trackEpisodeReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TO_TRACKED':
@@ -10,29 +12,11 @@ export const trackEpisodeReducer = (state = [], action) => {
       })
       return newState
     case 'TOGGLE_FAVORITE':
-      const toggleFavorite = state.map(episode => {
-        if(episode.url === action.episode.url) {
-          episode.tracked.favorites = !episode.tracked.favorites
-        }
-        return episode
-      })
-      return toggleFavorite
+      return toggleTracked(state, action, 'favorites')
     case 'TOGGLE_WATCHED':
-      const toggleWatched = state.map(episode => {
-        if(episode.url === action.episode.url) {
-          episode.tracked.watched = !episode.tracked.watched
-        }
-        return episode
-      })
-      return toggleWatched
+      return toggleTracked(state, action, 'watched')
     case 'TOGGLE_WATCH_LIST':
-      const toggleWatchList = state.map(episode => {
-        if(episode.url === action.episode.url) {
-          episode.tracked.watchlist = !episode.tracked.watchlist
-        }
-        return episode
-      })
-      return toggleWatchList
+      return toggleTracked(state, action, 'watchlist')
     default:
       return state
   }

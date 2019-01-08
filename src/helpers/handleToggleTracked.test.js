@@ -7,7 +7,6 @@ describe('handleTrackedEpisode', () => {
   let mockEvent
   let mockEpisode
   let mockTracked
-  let mockDispatch
   let mockTrackedSecond
 
   beforeEach(() => {
@@ -28,10 +27,10 @@ describe('handleTrackedEpisode', () => {
       title: 'Cake Wars',
       url: 'www.cakewars.com'
     }]
-    mockDispatch = jest.fn()
   })
 
   it('should call addToTracked if matchedEpisode is undefined', () => {
+    const mockDispatch = jest.fn()
     const trackedFunction = handleTrackedEpisode(mockEvent, mockEpisode, mockTrackedSecond)
     
     trackedFunction(mockDispatch)
@@ -40,6 +39,7 @@ describe('handleTrackedEpisode', () => {
   })
 
   it('should call handleToggleTracked if matchedEpisode is undefined', () => {
+    const mockDispatch = jest.fn()
     const trackedFunction = handleTrackedEpisode(mockEvent, mockEpisode, mockTrackedSecond)
     
     trackedFunction(mockDispatch)
@@ -48,6 +48,7 @@ describe('handleTrackedEpisode', () => {
   })
 
   it('should call handleToggleTracked if matchedEpisode is defined', () => {
+    const mockDispatch = jest.fn()
     const trackedFunction = handleTrackedEpisode(mockEvent, mockEpisode, mockTracked)
     
     trackedFunction(mockDispatch)
@@ -59,7 +60,6 @@ describe('handleTrackedEpisode', () => {
 describe('handleToggleTracked', () => {
   let mockEpisode
   let mockTracked
-  let mockDispatch
   let mockTrackedSecond
 
   beforeEach(() => {
@@ -75,13 +75,13 @@ describe('handleToggleTracked', () => {
       title: 'Cake Wars',
       url: 'www.cakewars.com'
     }]
-    mockDispatch = jest.fn()
   })
 
   it('should call dispatch with toggleFavorite if the target is favorite and handleRemoveTracked', () => {
+    const mockDispatch = jest.fn()
     const mockEvent =  {
       target: {
-        value: 'favorites'
+        value: 'favorite'
       }
     }
     const trackedFunction = handleToggleTracked(mockEvent, mockEpisode, mockTracked)
@@ -92,6 +92,7 @@ describe('handleToggleTracked', () => {
   })
 
   it('should call dispatch with toggleWatched if the target is watched and handleRemoveTracked', () => {
+    const mockDispatch = jest.fn()
     const mockEvent =  {
       target: {
         value: 'watched'
@@ -105,6 +106,7 @@ describe('handleToggleTracked', () => {
   })
 
   it('should call dispatch with toggleWatchList if the target is watchlist and handleRemoveTracked', () => {
+    const mockDispatch = jest.fn()
     const mockEvent =  {
       target: {
         value: 'watchlist'
@@ -120,7 +122,6 @@ describe('handleToggleTracked', () => {
   describe('handleRemoveTracked', () => {
     let mockEpisode
     let mockTracked
-    let mockDispatch
 
     beforeEach(() => {
       mockEpisode = {
@@ -141,11 +142,11 @@ describe('handleToggleTracked', () => {
           watchlist: false
         }
       }
-      mockDispatch = jest.fn()
     })
 
     it('should call dispatch if favorites, watchlist, and watched are all false', () => {
-      const trackedFunction = handleRemoveTracked(mockTracked, mockEpisode)
+      const mockDispatch = jest.fn()
+      const trackedFunction = handleRemoveTracked(mockEpisode)
 
       trackedFunction(mockDispatch)
 
