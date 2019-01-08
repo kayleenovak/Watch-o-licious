@@ -15,31 +15,40 @@ export class CardContainer extends Component {
     return tvShows
   }
 
+  displayTvShows = () => {
+    const shuffledTvShows = this.shuffleTvShows(this.props.tvShows)
+    const tvCards = shuffledTvShows.map(tvShow => {
+      return <TvShowCard {...tvShow} />
+    })
+    return tvCards
+  }
+
   splitLocation = (location) => {
     const splitLocation = location.split('/')
     return splitLocation[1]
+  }
+
+  findTrackedEpisodes = (locationString) => {
+    const trackedEpisodes = this.props.trackedEpisodes.filter(episode => {
+        return episode.tracked[locationString] === true
+      }).map(episode => {
+        return <FavoriteCard episode={episode}/>
+      })
+    return trackedEpisodes
   }
   
   render() {
     const { pathname } = this.props.location
     if(pathname === '/favorites' || pathname === '/watched' || pathname === '/watchlist') {
       const locationString = this.splitLocation(pathname)
-      const trackedEpisodes = this.props.trackedEpisodes.filter(episode => {
-      console.log(episode.tracked[locationString])
-        return episode.tracked[locationString] === true
-      }).map(episode => {
-        return <FavoriteCard episode={episode}/>
-      })
+      const trackedEpisodes = this.findTrackedEpisodes(locationString)
       return (
         <section className='tracked-episodes'>
           {trackedEpisodes}
         </section>
       )
     } else {
-      const shuffledTvShows = this.shuffleTvShows(this.props.tvShows)
-      const tvCards = shuffledTvShows.map(tvShow => {
-        return <TvShowCard {...tvShow} />
-      })
+      const tvCards = this.displayTvShows()
       return (
         <section className='card-container'>
           {tvCards}
