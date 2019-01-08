@@ -77,6 +77,14 @@ describe('CardContainer', () => {
     expect(wrapper.find(FavoriteCard).length).toEqual(1)
   })
 
+  it('splitLocation should return a location without /', () => {
+    const expected = 'favorites'
+    const wrapper = shallow(<CardContainer trackedEpisodes={ mockTrackedEpisodes} tvShows={ mockCleanCakeShows } location={ mockWatchListLocation }/>)
+    const result = wrapper.instance().splitLocation('/favorites')
+
+    expect(result).toEqual(expected)
+  })
+
   describe('mapStateToProps', () => {
     const mockState = {
       tvShows: mockCleanCakeShows,
