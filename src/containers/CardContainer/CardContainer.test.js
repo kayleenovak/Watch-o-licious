@@ -39,24 +39,40 @@ describe('CardContainer', () => {
 
   it('should render two TvShowCards if the location is home', () => {
     const wrapper = shallow(<CardContainer tvShows={ mockCleanCakeShows } location={ mockHomeLocation }/>)
+    const spySplitLocaton = jest.spyOn(wrapper.instance(), 'displayTvShows')
+    
+    wrapper.instance().forceUpdate()
 
     expect(wrapper.find(TvShowCard).length).toBe(2)
+    expect(spySplitLocaton).toHaveBeenCalled()
   })
 
   it('should render one Favorite Card if the location is favorites', () => {
     const wrapper = shallow(<CardContainer trackedEpisodes={ mockTrackedEpisodes} tvShows={ mockCleanCakeShows } location={ mockFavoriteLocation }/>)
+    const spySplitLocaton = jest.spyOn(wrapper.instance(), 'splitLocation')
+    const spyTrackedEpisodes = jest.spyOn(wrapper.instance(), 'findTrackedEpisodes')
+
+    wrapper.instance().forceUpdate()
 
     expect(wrapper.find(FavoriteCard).length).toEqual(1)
   })
 
   it('should render one Favorite Card if the location is watched', () => {
     const wrapper = shallow(<CardContainer trackedEpisodes={ mockTrackedEpisodes} tvShows={ mockCleanCakeShows } location={ mockWatchedLocation }/>)
+    const spySplitLocaton = jest.spyOn(wrapper.instance(), 'splitLocation')
+    const spyTrackedEpisodes = jest.spyOn(wrapper.instance(), 'findTrackedEpisodes')
+
+    wrapper.instance().forceUpdate()
 
     expect(wrapper.find(FavoriteCard).length).toEqual(1)
   })
 
   it('should render one Favorite Card if the location is watchlist', () => {
     const wrapper = shallow(<CardContainer trackedEpisodes={ mockTrackedEpisodes} tvShows={ mockCleanCakeShows } location={ mockWatchListLocation }/>)
+    const spySplitLocaton = jest.spyOn(wrapper.instance(), 'splitLocation')
+    const spyTrackedEpisodes = jest.spyOn(wrapper.instance(), 'findTrackedEpisodes')
+
+    wrapper.instance().forceUpdate()
 
     expect(wrapper.find(FavoriteCard).length).toEqual(1)
   })
