@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addToTracked, removeFromTracked, toggleFavorite, toggleWatched, toggleWatchList } from '../../actions/index.js'
-import { handleTrackedEpisodes } from '../../helpers/handleToggleTracked.js'
+import { handleTrackedEpisode } from '../../helpers/handleToggleTracked.js'
 import './Episode.css'
 
 export class Episode extends Component {
@@ -16,36 +16,6 @@ export class Episode extends Component {
     this.setState({
       expanded: !this.state.expanded
     })
-  }
-
-  handleTrackedEpisode = (e) => {
-    const matchedEpisode = this.props.tracked.find(episode => {
-      return this.props.episode.url === episode.url
-    })
-    if(matchedEpisode === undefined) {
-      this.props.addToTracked(this.props.episode)
-      this.handleToggleTracked(e)
-    } else {
-      this.handleToggleTracked(e)
-    }
-  }
-
-  handleToggleTracked = (e) => {
-    if (e.target.value === 'favorite') {
-      this.props.toggleFavorite(this.props.episode)
-    } else if (e.target.value === 'watched') {
-      this.props.toggleWatched(this.props.episode)
-    } else if (e.target.value === 'watchlist') {
-      this.props.toggleWatchList(this.props.episode)
-    }
-    this.handleRemoveTracked()
-  }
-
-  handleRemoveTracked = () => {
-    const { favorite, watchlist, watched } = this.props.episode.tracked
-    if (favorite === false && watchlist === false && watched === false) {
-      this.props.removeFromTracked(this.props.episode)
-    }
   }
 
   render() {
@@ -78,7 +48,7 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  handleTracked: (e, episode, tracked) => dispatch(handleTrackedEpisodes(e, episode, tracked)) 
+  handleTracked: (e, episode, tracked) => dispatch(handleTrackedEpisode(e, episode, tracked)) 
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Episode)

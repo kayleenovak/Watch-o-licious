@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addToTracked, removeFromTracked, toggleFavorite, toggleWatched, toggleWatchList } from '../../actions/index.js'
+import { handleTrackedEpisode } from '../../helpers/handleToggleTracked.js'
+
 
 export class FavoriteCard extends Component {
     
@@ -45,9 +47,9 @@ export class FavoriteCard extends Component {
         <img src={matchedTvShow.image} />
         <h3>Episode: {this.props.episode.title}</h3>
         <h5>{matchedTvShow.title}</h5>
-        <button onClick={(e) => this.handleTrackedEpisode(e)} value='favorite'>Favorite</button>
-        <button onClick={(e) => this.handleTrackedEpisode(e)} value='watchlist'>Watch List</button>
-        <button onClick={(e) => this.handleTrackedEpisode(e)} value='watched'>Watched</button>
+        <button onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='favorite'>Favorite</button>
+        <button onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watchlist'>Watch List</button>
+        <button onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watched'>Watched</button>
       </section>
     )
   }
@@ -59,11 +61,7 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  addToTracked: (episode) => dispatch(addToTracked(episode)),
-  removeFromTracked: (episode) => dispatch(removeFromTracked(episode)),
-  toggleFavorite: (episode) => dispatch(toggleFavorite(episode)),
-  toggleWatched: (episode) => dispatch(toggleWatched(episode)),
-  toggleWatchList: (episode) => dispatch(toggleWatchList(episode))
+  handleTracked: (e, episode, tracked) => dispatch(handleTrackedEpisode(e, episode, tracked)) 
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(FavoriteCard)
