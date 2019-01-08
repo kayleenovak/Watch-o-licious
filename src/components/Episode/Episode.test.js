@@ -98,13 +98,12 @@ describe('Episode', () => {
 
   describe('expandEpisode', () => {
     let wrapper
+    let mockHandleTracked
+    let mockTrueEpisode
+    let mockTrueTrackedShows
 
     beforeEach(() => {
-      const mockAddToTracked = jest.fn()
-      const mockRemoveFromTracked = jest.fn()
-      const mockToggleFavorite = jest.fn()
-      const mockToggleWatched = jest.fn()
-      const mockToggleWatchList = jest.fn()
+      mockHandleTracked = jest.fn()
       const mockEpisode = {
         showId: '6407',
         url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
@@ -117,6 +116,20 @@ describe('Episode', () => {
           favorites: false,
           watched: false,
           watchlist: false
+        }
+      }
+      mockTrueEpisode = {
+        showId: '6407',
+        url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
+        title: 'Holiday Cookie Madness',
+        episode: 1,
+        runtime: 60,
+        summary: 'This is a summary',
+        airdate: '2014-11-09',
+        tracked: {
+          favorites: true,
+          watched: true,
+          watchlist: true
         }
       }
       const mockTrackedShows = [{
@@ -133,12 +146,22 @@ describe('Episode', () => {
           watchlist: false
         }
       }]
+      mockTrueTrackedShows = [{
+        showId: '6407',
+        url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
+        title: 'Holiday Cookie Madness',
+        episode: 1,
+        runtime: 60,
+        summary: 'This is a summary',
+        airdate: '2014-11-09',
+        tracked: {
+          favorites: true,
+          watched: true,
+          watchlist: true
+        }
+      }]
       wrapper = shallow(<Episode 
-        addToTracked={ mockAddToTracked }
-        removeFromTracked={ mockRemoveFromTracked }
-        toggleFavorite={ mockToggleFavorite }
-        toggleWatched={ mockToggleWatched }
-        toggleWatchList={ mockToggleWatchList }
+        handleTracked = { mockHandleTracked }
         tracked={ mockTrackedShows }
         episode={ mockEpisode }
       />)
@@ -163,6 +186,30 @@ describe('Episode', () => {
 
       expect(spyExpandEpisode).toHaveBeenCalled()
     })
+
+    it('should render add to watched in the watched button if tracked.watched is false', () => {
+
+      expect(wrapper.find('.watched-button').text()).toEqual('Add to Watched')
+    })
+
+    it('should render remove from watched in the watched button if tracked.watched is true', () => {
+      const trueWrapper = shallow(<Episode episode={ mockTrueEpisode } tracked={ mockTrueTrackedShows } handleTracked={ mockHandleTracked }/>)
+      
+      expect(trueWrapper.find('.watched-button').text()).toEqual('Remove from Watched')
+    })
+
+    it('should render add to watch list in the watch list button if tracked.watchlist is false', () => {
+
+      expect(wrapper.find('.watchlist-button').text()).toEqual('Add to Watch List')
+    })
+
+    it('should render remove from watched in the watched button if tracked.watched is true', () => {
+      const trueWrapper = shallow(<Episode episode={ mockTrueEpisode } tracked={ mockTrueTrackedShows } handleTracked={ mockHandleTracked }/>)
+      
+      expect(trueWrapper.find('.watchlist-button').text()).toEqual('Remove from Watch List')
+    })
+
+
   })
 
   describe('mapStateToProps', () => {
