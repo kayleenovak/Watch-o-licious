@@ -7,7 +7,8 @@ import TvShowCard from '../TvShowCard/TvShowCard.js'
 
 describe('CardContainer', () => {
   it('should render two TvShowCards', () => {
-    const wrapper = shallow(<CardContainer tvShows={ mockCleanCakeShows } />)
+    const mockLocation = ['/favorites']
+    const wrapper = shallow(<CardContainer tvShows={ mockCleanCakeShows } location={mockLocation}/>)
 
     expect(wrapper.find(TvShowCard).length).toBe(2)
   })

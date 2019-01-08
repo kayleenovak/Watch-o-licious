@@ -5,37 +5,6 @@ import { handleTrackedEpisode } from '../../helpers/handleToggleTracked.js'
 
 
 export class FavoriteCard extends Component {
-    
-  handleTrackedEpisode = (e) => {
-    console.log(1)
-    const matchedEpisode = this.props.tracked.find(episode => {
-      return this.props.episode.url === episode.url
-    })
-    if(matchedEpisode === undefined) {
-      this.props.addToTracked(this.props.episode)
-      this.handleToggleTracked(e)
-    } else {
-      this.handleToggleTracked(e)
-    }
-  }
-
-  handleToggleTracked = (e) => {
-    if (e.target.value === 'favorite') {
-      this.props.toggleFavorite(this.props.episode)
-    } else if (e.target.value === 'watched') {
-      this.props.toggleWatched(this.props.episode)
-    } else if (e.target.value === 'watchlist') {
-      this.props.toggleWatchList(this.props.episode)
-    }
-    this.handleRemoveTracked()
-  }
-
-  handleRemoveTracked = () => {
-    const { favorite, watchlist, watched } = this.props.episode.tracked
-    if (favorite === false && watchlist === false && watched === false) {
-      this.props.removeFromTracked(this.props.episode)
-    }
-  }
 
   render() {
     const matchedTvShow = this.props.tvShows.find(show => {
