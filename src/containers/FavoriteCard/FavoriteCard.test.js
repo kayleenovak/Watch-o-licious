@@ -102,5 +102,58 @@ describe('FavoriteCard', () => {
     expect(mockHandleTracked).toHaveBeenCalledWith(mockEvent, mockEpsiode, mockTracked)
   })
 
+  describe('mapStateToProps', () => {
+    it('should return an object with the keys of tvShows and tracked', () => {
+      const mockState = {
+        isLoading: false,
+        hasErrored: false,
+        tvShows: [],
+        tracked: []
+      }
+      const expected = {
+        tvShows: [],
+        tracked: []
+      }
 
+      const result = mapStateToProps(mockState)
+
+      expect(result).toEqual(expected)
+    })
+  })
+
+  describe('mapDispatchToProps', () => {
+    it('should call dispatch with the correct params', () => {
+      const mockDispatch = jest.fn()
+      const mockEvent = {
+        target: {
+          value: 'watched'
+        }
+      }
+      const mockTracked = [{
+      title: 'Cake Boss',
+      image: 'www.thisimgage.com', 
+      id: 921,
+      tracked: {
+        favorites: true,
+        watched: true,
+        watchlist: true,
+      }
+    }]
+    const mockEpsiode = {
+      title: 'Cake Boss',
+      image: 'www.thisimgage.com', 
+      showId: 921,
+      tracked: {
+        favorites: true,
+        watched: true,
+        watchlist: true,
+      }
+    }
+
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.handleTracked(mockEvent, mockEpsiode, mockTracked)
+
+      expect(mockDispatch).toHaveBeenCalledWith(expect.any(Function))
+    })
+  })
 })
