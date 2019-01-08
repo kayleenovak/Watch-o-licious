@@ -17,7 +17,7 @@ export const handleTrackedEpisode = (e, episode, tracked) => {
 export const handleToggleTracked = (e, episode, tracked) => {
   const target = e.target.value
   return (dispatch) => {
-    if (target === 'favorite') {
+    if (target === 'favorites') {
       dispatch(toggleFavorite(episode))
     } else if (target === 'watched') {
       dispatch(toggleWatched(episode))
@@ -30,7 +30,7 @@ export const handleToggleTracked = (e, episode, tracked) => {
 
 export const handleRemoveTracked = (tracked, episode) => {
   return (dispatch) => {
-    const { favorite, watchlist, watched } = tracked
+    const { favorites, watchlist, watched } = tracked
     if (favorite === false && watchlist === false && watched === false) {
       dispatch(removeFromTracked(episode))
     }

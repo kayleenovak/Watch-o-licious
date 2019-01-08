@@ -130,25 +130,25 @@ describe('FavoriteCard', () => {
         }
       }
       const mockTracked = [{
-      title: 'Cake Boss',
-      image: 'www.thisimgage.com', 
-      id: 921,
-      tracked: {
-        favorites: true,
-        watched: true,
-        watchlist: true,
+        title: 'Cake Boss',
+        image: 'www.thisimgage.com', 
+        id: 921,
+        tracked: {
+          favorites: true,
+          watched: true,
+          watchlist: true,
+        }
+      }]
+      const mockEpsiode = {
+        title: 'Cake Boss',
+        image: 'www.thisimgage.com', 
+        showId: 921,
+        tracked: {
+          favorites: true,
+          watched: true,
+          watchlist: true,
+        }
       }
-    }]
-    const mockEpsiode = {
-      title: 'Cake Boss',
-      image: 'www.thisimgage.com', 
-      showId: 921,
-      tracked: {
-        favorites: true,
-        watched: true,
-        watchlist: true,
-      }
-    }
 
       const mappedProps = mapDispatchToProps(mockDispatch)
       mappedProps.handleTracked(mockEvent, mockEpsiode, mockTracked)

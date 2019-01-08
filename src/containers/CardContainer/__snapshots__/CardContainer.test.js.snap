@@ -12,23 +12,6 @@ ShallowWrapper {
     tvShows={
       Array [
         Object {
-          "id": 921,
-          "image": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg",
-          "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg",
-          "network": "TLC",
-          "premiered": "2009-05-25",
-          "rating": null,
-          "runtime": 30,
-          "schedule": Object {
-            "days": Array [
-              "Monday",
-            ],
-            "time": "21:00",
-          },
-          "summary": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
-          "title": "Cake Boss",
-        },
-        Object {
           "id": 27786,
           "image": "http://static.tvmaze.com/uploads/images/medium_portrait/110/275113.jpg",
           "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/110/275113.jpg",
@@ -49,6 +32,23 @@ ShallowWrapper {
           "summary": "Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth.",
           "title": "Extreme Cake Makers",
         },
+        Object {
+          "id": 921,
+          "image": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg",
+          "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg",
+          "network": "TLC",
+          "premiered": "2009-05-25",
+          "rating": null,
+          "runtime": 30,
+          "schedule": Object {
+            "days": Array [
+              "Monday",
+            ],
+            "time": "21:00",
+          },
+          "summary": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
+          "title": "Cake Boss",
+        },
       ]
     }
   />,
@@ -66,25 +66,6 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Connect(TvShowCard)
-          id={921}
-          image="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
-          largeImage="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
-          network="TLC"
-          premiered="2009-05-25"
-          rating={null}
-          runtime={30}
-          schedule={
-            Object {
-              "days": Array [
-                "Monday",
-              ],
-              "time": "21:00",
-            }
-          }
-          summary="Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses."
-          title="Cake Boss"
-        />,
         <Connect(TvShowCard)
           id={27786}
           image="http://static.tvmaze.com/uploads/images/medium_portrait/110/275113.jpg"
@@ -108,36 +89,30 @@ ShallowWrapper {
           summary="Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth."
           title="Extreme Cake Makers"
         />,
+        <Connect(TvShowCard)
+          id={921}
+          image="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
+          largeImage="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+          network="TLC"
+          premiered="2009-05-25"
+          rating={null}
+          runtime={30}
+          schedule={
+            Object {
+              "days": Array [
+                "Monday",
+              ],
+              "time": "21:00",
+            }
+          }
+          summary="Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses."
+          title="Cake Boss"
+        />,
       ],
       "className": "card-container",
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "id": 921,
-          "image": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg",
-          "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg",
-          "network": "TLC",
-          "premiered": "2009-05-25",
-          "rating": null,
-          "runtime": 30,
-          "schedule": Object {
-            "days": Array [
-              "Monday",
-            ],
-            "time": "21:00",
-          },
-          "summary": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
-          "title": "Cake Boss",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -167,6 +142,31 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "id": 921,
+          "image": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg",
+          "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg",
+          "network": "TLC",
+          "premiered": "2009-05-25",
+          "rating": null,
+          "runtime": 30,
+          "schedule": Object {
+            "days": Array [
+              "Monday",
+            ],
+            "time": "21:00",
+          },
+          "summary": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
+          "title": "Cake Boss",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "section",
   },
@@ -177,25 +177,6 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Connect(TvShowCard)
-            id={921}
-            image="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
-            largeImage="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
-            network="TLC"
-            premiered="2009-05-25"
-            rating={null}
-            runtime={30}
-            schedule={
-              Object {
-                "days": Array [
-                  "Monday",
-                ],
-                "time": "21:00",
-              }
-            }
-            summary="Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses."
-            title="Cake Boss"
-          />,
           <Connect(TvShowCard)
             id={27786}
             image="http://static.tvmaze.com/uploads/images/medium_portrait/110/275113.jpg"
@@ -219,36 +200,30 @@ ShallowWrapper {
             summary="Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth."
             title="Extreme Cake Makers"
           />,
+          <Connect(TvShowCard)
+            id={921}
+            image="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
+            largeImage="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+            network="TLC"
+            premiered="2009-05-25"
+            rating={null}
+            runtime={30}
+            schedule={
+              Object {
+                "days": Array [
+                  "Monday",
+                ],
+                "time": "21:00",
+              }
+            }
+            summary="Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses."
+            title="Cake Boss"
+          />,
         ],
         "className": "card-container",
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "id": 921,
-            "image": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg",
-            "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg",
-            "network": "TLC",
-            "premiered": "2009-05-25",
-            "rating": null,
-            "runtime": 30,
-            "schedule": Object {
-              "days": Array [
-                "Monday",
-              ],
-              "time": "21:00",
-            },
-            "summary": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
-            "title": "Cake Boss",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
         Object {
           "instance": null,
           "key": undefined,
@@ -273,6 +248,31 @@ ShallowWrapper {
             },
             "summary": "Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth.",
             "title": "Extreme Cake Makers",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "id": 921,
+            "image": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg",
+            "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg",
+            "network": "TLC",
+            "premiered": "2009-05-25",
+            "rating": null,
+            "runtime": 30,
+            "schedule": Object {
+              "days": Array [
+                "Monday",
+              ],
+              "time": "21:00",
+            },
+            "summary": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
+            "title": "Cake Boss",
           },
           "ref": null,
           "rendered": null,
