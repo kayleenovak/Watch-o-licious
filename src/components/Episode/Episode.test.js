@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Episode } from './Episode.js'
+import { Episode, mapDispatchToProps, mapStateToProps } from './Episode.js'
 
 describe('Episode', () => {
   let wrapper
@@ -162,6 +162,67 @@ describe('Episode', () => {
       wrapper.find('.arrow').simulate('click')
 
       expect(spyExpandEpisode).toHaveBeenCalled()
+    })
+  })
+
+  describe('mapStateToProps', () => {
+    it('should return an object with a key of tracked', () => {
+      const mockState = {
+        isLoading: false, 
+        hasErrored: false,
+        tracked: []
+      }
+      const expected = {
+        tracked: []
+      }
+
+      const result = mapStateToProps(mockState)
+
+      expect(result).toEqual(expected)
+    })
+  })
+
+  describe('mapDispatchToProps', () => {
+    it('should call dispatch with the correct params', () => {
+      const mockDispatch = jest.fn()
+      const mockEvent = {
+        target: {
+          value: 'favorite'
+        }
+      }
+      const mockEpisode = {
+        showId: '6407',
+        url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
+        title: 'Holiday Cookie Madness',
+        episode: 1,
+        runtime: 60,
+        summary: 'This is a summary',
+        airdate: '2014-11-09',
+        tracked: {
+          favorites: false,
+          watched: false,
+          watchlist: false
+        }
+      }
+      const mockTrackedShows = [{
+        showId: '6407',
+        url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
+        title: 'Holiday Cookie Madness',
+        episode: 1,
+        runtime: 60,
+        summary: 'This is a summary',
+        airdate: '2014-11-09',
+        tracked: {
+          favorites: false,
+          watched: false,
+          watchlist: false
+        }
+      }]
+      const mappedProps = mapDispatchToProps(mockDispatch)
+
+      mappedProps.handleTracked(mockEvent, mockEpisode, mockTrackedShows)
+
+      expect(mockDispatch).toHaveBeenCalledWith(expect.any(Function))
     })
   })
 })
