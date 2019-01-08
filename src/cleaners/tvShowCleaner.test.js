@@ -29,12 +29,13 @@ describe('tvShowCleaner', () => {
         season: 1,
         episodes: [{
           title: 'Pilot',
+          "url": "http://www.tvmaze.com/episodes/1/under-the-dome-1x01-pilot",
           episode: 1,
           runtime: 60,
           summary: "When the residents of Chester's Mill find themselves trapped under a massive transparent dome with no way out, they struggle to survive as resources rapidly dwindle and panic quickly escalates.",
           airdate: '2013-06-24',
-          favorite: {
-            favorite: false,
+          tracked: {
+            favorites: false,
             watchlist: false,
             watched: false
           }

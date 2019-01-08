@@ -1,5 +1,4 @@
 export const tvShowCleaner = (tvShow, id) => {
-  console.log(id)
   const seasons = tvShow.reduce((acc, episode) => {
     if (!acc.includes(episode.season)) {
       acc.push(episode.season)
