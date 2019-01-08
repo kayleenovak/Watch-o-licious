@@ -4,7 +4,6 @@ export const trackEpisodeReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TO_TRACKED':
       const updatedState = [...state, action.episode]
-
       return updatedState
     case 'REMOVE_FROM_TRACKED':
       const newState = state.filter(episode => {

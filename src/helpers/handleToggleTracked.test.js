@@ -1,5 +1,5 @@
 import { addToTracked, removeFromTracked, toggleFavorite, toggleWatched, toggleWatchList } from '../actions/index.js'
-import { handleTrackedEpisode, handleToggleTracked, handleRemoveTracked } from './handleToggleTracked.js'
+import { handleTrackedEpisode, handleToggleTracked, handleRemoveTracked, toggleTracked } from './handleToggleTracked.js'
 
 const handleTracked = require('./handleToggleTracked.js')
 
@@ -152,6 +152,45 @@ describe('handleToggleTracked', () => {
 
       expect(mockDispatch).toHaveBeenCalledWith(removeFromTracked(mockEpisode))
     })
+  })
 
+  describe('toggleTracked', () => {
+    it('should return a new array with an episode that has a toggled value of the key', () => {
+      const mockState = [{
+        title: 'Cake Boss',
+        url: 'www.cakeboss.com',
+        tracked: {
+          favorites: false,
+          watched: false,
+          watchlist: false
+        }
+      }]
+      const mockEpisode = {
+        title: 'Cake Boss',
+        url: 'www.cakeboss.com',
+        tracked: {
+          favorites: false,
+          watched: false,
+          watchlist: false
+        }
+      }
+      const mockAction = {
+        type: 'TOGGLE_FAVORITE',
+        episode: mockEpisode
+      }
+      const expected = [{
+        title: 'Cake Boss',
+        url: 'www.cakeboss.com',
+        tracked: {
+          favorites: true,
+          watched: false,
+          watchlist: false
+        }
+      }]
+
+      const result = toggleTracked(mockState, mockAction, 'favorites')
+
+      expect(result).toEqual(expected)
+    })
   })
 })

@@ -138,6 +138,4 @@ describe('trackEpisodeReducer', () => {
 
     expect(result).toEqual(expected)
   })
-
-
 })
