@@ -72,7 +72,7 @@ describe('actions', () => {
   })
 
   describe('addToTracked', () => {
-    it('should return an object with a type of ADD_TO_TRACKED', () => {
+    it('should return an object with a type of ADD_TO_TRACKED and an episode', () => {
       const episode = {
         title: 'Cake Boss'
       }
@@ -88,7 +88,7 @@ describe('actions', () => {
   })
 
   describe('removeFromTracked', () => {
-    it('should return an object with a type of REMOVE_FROM_TRACKED', () => {
+    it('should return an object with a type of REMOVE_FROM_TRACKED and an episode', () => {
       const episode = {
         title: 'Cake Boss'
       }
@@ -98,6 +98,38 @@ describe('actions', () => {
       }
 
       const result = removeFromTracked(episode)
+
+      expect(result).toEqual(expected)
+    })
+  })
+
+  describe('toggleFavorite', () => {
+    it('should return an object with a type of TOGGLE_FAVORITE and an episode', () => {
+      const episode = {
+        title: 'Cake Boss'
+      }
+      const expected = {
+        type: 'TOGGLE_FAVORITE',
+        episode
+      }
+
+      const result = toggleFavorite(episode)
+
+      expect(result).toEqual(expected)
+    })
+  })
+
+  describe('toggleWatched', () => {
+    it('should return an object with a type of TOGGLE_WATCHED and an episode', () => {
+      const episode = {
+        title: 'Cake Boss'
+      }
+      const expected = {
+        type: 'TOGGLE_WATCHED',
+        episode
+      }
+
+      const result = toggleWatched(episode)
 
       expect(result).toEqual(expected)
     })
