@@ -37,6 +37,12 @@ describe('CardContainer', () => {
     }
   })
 
+  it('should match the snapshot', () => {
+    const wrapper = shallow(<CardContainer tvShows={ mockCleanCakeShows } location={ mockHomeLocation }/>)
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('should render two TvShowCards if the location is home', () => {
     const wrapper = shallow(<CardContainer tvShows={ mockCleanCakeShows } location={ mockHomeLocation }/>)
     const spySplitLocaton = jest.spyOn(wrapper.instance(), 'displayTvShows')

@@ -6,19 +6,24 @@ import { handleTrackedEpisode } from '../../helpers/handleToggleTracked.js'
 
 export class FavoriteCard extends Component {
 
-  render() {
-    const matchedTvShow = this.props.tvShows.find(show => {
+  findMatchedTvShow = () => {
+    const match = this.props.tvShows.find(show => {
       return show.id === parseInt(this.props.episode.showId)
     })
+    return match
+  }
+
+  render() {
+    const matchedTvShow = this.findMatchedTvShow()
 
     return (
       <section>
         <img src={matchedTvShow.image} />
         <h3>Episode: {this.props.episode.title}</h3>
         <h5>{matchedTvShow.title}</h5>
-        <button onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='favorite'>Favorite</button>
-        <button onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watchlist'>Watch List</button>
-        <button onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watched'>Watched</button>
+        <button className='favorite-btn' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='favorite'>Favorite</button>
+        <button className='watch-list-btn' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watchlist'>Watch List</button>
+        <button className='watched-btn' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watched'>Watched</button>
       </section>
     )
   }
