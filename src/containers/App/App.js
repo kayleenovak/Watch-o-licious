@@ -25,9 +25,9 @@ export class App extends Component {
             return <TvShowModal id={ id } />
             }} 
           />
-        <Route exact to='/favorites' component={ CardContainer } />
-        <Route exact to='/watched' component={ CardContainer } />
-        <Route exact to='/watchlist' component={ CardContainer } />
+          <Route exact to='/favorites' component={ CardContainer } />
+          <Route exact to='/watched' component={ CardContainer } />
+          <Route exact to='/watchlist' component={ CardContainer } />
         </Switch>
       </div>
     );

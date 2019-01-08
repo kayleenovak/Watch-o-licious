@@ -1,13 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { App, mapDispatchToProps } from './App';
+import { Route } from 'react-router-dom'
 import { shallow } from 'enzyme'
 import { fetchTvShows } from '../../thunks/fetchTvShows.js'
 
 describe('App', () => {
+  let wrapper
+  let mockFetchTvShows
+
+  beforeEach(() => {
+    mockFetchTvShows = jest.fn()
+    wrapper = shallow(<App fetchTvShows={ mockFetchTvShows } />)
+  })
+
+  it('should match the snapshot', () => {
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render 5 routes', () => {
+
+    expect(wrapper.find(Route).length).toEqual(5)
+  })
+
   it('should fire fetchTvShows on componentDidMount', () => {
-    const mockFetchTvShows = jest.fn()
-    const wrapper = shallow(<App  fetchTvShows={ mockFetchTvShows } />)
 
     wrapper.instance().componentDidMount()
 
