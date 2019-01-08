@@ -119,6 +119,19 @@ describe('handleToggleTracked', () => {
     expect(mockDispatch).toHaveBeenCalledTimes(2)
   })
 
+  it('should not call dispatch with toggleWatchList if the target is anything but favorites, watched, watchlist', () => {
+    const mockDispatch = jest.fn()
+    const mockEvent =  {
+      target: {
+        value: 'button'
+      }
+    }
+    const trackedFunction = handleToggleTracked(mockEvent, mockEpisode, mockTracked)
+    trackedFunction(mockDispatch)
+
+    expect(mockDispatch).not.toHaveBeenCalledWith(toggleWatchList(mockEpisode))
+  })
+
   describe('handleRemoveTracked', () => {
     let mockEpisode
     let mockTracked
@@ -152,15 +165,43 @@ describe('handleToggleTracked', () => {
 
       expect(mockDispatch).toHaveBeenCalledWith(removeFromTracked(mockEpisode))
     })
+
+    it('should not call dispatch if either favorites, watchlist, or watched is true', () => {
+      const mockDispatch = jest.fn()
+      const mockEpisode = {
+        title: 'Cake Boss',
+        url: 'www.cakeboss.com',
+        tracked: {
+          favorites: true,
+          watched: false,
+          watchlist: false
+        }
+      }
+      const trackedFunction = handleRemoveTracked(mockEpisode)
+
+      trackedFunction(mockDispatch)
+
+      expect(mockDispatch).not.toHaveBeenCalled()
+    })
   })
 
   describe('toggleTracked', () => {
-    it('should return a new array with an episode that has a toggled value of the key', () => {
+
+    it('should toggle the value of the key', () => {
       const mockState = [{
         title: 'Cake Boss',
         url: 'www.cakeboss.com',
         tracked: {
           favorites: false,
+          watched: false,
+          watchlist: false
+        }
+      }]
+      const toggledState = [{
+        title: 'Cake Boss',
+        url: 'www.cakeboss.com',
+        tracked: {
+          favorites: true,
           watched: false,
           watchlist: false
         }
@@ -174,11 +215,16 @@ describe('handleToggleTracked', () => {
           watchlist: false
         }
       }
-      const mockAction = {
-        type: 'TOGGLE_FAVORITE',
-        episode: mockEpisode
-      }
-      const expected = [{
+      const mockToggledState = [{
+        title: 'Cake Boss',
+        url: 'www.cakeboss.com',
+        tracked: {
+          favorites: false,
+          watched: false,
+          watchlist: false
+        }
+      }]
+      const toggledEpisode = {
         title: 'Cake Boss',
         url: 'www.cakeboss.com',
         tracked: {
@@ -186,11 +232,61 @@ describe('handleToggleTracked', () => {
           watched: false,
           watchlist: false
         }
-      }]
+      }
+      const mockAction = {
+        type: 'TOGGLE_FAVORITE',
+        episode: mockEpisode
+      }
+      const toggledAction = {
+        type: 'TOGGLE_FAVORITE',
+        episode: toggledEpisode
+      }
 
       const result = toggleTracked(mockState, mockAction, 'favorites')
 
-      expect(result).toEqual(expected)
+      expect(result).toEqual(toggledState)
+
+      const toggledResult = toggleTracked(toggledState, toggledAction, 'favorites')
+
+      expect(toggledResult).toEqual(mockToggledState)
     })
+  })
+
+  it('should return an array that is unmutated if there is no episode that matches', () => {
+    const mockState = [{
+      title: 'Cake Boss',
+      url: 'www.cakeboss.com',
+      tracked: {
+        favorites: false,
+        watched: false,
+        watchlist: false
+      }
+    }]
+    const mockEpisode = {
+      title: 'Cake Boss',
+      url: 'www.cake.com',
+      tracked: {
+        favorites: false,
+        watched: false,
+        watchlist: false
+      }
+    }
+    const mockAction = {
+      type: 'TOGGLE_FAVORITE',
+      episode: mockEpisode
+    }
+    const expected = [{
+      title: 'Cake Boss',
+      url: 'www.cakeboss.com',
+      tracked: {
+        favorites: false,
+        watched: false,
+        watchlist: false
+      }
+    }]
+
+    const result = toggleTracked(mockState, mockAction, 'favorites')
+
+    expect(result).toEqual(expected)
   })
 })
