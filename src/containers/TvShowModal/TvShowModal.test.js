@@ -49,7 +49,7 @@ describe('TvShowModal', () => {
     expect(wrapper.find('h3').length).toEqual(2)
     expect(wrapper.find('p').length).toEqual(1)
     expect(wrapper.find('button').length).toEqual(1)
-    expect(wrapper.find('div').length).toEqual(2)
+    expect(wrapper.find('div').length).toEqual(7)
   })
 
   it('should invoke findTvShow, displaySeasons, and displayEpisodes if there are tvShows and episodes', () => {
