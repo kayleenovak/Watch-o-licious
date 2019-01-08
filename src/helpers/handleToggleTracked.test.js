@@ -78,7 +78,7 @@ describe('handleToggleTracked', () => {
     mockDispatch = jest.fn()
   })
 
-  it('should call dispatch with toggleFavorite if the target is favorite', () => {
+  it('should call dispatch with toggleFavorite if the target is favorite and handleRemoveTracked', () => {
     const mockEvent =  {
       target: {
         value: 'favorites'
@@ -88,9 +88,10 @@ describe('handleToggleTracked', () => {
     trackedFunction(mockDispatch)
 
     expect(mockDispatch).toHaveBeenCalledWith(toggleFavorite(mockEpisode))
+    expect(mockDispatch).toHaveBeenCalledTimes(2)
   })
 
-  it('should call dispatch with toggleWatched if the target is watched', () => {
+  it('should call dispatch with toggleWatched if the target is watched and handleRemoveTracked', () => {
     const mockEvent =  {
       target: {
         value: 'watched'
@@ -100,9 +101,10 @@ describe('handleToggleTracked', () => {
     trackedFunction(mockDispatch)
 
     expect(mockDispatch).toHaveBeenCalledWith(toggleWatched(mockEpisode))
+    expect(mockDispatch).toHaveBeenCalledTimes(2)
   })
 
-  it('should call dispatch with toggleWatchList if the target is watchlist', () => {
+  it('should call dispatch with toggleWatchList if the target is watchlist and handleRemoveTracked', () => {
     const mockEvent =  {
       target: {
         value: 'watchlist'
@@ -112,7 +114,43 @@ describe('handleToggleTracked', () => {
     trackedFunction(mockDispatch)
 
     expect(mockDispatch).toHaveBeenCalledWith(toggleWatchList(mockEpisode))
+    expect(mockDispatch).toHaveBeenCalledTimes(2)
   })
 
+  describe('handleRemoveTracked', () => {
+    let mockEpisode
+    let mockTracked
+    let mockDispatch
 
+    beforeEach(() => {
+      mockEpisode = {
+        title: 'Cake Boss',
+        url: 'www.cakeboss.com',
+        tracked: {
+          favorites: false,
+          watched: false,
+          watchlist: false
+        }
+      }
+      mockTracked = {
+        title: 'Cake Boss',
+        url: 'www.cakeboss.com',
+        tracked: {
+          favorites: false,
+          watched: false,
+          watchlist: false
+        }
+      }
+      mockDispatch = jest.fn()
+    })
+
+    it('should call dispatch if favorites, watchlist, and watched are all false', () => {
+      const trackedFunction = handleRemoveTracked(mockTracked, mockEpisode)
+
+      trackedFunction(mockDispatch)
+
+      expect(mockDispatch).toHaveBeenCalledWith(removeFromTracked(mockEpisode))
+    })
+
+  })
 })

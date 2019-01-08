@@ -30,8 +30,8 @@ export const handleToggleTracked = (e, episode, tracked) => {
 
 export const handleRemoveTracked = (tracked, episode) => {
   return (dispatch) => {
-    const { favorites, watchlist, watched } = tracked
-    if (favorite === false && watchlist === false && watched === false) {
+    const { favorites, watchlist, watched } = tracked.tracked
+    if (favorites === false && watchlist === false && watched === false) {
       dispatch(removeFromTracked(episode))
     }
   }
