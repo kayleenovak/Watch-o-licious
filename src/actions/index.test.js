@@ -1,4 +1,4 @@
-import { dataFetchSuccess, isLoading, hasErrored, tvShowFetchSuccess, removeShow } from './index.js'
+import { dataFetchSuccess, isLoading, hasErrored, tvShowFetchSuccess, removeShow, addToTracked, removeFromTracked, toggleFavorite, toggleWatched, toggleWatchList } from './index.js'
 
 describe('actions', () => {
   describe('dataFetchSuccess', () => {
@@ -66,6 +66,38 @@ describe('actions', () => {
       }
 
       const result = removeShow()
+
+      expect(result).toEqual(expected)
+    })
+  })
+
+  describe('addToTracked', () => {
+    it('should return an object with a type of ADD_TO_TRACKED', () => {
+      const episode = {
+        title: 'Cake Boss'
+      }
+      const expected = {
+        type: 'ADD_TO_TRACKED',
+        episode
+      }
+
+      const result = addToTracked(episode)
+
+      expect(result).toEqual(expected)
+    })
+  })
+
+  describe('removeFromTracked', () => {
+    it('should return an object with a type of REMOVE_FROM_TRACKED', () => {
+      const episode = {
+        title: 'Cake Boss'
+      }
+      const expected = {
+        type: 'REMOVE_FROM_TRACKED',
+        episode
+      }
+
+      const result = removeFromTracked(episode)
 
       expect(result).toEqual(expected)
     })
