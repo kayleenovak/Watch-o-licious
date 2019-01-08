@@ -4,14 +4,13 @@ import { Episode } from './Episode.js'
 
 describe('Episode', () => {
   let wrapper
+  let mockHandleTracked
+  let mockEpisode
+  let mockTrackedShows
 
   beforeEach(() => {
-    const mockAddToTracked = jest.fn()
-    const mockRemoveFromTracked = jest.fn()
-    const mockToggleFavorite = jest.fn()
-    const mockToggleWatched = jest.fn()
-    const mockToggleWatchList = jest.fn()
-    const mockEpisode = {
+    mockHandleTracked = jest.fn()
+    mockEpisode = {
       showId: '6407',
       url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
       title: 'Holiday Cookie Madness',
@@ -25,7 +24,7 @@ describe('Episode', () => {
         watchlist: false
       }
     }
-    const mockTrackedShows = [{
+    mockTrackedShows = [{
       showId: '6407',
       url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
       title: 'Holiday Cookie Madness',
@@ -40,11 +39,7 @@ describe('Episode', () => {
       }
     }]
     wrapper = shallow(<Episode 
-      addToTracked={ mockAddToTracked }
-      removeFromTracked={ mockRemoveFromTracked }
-      toggleFavorite={ mockToggleFavorite }
-      toggleWatched={ mockToggleWatched }
-      toggleWatchList={ mockToggleWatchList }
+      handleTracked={ mockHandleTracked }
       tracked={ mockTrackedShows }
       episode={ mockEpisode }
     />)
@@ -65,7 +60,43 @@ describe('Episode', () => {
     expect(wrapper.find('p').length).toEqual(3)
   })
 
-  describe('Episode methods', () => {
+  it('should invoke handleTracked on click of the favorite, watched, and watchlist buttons', () => {
+    const mockEvent = {
+      target: {
+        value: 'favorite'
+      }
+    }
+
+    wrapper.find('.favorite-button').simulate('click', mockEvent)
+
+    expect(mockHandleTracked).toHaveBeenCalledWith(mockEvent, mockEpisode, mockTrackedShows)
+  })
+
+  it('should invoke handleTracked on click of the favorite, watched, and watchlist buttons', () => {
+    const mockEvent = {
+      target: {
+        value: 'watched'
+      }
+    }
+
+    wrapper.find('.watched-button').simulate('click', mockEvent)
+
+    expect(mockHandleTracked).toHaveBeenCalledWith(mockEvent, mockEpisode, mockTrackedShows)
+  })
+
+  it('should invoke handleTracked on click of the favorite, watched, and watchlist buttons', () => {
+    const mockEvent = {
+      target: {
+        value: 'watchlist'
+      }
+    }
+
+    wrapper.find('.watchlist-button').simulate('click', mockEvent)
+
+    expect(mockHandleTracked).toHaveBeenCalledWith(mockEvent, mockEpisode, mockTrackedShows)
+  })
+
+  describe('expandEpisode', () => {
     let wrapper
 
     beforeEach(() => {
