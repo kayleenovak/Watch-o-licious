@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addToTracked, removeFromTracked, toggleFavorite, toggleWatched, toggleWatchList } from '../../actions/index.js'
+import { handleTrackedEpisodes } from '../../helpers/handleToggleTracked.js'
 import './Episode.css'
 
 export class Episode extends Component {
@@ -59,9 +60,9 @@ export class Episode extends Component {
       return (
         <section className={episodeStyle}>
           <h3 className='episode-title'>Episode {episode}: {title}</h3>
-          <button className='favorite-button' onClick={(e) => this.handleTrackedEpisode(e)} value='favorite'><img className='favorite-icon' src={favoriteIcon} />sss</button>
-          <button className='watched-button' onClick={(e) => this.handleTrackedEpisode(e)} value='watched'>{watched}</button>
-          <button className='watchlist-button' onClick={(e) => this.handleTrackedEpisode(e)} value='watchlist'>{watchlist}</button>
+          <button className='favorite-button' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='favorite'><img className='favorite-icon' src={favoriteIcon} />sss</button>
+          <button className='watched-button' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watched'>{watched}</button>
+          <button className='watchlist-button' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watchlist'>{watchlist}</button>
           <img src='/down-arrow.svg' className={arrow} onClick={() => this.expandEpisode()}/>
           {
             !this.state.expanded ? null : <div><p>{summary}</p><p>Runtime: {runtime} minutes</p><p>Original airdate: {airdate}</p></div>
@@ -77,11 +78,7 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  addToTracked: (episode) => dispatch(addToTracked(episode)),
-  removeFromTracked: (episode) => dispatch(removeFromTracked(episode)),
-  toggleFavorite: (episode) => dispatch(toggleFavorite(episode)),
-  toggleWatched: (episode) => dispatch(toggleWatched(episode)),
-  toggleWatchList: (episode) => dispatch(toggleWatchList(episode))
+  handleTracked: (e, episode, tracked) => dispatch(handleTrackedEpisodes(e, episode, tracked)) 
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Episode)
