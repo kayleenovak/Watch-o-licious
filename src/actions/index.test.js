@@ -134,4 +134,20 @@ describe('actions', () => {
       expect(result).toEqual(expected)
     })
   })
+
+  describe('toggleWatchList', () => {
+    it('should return an object with a type of TOGGLE_WATCH_LIST and an episode', () => {
+      const episode = {
+        title: 'Cake Boss'
+      }
+      const expected = {
+        type: 'TOGGLE_WATCH_LIST',
+        episode
+      }
+
+      const result = toggleWatchList(episode)
+
+      expect(result).toEqual(expected)
+    })
+  })
 })
