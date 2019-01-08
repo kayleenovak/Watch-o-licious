@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Episode should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Episode
+    episode={
+      Object {
+        "airdate": "2014-11-09",
+        "episode": 1,
+        "runtime": 60,
+        "showId": "6407",
+        "summary": "This is a summary",
+        "title": "Holiday Cookie Madness",
+        "tracked": Object {
+          "favorites": false,
+          "watched": false,
+          "watchlist": false,
+        },
+        "url": "http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness",
+      }
+    }
+    handleTracked={[MockFunction]}
+    tracked={
+      Array [
+        Object {
+          "airdate": "2014-11-09",
+          "episode": 1,
+          "runtime": 60,
+          "showId": "6407",
+          "summary": "This is a summary",
+          "title": "Holiday Cookie Madness",
+          "tracked": Object {
+            "favorites": false,
+            "watched": false,
+            "watchlist": false,
+          },
+          "url": "http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3
+          className="episode-title"
+        >
+          Episode 
+          1
+          : 
+          Holiday Cookie Madness
+        </h3>,
+        <button
+          className="favorite-button"
+          onClick={[Function]}
+          value="favorite"
+        >
+          <img
+            className="favorite-icon"
+            src="/unfavorite.svg"
+          />
+          sss
+        </button>,
+        <button
+          className="watched-button"
+          onClick={[Function]}
+          value="watched"
+        >
+          Add to Watched
+        </button>,
+        <button
+          className="watchlist-button"
+          onClick={[Function]}
+          value="watchlist"
+        >
+          Add to Watch List
+        </button>,
+        <img
+          className="arrow"
+          onClick={[Function]}
+          src="/down-arrow.svg"
+        />,
+        null,
+      ],
+      "className": "collapsed-episode",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Episode ",
+            1,
+            ": ",
+            "Holiday Cookie Madness",
+          ],
+          "className": "episode-title",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Episode ",
+          1,
+          ": ",
+          "Holiday Cookie Madness",
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              className="favorite-icon"
+              src="/unfavorite.svg"
+            />,
+            "sss",
+          ],
+          "className": "favorite-button",
+          "onClick": [Function],
+          "value": "favorite",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "favorite-icon",
+              "src": "/unfavorite.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "sss",
+        ],
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Add to Watched",
+          "className": "watched-button",
+          "onClick": [Function],
+          "value": "watched",
+        },
+        "ref": null,
+        "rendered": "Add to Watched",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Add to Watch List",
+          "className": "watchlist-button",
+          "onClick": [Function],
+          "value": "watchlist",
+        },
+        "ref": null,
+        "rendered": "Add to Watch List",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "arrow",
+          "onClick": [Function],
+          "src": "/down-arrow.svg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      null,
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3
+            className="episode-title"
+          >
+            Episode 
+            1
+            : 
+            Holiday Cookie Madness
+          </h3>,
+          <button
+            className="favorite-button"
+            onClick={[Function]}
+            value="favorite"
+          >
+            <img
+              className="favorite-icon"
+              src="/unfavorite.svg"
+            />
+            sss
+          </button>,
+          <button
+            className="watched-button"
+            onClick={[Function]}
+            value="watched"
+          >
+            Add to Watched
+          </button>,
+          <button
+            className="watchlist-button"
+            onClick={[Function]}
+            value="watchlist"
+          >
+            Add to Watch List
+          </button>,
+          <img
+            className="arrow"
+            onClick={[Function]}
+            src="/down-arrow.svg"
+          />,
+          null,
+        ],
+        "className": "collapsed-episode",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Episode ",
+              1,
+              ": ",
+              "Holiday Cookie Madness",
+            ],
+            "className": "episode-title",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Episode ",
+            1,
+            ": ",
+            "Holiday Cookie Madness",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                className="favorite-icon"
+                src="/unfavorite.svg"
+              />,
+              "sss",
+            ],
+            "className": "favorite-button",
+            "onClick": [Function],
+            "value": "favorite",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "favorite-icon",
+                "src": "/unfavorite.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "sss",
+          ],
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Add to Watched",
+            "className": "watched-button",
+            "onClick": [Function],
+            "value": "watched",
+          },
+          "ref": null,
+          "rendered": "Add to Watched",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Add to Watch List",
+            "className": "watchlist-button",
+            "onClick": [Function],
+            "value": "watchlist",
+          },
+          "ref": null,
+          "rendered": "Add to Watch List",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "arrow",
+            "onClick": [Function],
+            "src": "/down-arrow.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        null,
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -44,20 +44,29 @@ describe('Episode', () => {
       episode={ mockEpisode }
     />)
   })
+
+  it('should match the snapshot', () => {
+
+    expect(wrapper).toMatchSnapshot()
+  })
   
   it('should return a section and an h3 if the state is false', () => {
     expect(wrapper.find('section').length).toEqual(1)
+    expect(wrapper.find('button').length).toEqual(3)
     expect(wrapper.find('h3').length).toEqual(1)
     expect(wrapper.find('div').length).toEqual(0)
+    expect(wrapper.find('img').length).toEqual(2)
   })
 
   it('should return a section, h3, div, and two p elements if the state is true', () => {
     wrapper.instance().expandEpisode()
 
     expect(wrapper.find('section').length).toEqual(1)
+    expect(wrapper.find('button').length).toEqual(3)
     expect(wrapper.find('h3').length).toEqual(1)
     expect(wrapper.find('div').length).toEqual(1)
     expect(wrapper.find('p').length).toEqual(3)
+    expect(wrapper.find('img').length).toEqual(2)
   })
 
   it('should invoke handleTracked on click of the favorite, watched, and watchlist buttons', () => {
