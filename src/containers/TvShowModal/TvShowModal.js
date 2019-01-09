@@ -35,7 +35,7 @@ export class TvShowModal extends Component {
 
   displaySeasons = () => {
     const seasons = this.props.tvShowEpisodes.map(season => {
-      return <h5 onClick={(e) => this.updateSeason(e)} value={season.season}>{season.season}</h5>
+      return <h5 className={parseInt(this.state.season) === parseInt(season.season) ? 'season-selected' : 'series-season'} onClick={(e) => this.updateSeason(e)} value={season.season}>{season.season}</h5>
     })
     return seasons
   }
@@ -73,12 +73,12 @@ export class TvShowModal extends Component {
                 <div className='seasons'>
                   <h3 className='series-title'>{tvShowInfo.title}</h3>
                   <p className='series-summary'>{tvShowInfo.summary}</p>
-                  <button onClick={() => this.collapseModal()} className='collapse-modal'>X</button>
-                  <div>
-                    <h3>Seasons</h3>
+                  <h3 className='seasons-heading'>Seasons</h3>
+                  <section className='series-seasons'>
                     {seasons}
-                  </div>
+                  </section>
                 </div>
+                <button onClick={() => this.collapseModal()} className='collapse-modal'><img src='/add.svg' className='collapse-modal-icon' /></button>
                 <div className='episodes'>
                   <div className='image-wrapper'>
                     <img src={tvShowInfo.largeImage} className='series-image'/>

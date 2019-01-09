@@ -1,5 +1,47 @@
+.seasons-heading {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.series-seasons {
+  max-height: 293px;
+  border: 2px solid transparent;
+  transition: all .2s; 
+  overflow: auto
+}
+
+.series-seasons:hover {
+  border: 2px solid #AEA7B9;
+  transition: all .2s; 
+}
+
+.series-season {
+  border: 2px solid transparent;
+  background: rgba(166, 218, 211, .5);
+  margin: 0;
+  padding: 10px;
+  transition: all .2s;
+  color: white;
+}
+
+.series-season:hover {
+  background: rgba(166, 218, 211, .9);
+  border: 2px solid #AEA7B9;
+  transition: all .2s;
+}
+
+.season-selected {
+  background: rgba(166, 218, 211, .9);
+  border: 2px solid #AEA7B9;
+  transition: all .2s;
+  margin: 0;
+  padding: 10px;
+}
+
 .expanded-episode {
   background: rgba(174, 167, 185);
+  border: 2px solid transparent;
   border-bottom: 2px solid #442C3E;
 }
 
@@ -12,11 +54,13 @@
 
 .collapsed-episode:hover,
 .expanded-episode:hover {
-  border: 2px solid white;
+  border: 2px solid #d2d1cf;
+  transition: all .5s;
 }
 
 .collapsed-episode:hover {
   background: rgba(174, 167, 185);
+  transition: all .5s;
 }
 
 .episode-title {
@@ -24,20 +68,125 @@
   padding: 5px;
   color: white;
   font-family: 'Open Sans', sans-serif;
+  margin-bottom: 5px;
+}
+
+.episode-info {
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.episode-summary {
+  color: white;
 }
 
 .arrow {
   height: 20px;
   cursor: pointer;
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  transition: all .4s;
 }
 
 .arrow-up {
   transform: rotate(180deg);
   height: 20px;
   cursor: pointer;
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  transition: all .4s;
+}
+
+.episode-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 .watchlist-button,
-.watched-button {
-  width: 170px;
+.watched-button,
+.favorite-button {
+  box-shadow: 0px 1px 0px 0px #1c1b18;
+  background:linear-gradient(to bottom, #442c3e 5%, #947b8e 100%);
+  background-color:#a6d4d3;
+  border-radius:2px;
+  border:2px solid #442c3e;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:14px;
+  font-weight:bold;
+  padding:6px 6px;
+  text-decoration:none;
+  text-shadow:0px 1px 1px #442C3E;
 }
+
+.favorite-button {
+  margin-left: 10px;
+}
+
+.watchlist-button {
+  margin-right: 10px;
+}
+
+.watchlist-button,
+.watched-button,
+.tracked-watchlist,
+.tracked-watched {
+  width: 180px;
+}
+
+.watchlist-button:hover,
+.watched-button:hover,
+.favorite-button:hover {
+  background:linear-gradient(to bottom, #947b8e 5%, #442c3e 100%);
+  background-color:#769190;
+}
+
+.watchlist-button:active,
+.watched-button:active,
+.favorite-button:active {
+  position: relative;
+  top: 1px;
+}
+
+.favorite-button {
+  width: 100px;
+}
+
+.tracked-favorite,
+.tracked-watched,
+.tracked-watchlist {
+  background: #442c3e;
+  border-radius:2px;
+  border:2px solid #442c3e;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:14px;
+  font-weight:bold;
+  padding:6px 6px;
+  text-decoration:none;
+  text-shadow:0px 1px 1px #442C3E;
+}
+
+.tracked-favorite {
+  width: 100px;
+  margin-left: 10px;
+}
+
+.tracked-watchlist {
+  margin-right: 10px;
+}
+
+.tracked-favorite:hover {
+  border: 2px solid white;
+}
+
+

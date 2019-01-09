@@ -32,10 +32,12 @@
   text-shadow: 1px 1px 0px black;
   margin: 20px 5px 0 15px;
 }
+
 .header-btn:hover {
   background: linear-gradient(to bottom, #74707a 5%, #aea7b9 100%);
   background-color: #74707a;
 }
+
 .header-btn:active {
   position: relative;
   top: 1px;

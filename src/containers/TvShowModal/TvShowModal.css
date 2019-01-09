@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  min-height: 110%;
 }
 
 .tv-show-modal {
@@ -30,6 +31,7 @@
   width: 100%;
   height: 100%;
 }
+
 .series-background {
   position: absolute;
   top: 0;
@@ -44,8 +46,9 @@
   padding: 20px 20px;
 }
 
+
 .seasons {
-  width: 450px;
+  width: 500px;
 }
 
 .series-title {
@@ -61,20 +64,12 @@
   overflow: auto;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.2;
+  border: 2px solid transparent;
 }
 
-.watchlist-button,
-.watched-button,
-.favorite-button {
-  background: none;
-  outline: none;
-  border: none;
-}
-
-.watchlist-icon,
-.watched-icon,
-.favorite-icon {
-  height: 20px;
+.series-summary:hover {
+  border: 2px solid #AEA7B9;
+  box-shadow: inset 0 -45px 130px -55px #AEA7B9;
 }
 
 .image-wrapper {
@@ -96,11 +91,39 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 13px;
 }
 
 .series-episodes {
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
   height: 235px;
   text-align: left;
+  border: 2px solid transparent;
+}
+
+.series-episodes:hover {
+  border: 2px solid #a6d4d3;
+  overflow: auto;
+  transition: all .5s;
+}
+
+.collapse-modal {
+  position: relative;
+  top: -36px;
+  left: 572px;
+  z-index: 10000;
+  height: 20px;
+  background: none;
+  border: none;
+}
+
+.collapse-modal-icon {
+  height: 30px;
+  transform: rotate(45deg);
+  opacity: .5;
+}
+
+.collapse-modal-icon:hover {
+  opacity: 1;
 }

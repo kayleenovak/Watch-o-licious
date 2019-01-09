@@ -25,17 +25,19 @@ export class Episode extends Component {
       const arrow = this.state.expanded ? 'arrow-up' : 'arrow'
       const watched = tracked.watched ? 'Remove from Watched' : 'Add to Watched'
       const watchlist = tracked.watchlist ? 'Remove from Watch List' : 'Add to Watch List'
-      const favoriteIcon = tracked.favorites ? '/favorite.svg' : '/unfavorite.svg'
+      const favoriteText = tracked.favorites ? 'Unfavorite' : 'Favorite'
 
       return (
         <section className={episodeStyle}>
           <h3 className='episode-title'>Episode {episode}: {title}</h3>
-          <button className='favorite-button' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='favorite'><img className='favorite-icon' src={favoriteIcon} />Favorite</button>
-          <button className='watched-button' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watched'>{watched}</button>
-          <button className='watchlist-button' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watchlist'>{watchlist}</button>
+          <div className='episode-btn-wrapper'>
+            <button className={tracked.favorites ? 'tracked-favorite' : 'favorite-button'} onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='favorite'>{favoriteText}</button>
+            <button className={tracked.watched ? 'tracked-watched' : 'watched-button'} onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watched'>{watched}</button>
+            <button className={tracked.watchlist ? 'tracked-watchlist' : 'watchlist-button'} onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watchlist'>{watchlist}</button>
           <img src='/down-arrow.svg' className={arrow} onClick={() => this.expandEpisode()}/>
+          </div>
           {
-            !this.state.expanded ? null : <div><p>{summary}</p><p>Runtime: {runtime} minutes</p><p>Original airdate: {airdate}</p></div>
+            !this.state.expanded ? null : <div className='episode-info'><p className='episode-summary'>{summary}</p><p>Runtime: {runtime} minutes</p><p>Original airdate: {airdate}</p></div>
           }
         </section>
       )
