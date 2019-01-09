@@ -4,14 +4,18 @@ import { mockCleanCakeShows } from '../../mockCleanData.js'
 import { fetchTvShowInfo } from '../../thunks/fetchTvShowInfo'
 import { shallow } from 'enzyme'
 
+jest.mock('../../thunks/fetchTvShowInfo')
+
 describe('TvShowCard', () => {
-  it('should return an article with an imaage, h3, 2 p elements', () => {
-    const wrapper = shallow(<TvShowCard title={'Cake Boss'} />)
+  it('should return an article with an image, h3, 2 p elements and to match the snapshot', () => {
+    const mockFetch = jest.fn()
+    const wrapper = shallow(<TvShowCard title={'Cake Boss'} fetchShowInfo={ mockFetch }/>)
 
     expect(wrapper.find('article').length).toEqual(1)
     expect(wrapper.find('h3').length).toEqual(1)
     expect(wrapper.find('img').length).toEqual(1)
     expect(wrapper.find('p').length).toEqual(1)
+    expect(wrapper).toMatchSnapshot()
   })
 
   describe('mapDispatchToProps', () => {
@@ -22,7 +26,7 @@ describe('TvShowCard', () => {
       const mappedProps = mapDispatchToProps(mockDispatch)
       mappedProps.fetchShowInfo(mockId)
 
-      expect(mockDispatch).toHaveBeenCalledWith(expect.any(Function))
+      expect(mockDispatch).toHaveBeenCalledWith(fetchTvShowInfo(mockId))
     })
   })  
 })

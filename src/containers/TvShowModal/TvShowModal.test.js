@@ -45,6 +45,11 @@ describe('TvShowModal', () => {
     emptyWrapper = shallow(<TvShowModal tvShows={mockEmptyShows} fetchShowInfo={mockFetch} removeShow={mockRemoveShow} />)
   })
 
+  it('should match the snapshot', () => {
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('should return an empty div if there are no tvShows in props', () => {
 
     expect(emptyWrapper.find(Loading).length).toEqual(1)
