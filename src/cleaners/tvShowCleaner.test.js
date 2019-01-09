@@ -1,8 +1,11 @@
 import { tvShowCleaner } from './tvShowCleaner'
 
 describe('tvShowCleaner', () => {
-  it('should return a cleaned tvShow', () => {
-    const uncleanTvShows = [
+  let uncleanTvShows
+  let cleanedTvShows
+
+  beforeEach(() => {
+    uncleanTvShows = [
       {
         "id": 1,
         "url": "http://www.tvmaze.com/episodes/1/under-the-dome-1x01-pilot",
@@ -22,12 +25,34 @@ describe('tvShowCleaner', () => {
           "self": {
             "href": "http://api.tvmaze.com/episodes/1"
           }
-      }
-    }]
-    const cleanedTvShows = [
+        }
+      },
+      {
+        "id": 1,
+        "url": "http://www.tvmaze.com/episodes/1/under-the-dome-1x01-pilot",
+        "name": "Pilot",
+        "season": 2,
+        "number": 1,
+        "airdate": "2013-06-24",
+        "airtime": "22:00",
+        "airstamp": "2013-06-25T03:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/1/4388.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/1/4388.jpg"
+        },
+        "summary": null,
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1"
+          }
+        }
+      }]
+    cleanedTvShows = [
       {
         season: 1,
         episodes: [{
+          showId: 20,
           title: 'Pilot',
           "url": "http://www.tvmaze.com/episodes/1/under-the-dome-1x01-pilot",
           episode: 1,
@@ -40,10 +65,30 @@ describe('tvShowCleaner', () => {
             watched: false
           }
         }]
+      },
+      {
+        season: 2,
+        episodes: [{
+          showId: 20,
+          title: 'Pilot',
+          "url": "http://www.tvmaze.com/episodes/1/under-the-dome-1x01-pilot",
+          episode: 1,
+          runtime: 60,
+          summary: undefined,
+          airdate: '2013-06-24',
+          tracked: {
+            favorites: false,
+            watchlist: false,
+            watched: false
+          }
+        }]
       }
     ]
+  })
 
-    const result = tvShowCleaner(uncleanTvShows)
+  it('should return a cleaned tvShow', () => {
+
+    const result = tvShowCleaner(uncleanTvShows, 20)
 
     expect(result).toEqual(cleanedTvShows)
   })
