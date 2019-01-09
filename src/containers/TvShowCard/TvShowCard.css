@@ -8,14 +8,66 @@
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 7px;
   font-size: 17px;
+  color: white;
 }
 
 .tv-card-img {
   box-shadow: 2px 2px 10px black;
+  border-radius: 20px;
+  position: relative;
+  width: 210px;
+}
+
+.tv-card-image {
+  border-radius: 20px;
+}
+
+.tv-card-image:hover {
+  opacity: .5;
+}
+
+.view-series-btn:hover .tv-card-image {
+  opacity: .5;
 }
 
 .tv-card-network {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   margin: 0;
+  color: #aea7b9;
+}
+
+.view-series-btn {
+  display: none;
+  position: absolute;
+  top: 227px;
+  left: 38px;
+}
+
+.view-series-btn {
+  background: linear-gradient(to bottom, #aea7b9 5%, #74707a 100%);
+  background-color: #aea7b9;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px black;
+  margin: 20px 5px 0 15px;
+  outline: none;
+}
+.view-series-btn:hover {
+  background: linear-gradient(to bottom, #74707a 5%, #aea7b9 100%);
+  background-color: #74707a;
+}
+.view-series-btn:active {
+  position: relative;
+  top: 1px;
+}
+
+.tv-card-img:hover .view-series-btn {
+  display: inline-block;
 }

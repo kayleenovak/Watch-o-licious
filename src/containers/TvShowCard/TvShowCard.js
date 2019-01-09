@@ -10,7 +10,9 @@ export class TvShowCard extends Component {
     return (
       <article className='tv-show-card'>
         <Link to={`/tvshow/${this.props.id}`} key={this.props.id}>
-          <img src={image} className='tv-card-img'/>
+          <div className='tv-card-img'>
+            <img src={image} className='tv-card-image'/>
+          </div>
         </Link>
         <h3 className='tv-card-title'>{title}</h3>
         <p className='tv-card-network'>Network: {network}</p>
