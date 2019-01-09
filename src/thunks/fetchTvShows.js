@@ -16,7 +16,6 @@ export const fetchTvShows = () => {
       const cleanedTvShows = await tvShowsCleaner(cakeShows, bakeShows, bakingShows)
       dispatch(dataFetchSuccess(cleanedTvShows))
     } catch (error) {
-      console.log(error)
       dispatch(hasErrored(true))
     }
   }
