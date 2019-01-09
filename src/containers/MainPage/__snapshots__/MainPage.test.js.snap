@@ -64,27 +64,23 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <FeaturedTvShow
-          id={27786}
-          image="http://static.tvmaze.com/uploads/images/medium_portrait/110/275113.jpg"
-          largeImage="http://static.tvmaze.com/uploads/images/original_untouched/110/275113.jpg"
-          network="Channel 4"
-          premiered="2017-05-01"
+          id={921}
+          image="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
+          largeImage="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+          network="TLC"
+          premiered="2009-05-25"
           rating={null}
           runtime={30}
           schedule={
             Object {
               "days": Array [
                 "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
               ],
-              "time": "17:30",
+              "time": "21:00",
             }
           }
-          summary="Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth."
-          title="Extreme Cake Makers"
+          summary="Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses."
+          title="Cake Boss"
         />,
         <withRouter(Connect(CardContainer)) />,
       ],
@@ -97,25 +93,21 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "id": 27786,
-          "image": "http://static.tvmaze.com/uploads/images/medium_portrait/110/275113.jpg",
-          "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/110/275113.jpg",
-          "network": "Channel 4",
-          "premiered": "2017-05-01",
+          "id": 921,
+          "image": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg",
+          "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg",
+          "network": "TLC",
+          "premiered": "2009-05-25",
           "rating": null,
           "runtime": 30,
           "schedule": Object {
             "days": Array [
               "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
             ],
-            "time": "17:30",
+            "time": "21:00",
           },
-          "summary": "Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth.",
-          "title": "Extreme Cake Makers",
+          "summary": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
+          "title": "Cake Boss",
         },
         "ref": null,
         "rendered": null,
@@ -141,27 +133,23 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <FeaturedTvShow
-            id={27786}
-            image="http://static.tvmaze.com/uploads/images/medium_portrait/110/275113.jpg"
-            largeImage="http://static.tvmaze.com/uploads/images/original_untouched/110/275113.jpg"
-            network="Channel 4"
-            premiered="2017-05-01"
+            id={921}
+            image="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
+            largeImage="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+            network="TLC"
+            premiered="2009-05-25"
             rating={null}
             runtime={30}
             schedule={
               Object {
                 "days": Array [
                   "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
                 ],
-                "time": "17:30",
+                "time": "21:00",
               }
             }
-            summary="Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth."
-            title="Extreme Cake Makers"
+            summary="Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses."
+            title="Cake Boss"
           />,
           <withRouter(Connect(CardContainer)) />,
         ],
@@ -174,25 +162,21 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "id": 27786,
-            "image": "http://static.tvmaze.com/uploads/images/medium_portrait/110/275113.jpg",
-            "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/110/275113.jpg",
-            "network": "Channel 4",
-            "premiered": "2017-05-01",
+            "id": 921,
+            "image": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg",
+            "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg",
+            "network": "TLC",
+            "premiered": "2009-05-25",
             "rating": null,
             "runtime": 30,
             "schedule": Object {
               "days": Array [
                 "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
               ],
-              "time": "17:30",
+              "time": "21:00",
             },
-            "summary": "Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth.",
-            "title": "Extreme Cake Makers",
+            "summary": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
+            "title": "Cake Boss",
           },
           "ref": null,
           "rendered": null,

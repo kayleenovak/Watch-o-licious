@@ -4,7 +4,7 @@ import { TvShowModal, mapStateToProps, mapDispatchToProps } from './TvShowModal.
 import { fetchTvShowInfo } from '../../thunks/fetchTvShowInfo.js'
 import { removeShow } from '../../actions/index.js'
 import { mockCleanCakeShows } from '../../mockCleanData.js'
-import Episode from '../../components/Episode/Episode.js'
+import Episode from '../Episode/Episode.js'
 import { Loading } from '../../components/Loading/Loading.js'
 
 jest.mock('../../thunks/fetchTvShowInfo.js')

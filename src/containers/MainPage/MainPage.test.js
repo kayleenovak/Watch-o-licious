@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { MainPage, mapStateToProps } from './MainPage.js'
-import { FeaturedTvShow } from '../FeaturedTvShow/FeaturedTvShow.js'
+import { FeaturedTvShow } from '../../components/FeaturedTvShow/FeaturedTvShow.js'
 import CardContainer from '../CardContainer/CardContainer.js'
 import { mockCleanCakeShows } from '../../mockCleanData.js'
 import { Loading } from '../../components/Loading/Loading.js'

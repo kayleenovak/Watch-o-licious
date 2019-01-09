@@ -3,7 +3,7 @@ import { fetchTvShowInfo } from '../../thunks/fetchTvShowInfo.js'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { removeShow } from '../../actions/index.js'
-import Episode from '../../components/Episode/Episode.js'
+import Episode from '../Episode/Episode.js'
 import './TvShowModal.css'
 import { Loading } from '../../components/Loading/Loading.js'
 const uuidv1 = require('uuid/v1');
