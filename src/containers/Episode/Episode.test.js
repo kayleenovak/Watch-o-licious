@@ -1,6 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { Episode, mapDispatchToProps, mapStateToProps } from './Episode.js'
+import { handleTrackedEpisode } from '../../helpers/handleToggleTracked'
+
+jest.mock('../../helpers/handleToggleTracked')
 
 describe('Episode', () => {
   let wrapper
@@ -11,7 +14,7 @@ describe('Episode', () => {
   beforeEach(() => {
     mockHandleTracked = jest.fn()
     mockEpisode = {
-      showId: '6407',
+      showId: 6407,
       url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
       title: 'Holiday Cookie Madness',
       episode: 1,
@@ -25,7 +28,7 @@ describe('Episode', () => {
       }
     }
     mockTrackedShows = [{
-      showId: '6407',
+      showId: 6407,
       url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
       title: 'Holiday Cookie Madness',
       episode: 1,
@@ -40,7 +43,7 @@ describe('Episode', () => {
     }]
     wrapper = shallow(<Episode 
       handleTracked={ mockHandleTracked }
-      tracked={ mockTrackedShows }
+      trackedEpisodes={ mockTrackedShows }
       episode={ mockEpisode }
     />)
   })
@@ -50,23 +53,23 @@ describe('Episode', () => {
     expect(wrapper).toMatchSnapshot()
   })
   
-  it('should return a section and an h3 if the state is false', () => {
+  it('should return a section, h3, button(3), div(1), img(1) if the state is false', () => {
     expect(wrapper.find('section').length).toEqual(1)
     expect(wrapper.find('button').length).toEqual(3)
     expect(wrapper.find('h3').length).toEqual(1)
-    expect(wrapper.find('div').length).toEqual(0)
-    expect(wrapper.find('img').length).toEqual(2)
+    expect(wrapper.find('div').length).toEqual(1)
+    expect(wrapper.find('img').length).toEqual(1)
   })
 
-  it('should return a section, h3, div, and two p elements if the state is true', () => {
+  it('should return a section, h3, div(2), img(1) and two p elements if the state is true', () => {
     wrapper.instance().expandEpisode()
 
     expect(wrapper.find('section').length).toEqual(1)
     expect(wrapper.find('button').length).toEqual(3)
     expect(wrapper.find('h3').length).toEqual(1)
-    expect(wrapper.find('div').length).toEqual(1)
+    expect(wrapper.find('div').length).toEqual(2)
     expect(wrapper.find('p').length).toEqual(3)
-    expect(wrapper.find('img').length).toEqual(2)
+    expect(wrapper.find('img').length).toEqual(1)
   })
 
   it('should invoke handleTracked on click of the favorite, watched, and watchlist buttons', () => {
@@ -114,7 +117,7 @@ describe('Episode', () => {
     beforeEach(() => {
       mockHandleTracked = jest.fn()
       const mockEpisode = {
-        showId: '6407',
+        showId: 6407,
         url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
         title: 'Holiday Cookie Madness',
         episode: 1,
@@ -128,7 +131,7 @@ describe('Episode', () => {
         }
       }
       mockTrueEpisode = {
-        showId: '6407',
+        showId: 6407,
         url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
         title: 'Holiday Cookie Madness',
         episode: 1,
@@ -142,7 +145,7 @@ describe('Episode', () => {
         }
       }
       const mockTrackedShows = [{
-        showId: '6407',
+        showId: 6407,
         url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
         title: 'Holiday Cookie Madness',
         episode: 1,
@@ -156,7 +159,7 @@ describe('Episode', () => {
         }
       }]
       mockTrueTrackedShows = [{
-        showId: '6407',
+        showId: 6407,
         url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
         title: 'Holiday Cookie Madness',
         episode: 1,
@@ -176,7 +179,7 @@ describe('Episode', () => {
       />)
     })
     it('expandEipsodshould toggle the state of expanded', () => {
-      const wrapper = shallow(<Episode />)
+      const wrapper = shallow(<Episode handleTracked = { mockHandleTracked }/>)
 
       wrapper.instance().expandEpisode()
 
@@ -204,7 +207,7 @@ describe('Episode', () => {
     it('should render remove from watched in the watched button if tracked.watched is true', () => {
       const trueWrapper = shallow(<Episode episode={ mockTrueEpisode } tracked={ mockTrueTrackedShows } handleTracked={ mockHandleTracked }/>)
       
-      expect(trueWrapper.find('.watched-button').text()).toEqual('Remove from Watched')
+      expect(trueWrapper.find('.tracked-watched').text()).toEqual('Remove from Watched')
     })
 
     it('should render add to watch list in the watch list button if tracked.watchlist is false', () => {
@@ -215,7 +218,7 @@ describe('Episode', () => {
     it('should render remove from watched in the watched button if tracked.watched is true', () => {
       const trueWrapper = shallow(<Episode episode={ mockTrueEpisode } tracked={ mockTrueTrackedShows } handleTracked={ mockHandleTracked }/>)
       
-      expect(trueWrapper.find('.watchlist-button').text()).toEqual('Remove from Watch List')
+      expect(trueWrapper.find('.tracked-watchlist').text()).toEqual('Remove from Watch List')
     })
 
 
@@ -229,7 +232,7 @@ describe('Episode', () => {
         tracked: []
       }
       const expected = {
-        tracked: []
+        trackedEpisodes: []
       }
 
       const result = mapStateToProps(mockState)
@@ -247,7 +250,7 @@ describe('Episode', () => {
         }
       }
       const mockEpisode = {
-        showId: '6407',
+        showId: 6407,
         url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
         title: 'Holiday Cookie Madness',
         episode: 1,
@@ -261,7 +264,7 @@ describe('Episode', () => {
         }
       }
       const mockTrackedShows = [{
-        showId: '6407',
+        showId: 6407,
         url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
         title: 'Holiday Cookie Madness',
         episode: 1,
@@ -278,7 +281,7 @@ describe('Episode', () => {
 
       mappedProps.handleTracked(mockEvent, mockEpisode, mockTrackedShows)
 
-      expect(mockDispatch).toHaveBeenCalledWith(expect.any(Function))
+      expect(mockDispatch).toHaveBeenCalledWith(handleTrackedEpisode(mockEvent, mockEpisode, mockTrackedShows))
     })
   })
 })

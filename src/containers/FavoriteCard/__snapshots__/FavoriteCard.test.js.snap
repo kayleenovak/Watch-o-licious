@@ -60,38 +60,72 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <div
+          className="fav-card-background"
+        />,
         <img
+          alt="series"
+          className="fav-card-image"
           src="www.thisimgage.com"
         />,
-        <h3>
-          Episode: 
-          Cake Boss
-        </h3>,
-        <h5>
-          Cake Boss
-        </h5>,
-        <button
-          className="favorite-btn"
-          onClick={[Function]}
-          value="favorite"
+        <article
+          className="fav-card-info"
         >
-          Favorite
-        </button>,
-        <button
-          className="watch-list-btn"
-          onClick={[Function]}
-          value="watchlist"
-        >
-          Watch List
-        </button>,
-        <button
-          className="watched-btn"
-          onClick={[Function]}
-          value="watched"
-        >
-          Watched
-        </button>,
+          <h3
+            className="episode-information"
+          >
+            Episode: 
+            Cake Boss
+          </h3>
+          <h5
+            className="episode-series"
+          >
+            Cake Boss
+          </h5>
+          <Link
+            replace={false}
+            to="/tvshow/921"
+          >
+            <button
+              className="view-series-btn"
+            >
+              View Series
+            </button>
+          </Link>
+          <p
+            className="episode-runtime"
+          >
+            Runtime: 
+          </p>
+          <p
+            className="episode-airdate"
+          >
+            Air date: 
+          </p>
+          <button
+            className="fav-card-btns favorite-btn"
+            onClick={[Function]}
+            value="favorite"
+          >
+            Unfavorite
+          </button>
+          <button
+            className="fav-card-btns watch-list-btn"
+            onClick={[Function]}
+            value="watchlist"
+          >
+            Remove from Watch List
+          </button>
+          <button
+            className="fav-card-btns watched-btn"
+            onClick={[Function]}
+            value="watched"
+          >
+            Remove from Watched
+          </button>
+        </article>,
       ],
+      "className": "fav-card",
     },
     "ref": null,
     "rendered": Array [
@@ -100,6 +134,19 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "fav-card-background",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "series",
+          "className": "fav-card-image",
           "src": "www.thisimgage.com",
         },
         "ref": null,
@@ -112,69 +159,201 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Episode: ",
-            "Cake Boss",
+            <h3
+              className="episode-information"
+            >
+              Episode: 
+              Cake Boss
+            </h3>,
+            <h5
+              className="episode-series"
+            >
+              Cake Boss
+            </h5>,
+            <Link
+              replace={false}
+              to="/tvshow/921"
+            >
+              <button
+                className="view-series-btn"
+              >
+                View Series
+              </button>
+            </Link>,
+            <p
+              className="episode-runtime"
+            >
+              Runtime: 
+            </p>,
+            <p
+              className="episode-airdate"
+            >
+              Air date: 
+            </p>,
+            <button
+              className="fav-card-btns favorite-btn"
+              onClick={[Function]}
+              value="favorite"
+            >
+              Unfavorite
+            </button>,
+            <button
+              className="fav-card-btns watch-list-btn"
+              onClick={[Function]}
+              value="watchlist"
+            >
+              Remove from Watch List
+            </button>,
+            <button
+              className="fav-card-btns watched-btn"
+              onClick={[Function]}
+              value="watched"
+            >
+              Remove from Watched
+            </button>,
           ],
+          "className": "fav-card-info",
         },
         "ref": null,
         "rendered": Array [
-          "Episode: ",
-          "Cake Boss",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Episode: ",
+                "Cake Boss",
+              ],
+              "className": "episode-information",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Episode: ",
+              "Cake Boss",
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Cake Boss",
+              "className": "episode-series",
+            },
+            "ref": null,
+            "rendered": "Cake Boss",
+            "type": "h5",
+          },
+          Object {
+            "instance": null,
+            "key": "921",
+            "nodeType": "class",
+            "props": Object {
+              "children": <button
+                className="view-series-btn"
+              >
+                View Series
+              </button>,
+              "replace": false,
+              "to": "/tvshow/921",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "View Series",
+                "className": "view-series-btn",
+              },
+              "ref": null,
+              "rendered": "View Series",
+              "type": "button",
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Runtime: ",
+                undefined,
+              ],
+              "className": "episode-runtime",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Runtime: ",
+              undefined,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Air date: ",
+                undefined,
+              ],
+              "className": "episode-airdate",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Air date: ",
+              undefined,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Unfavorite",
+              "className": "fav-card-btns favorite-btn",
+              "onClick": [Function],
+              "value": "favorite",
+            },
+            "ref": null,
+            "rendered": "Unfavorite",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Remove from Watch List",
+              "className": "fav-card-btns watch-list-btn",
+              "onClick": [Function],
+              "value": "watchlist",
+            },
+            "ref": null,
+            "rendered": "Remove from Watch List",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Remove from Watched",
+              "className": "fav-card-btns watched-btn",
+              "onClick": [Function],
+              "value": "watched",
+            },
+            "ref": null,
+            "rendered": "Remove from Watched",
+            "type": "button",
+          },
         ],
-        "type": "h3",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Cake Boss",
-        },
-        "ref": null,
-        "rendered": "Cake Boss",
-        "type": "h5",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Favorite",
-          "className": "favorite-btn",
-          "onClick": [Function],
-          "value": "favorite",
-        },
-        "ref": null,
-        "rendered": "Favorite",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Watch List",
-          "className": "watch-list-btn",
-          "onClick": [Function],
-          "value": "watchlist",
-        },
-        "ref": null,
-        "rendered": "Watch List",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Watched",
-          "className": "watched-btn",
-          "onClick": [Function],
-          "value": "watched",
-        },
-        "ref": null,
-        "rendered": "Watched",
-        "type": "button",
+        "type": "article",
       },
     ],
     "type": "section",
@@ -186,38 +365,72 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <div
+            className="fav-card-background"
+          />,
           <img
+            alt="series"
+            className="fav-card-image"
             src="www.thisimgage.com"
           />,
-          <h3>
-            Episode: 
-            Cake Boss
-          </h3>,
-          <h5>
-            Cake Boss
-          </h5>,
-          <button
-            className="favorite-btn"
-            onClick={[Function]}
-            value="favorite"
+          <article
+            className="fav-card-info"
           >
-            Favorite
-          </button>,
-          <button
-            className="watch-list-btn"
-            onClick={[Function]}
-            value="watchlist"
-          >
-            Watch List
-          </button>,
-          <button
-            className="watched-btn"
-            onClick={[Function]}
-            value="watched"
-          >
-            Watched
-          </button>,
+            <h3
+              className="episode-information"
+            >
+              Episode: 
+              Cake Boss
+            </h3>
+            <h5
+              className="episode-series"
+            >
+              Cake Boss
+            </h5>
+            <Link
+              replace={false}
+              to="/tvshow/921"
+            >
+              <button
+                className="view-series-btn"
+              >
+                View Series
+              </button>
+            </Link>
+            <p
+              className="episode-runtime"
+            >
+              Runtime: 
+            </p>
+            <p
+              className="episode-airdate"
+            >
+              Air date: 
+            </p>
+            <button
+              className="fav-card-btns favorite-btn"
+              onClick={[Function]}
+              value="favorite"
+            >
+              Unfavorite
+            </button>
+            <button
+              className="fav-card-btns watch-list-btn"
+              onClick={[Function]}
+              value="watchlist"
+            >
+              Remove from Watch List
+            </button>
+            <button
+              className="fav-card-btns watched-btn"
+              onClick={[Function]}
+              value="watched"
+            >
+              Remove from Watched
+            </button>
+          </article>,
         ],
+        "className": "fav-card",
       },
       "ref": null,
       "rendered": Array [
@@ -226,6 +439,19 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "fav-card-background",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "series",
+            "className": "fav-card-image",
             "src": "www.thisimgage.com",
           },
           "ref": null,
@@ -238,69 +464,201 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Episode: ",
-              "Cake Boss",
+              <h3
+                className="episode-information"
+              >
+                Episode: 
+                Cake Boss
+              </h3>,
+              <h5
+                className="episode-series"
+              >
+                Cake Boss
+              </h5>,
+              <Link
+                replace={false}
+                to="/tvshow/921"
+              >
+                <button
+                  className="view-series-btn"
+                >
+                  View Series
+                </button>
+              </Link>,
+              <p
+                className="episode-runtime"
+              >
+                Runtime: 
+              </p>,
+              <p
+                className="episode-airdate"
+              >
+                Air date: 
+              </p>,
+              <button
+                className="fav-card-btns favorite-btn"
+                onClick={[Function]}
+                value="favorite"
+              >
+                Unfavorite
+              </button>,
+              <button
+                className="fav-card-btns watch-list-btn"
+                onClick={[Function]}
+                value="watchlist"
+              >
+                Remove from Watch List
+              </button>,
+              <button
+                className="fav-card-btns watched-btn"
+                onClick={[Function]}
+                value="watched"
+              >
+                Remove from Watched
+              </button>,
             ],
+            "className": "fav-card-info",
           },
           "ref": null,
           "rendered": Array [
-            "Episode: ",
-            "Cake Boss",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Episode: ",
+                  "Cake Boss",
+                ],
+                "className": "episode-information",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Episode: ",
+                "Cake Boss",
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Cake Boss",
+                "className": "episode-series",
+              },
+              "ref": null,
+              "rendered": "Cake Boss",
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": "921",
+              "nodeType": "class",
+              "props": Object {
+                "children": <button
+                  className="view-series-btn"
+                >
+                  View Series
+                </button>,
+                "replace": false,
+                "to": "/tvshow/921",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "View Series",
+                  "className": "view-series-btn",
+                },
+                "ref": null,
+                "rendered": "View Series",
+                "type": "button",
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Runtime: ",
+                  undefined,
+                ],
+                "className": "episode-runtime",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Runtime: ",
+                undefined,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Air date: ",
+                  undefined,
+                ],
+                "className": "episode-airdate",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Air date: ",
+                undefined,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Unfavorite",
+                "className": "fav-card-btns favorite-btn",
+                "onClick": [Function],
+                "value": "favorite",
+              },
+              "ref": null,
+              "rendered": "Unfavorite",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Remove from Watch List",
+                "className": "fav-card-btns watch-list-btn",
+                "onClick": [Function],
+                "value": "watchlist",
+              },
+              "ref": null,
+              "rendered": "Remove from Watch List",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Remove from Watched",
+                "className": "fav-card-btns watched-btn",
+                "onClick": [Function],
+                "value": "watched",
+              },
+              "ref": null,
+              "rendered": "Remove from Watched",
+              "type": "button",
+            },
           ],
-          "type": "h3",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Cake Boss",
-          },
-          "ref": null,
-          "rendered": "Cake Boss",
-          "type": "h5",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Favorite",
-            "className": "favorite-btn",
-            "onClick": [Function],
-            "value": "favorite",
-          },
-          "ref": null,
-          "rendered": "Favorite",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Watch List",
-            "className": "watch-list-btn",
-            "onClick": [Function],
-            "value": "watchlist",
-          },
-          "ref": null,
-          "rendered": "Watch List",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Watched",
-            "className": "watched-btn",
-            "onClick": [Function],
-            "value": "watched",
-          },
-          "ref": null,
-          "rendered": "Watched",
-          "type": "button",
+          "type": "article",
         },
       ],
       "type": "section",

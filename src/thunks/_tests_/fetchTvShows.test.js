@@ -26,7 +26,7 @@ describe('fetchTvShows', () => {
   })
 
   it('should call fetchCall with the correct params', async () => {
-    fetchCall.fetchCall = jest.fn()
+    fetchCall.fetchCall = jest.fn(() => [])
     await thunk(mockDispatch)
 
     expect(fetchCall.fetchCall).toHaveBeenCalledWith(mockCakeUrl)

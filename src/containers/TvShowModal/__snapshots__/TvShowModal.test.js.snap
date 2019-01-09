@@ -1,0 +1,1544 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TvShowModal should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TvShowModal
+    fetchShowInfo={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            921,
+            undefined,
+          ],
+          Array [
+            undefined,
+            undefined,
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    history={Array []}
+    id={921}
+    removeShow={[MockFunction]}
+    tvShowEpisodes={
+      Array [
+        Object {
+          "episodes": Array [
+            Object {
+              "airdate": "2018-12-12",
+              "episode": 1,
+              "favorite": Object {
+                "favorite": false,
+                "watched": false,
+                "watchlist": false,
+              },
+              "runtime": 30,
+              "summary": "A show about cakes",
+              "title": "Cakes",
+            },
+          ],
+          "season": 1,
+        },
+      ]
+    }
+    tvShows={
+      Array [
+        Object {
+          "id": 921,
+          "image": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg",
+          "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg",
+          "network": "TLC",
+          "premiered": "2009-05-25",
+          "rating": null,
+          "runtime": 30,
+          "schedule": Object {
+            "days": Array [
+              "Monday",
+            ],
+            "time": "21:00",
+          },
+          "summary": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
+          "title": "Cake Boss",
+        },
+        Object {
+          "id": 27786,
+          "image": "http://static.tvmaze.com/uploads/images/medium_portrait/110/275113.jpg",
+          "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/110/275113.jpg",
+          "network": "Channel 4",
+          "premiered": "2017-05-01",
+          "rating": null,
+          "runtime": 30,
+          "schedule": Object {
+            "days": Array [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+            ],
+            "time": "17:30",
+          },
+          "summary": "Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth.",
+          "title": "Extreme Cake Makers",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <section
+        className="tv-show-modal"
+      >
+        <div
+          className="modal"
+        >
+          <div
+            className="image-container"
+          >
+            <img
+              alt="card background"
+              className="series-background"
+              src="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
+            />
+            <div
+              className="overlay"
+            />
+          </div>
+          <article
+            className="series-info"
+          >
+            <div
+              className="seasons"
+            >
+              <h3
+                className="series-title"
+              >
+                Cake Boss
+              </h3>
+              <p
+                className="series-summary"
+              >
+                Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.
+              </p>
+              <h3
+                className="seasons-heading"
+              >
+                Seasons
+              </h3>
+              <section
+                className="series-seasons"
+              >
+                <h5
+                  className="season-selected"
+                  onClick={[Function]}
+                  value={1}
+                >
+                  1
+                </h5>
+              </section>
+            </div>
+            <button
+              className="collapse-modal"
+              onClick={[Function]}
+            >
+              <img
+                alt="arrow"
+                className="collapse-modal-icon"
+                src="/add.svg"
+              />
+            </button>
+            <div
+              className="episodes"
+            >
+              <div
+                className="image-wrapper"
+              >
+                <img
+                  alt="series poster"
+                  className="series-image"
+                  src="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+                />
+              </div>
+              <div
+                className="series-episodes"
+              >
+                <Connect(Episode)
+                  episode={
+                    Object {
+                      "airdate": "2018-12-12",
+                      "episode": 1,
+                      "favorite": Object {
+                        "favorite": false,
+                        "watched": false,
+                        "watchlist": false,
+                      },
+                      "runtime": 30,
+                      "summary": "A show about cakes",
+                      "title": "Cakes",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>,
+      "className": "tv-show-modal-container",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="modal"
+        >
+          <div
+            className="image-container"
+          >
+            <img
+              alt="card background"
+              className="series-background"
+              src="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
+            />
+            <div
+              className="overlay"
+            />
+          </div>
+          <article
+            className="series-info"
+          >
+            <div
+              className="seasons"
+            >
+              <h3
+                className="series-title"
+              >
+                Cake Boss
+              </h3>
+              <p
+                className="series-summary"
+              >
+                Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.
+              </p>
+              <h3
+                className="seasons-heading"
+              >
+                Seasons
+              </h3>
+              <section
+                className="series-seasons"
+              >
+                <h5
+                  className="season-selected"
+                  onClick={[Function]}
+                  value={1}
+                >
+                  1
+                </h5>
+              </section>
+            </div>
+            <button
+              className="collapse-modal"
+              onClick={[Function]}
+            >
+              <img
+                alt="arrow"
+                className="collapse-modal-icon"
+                src="/add.svg"
+              />
+            </button>
+            <div
+              className="episodes"
+            >
+              <div
+                className="image-wrapper"
+              >
+                <img
+                  alt="series poster"
+                  className="series-image"
+                  src="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+                />
+              </div>
+              <div
+                className="series-episodes"
+              >
+                <Connect(Episode)
+                  episode={
+                    Object {
+                      "airdate": "2018-12-12",
+                      "episode": 1,
+                      "favorite": Object {
+                        "favorite": false,
+                        "watched": false,
+                        "watchlist": false,
+                      },
+                      "runtime": 30,
+                      "summary": "A show about cakes",
+                      "title": "Cakes",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </article>
+        </div>,
+        "className": "tv-show-modal",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="image-container"
+            >
+              <img
+                alt="card background"
+                className="series-background"
+                src="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
+              />
+              <div
+                className="overlay"
+              />
+            </div>,
+            <article
+              className="series-info"
+            >
+              <div
+                className="seasons"
+              >
+                <h3
+                  className="series-title"
+                >
+                  Cake Boss
+                </h3>
+                <p
+                  className="series-summary"
+                >
+                  Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.
+                </p>
+                <h3
+                  className="seasons-heading"
+                >
+                  Seasons
+                </h3>
+                <section
+                  className="series-seasons"
+                >
+                  <h5
+                    className="season-selected"
+                    onClick={[Function]}
+                    value={1}
+                  >
+                    1
+                  </h5>
+                </section>
+              </div>
+              <button
+                className="collapse-modal"
+                onClick={[Function]}
+              >
+                <img
+                  alt="arrow"
+                  className="collapse-modal-icon"
+                  src="/add.svg"
+                />
+              </button>
+              <div
+                className="episodes"
+              >
+                <div
+                  className="image-wrapper"
+                >
+                  <img
+                    alt="series poster"
+                    className="series-image"
+                    src="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+                  />
+                </div>
+                <div
+                  className="series-episodes"
+                >
+                  <Connect(Episode)
+                    episode={
+                      Object {
+                        "airdate": "2018-12-12",
+                        "episode": 1,
+                        "favorite": Object {
+                          "favorite": false,
+                          "watched": false,
+                          "watchlist": false,
+                        },
+                        "runtime": 30,
+                        "summary": "A show about cakes",
+                        "title": "Cakes",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </article>,
+          ],
+          "className": "modal",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt="card background"
+                  className="series-background"
+                  src="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
+                />,
+                <div
+                  className="overlay"
+                />,
+              ],
+              "className": "image-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "card background",
+                  "className": "series-background",
+                  "src": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "overlay",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="seasons"
+                >
+                  <h3
+                    className="series-title"
+                  >
+                    Cake Boss
+                  </h3>
+                  <p
+                    className="series-summary"
+                  >
+                    Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.
+                  </p>
+                  <h3
+                    className="seasons-heading"
+                  >
+                    Seasons
+                  </h3>
+                  <section
+                    className="series-seasons"
+                  >
+                    <h5
+                      className="season-selected"
+                      onClick={[Function]}
+                      value={1}
+                    >
+                      1
+                    </h5>
+                  </section>
+                </div>,
+                <button
+                  className="collapse-modal"
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="arrow"
+                    className="collapse-modal-icon"
+                    src="/add.svg"
+                  />
+                </button>,
+                <div
+                  className="episodes"
+                >
+                  <div
+                    className="image-wrapper"
+                  >
+                    <img
+                      alt="series poster"
+                      className="series-image"
+                      src="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+                    />
+                  </div>
+                  <div
+                    className="series-episodes"
+                  >
+                    <Connect(Episode)
+                      episode={
+                        Object {
+                          "airdate": "2018-12-12",
+                          "episode": 1,
+                          "favorite": Object {
+                            "favorite": false,
+                            "watched": false,
+                            "watchlist": false,
+                          },
+                          "runtime": 30,
+                          "summary": "A show about cakes",
+                          "title": "Cakes",
+                        }
+                      }
+                    />
+                  </div>
+                </div>,
+              ],
+              "className": "series-info",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <h3
+                      className="series-title"
+                    >
+                      Cake Boss
+                    </h3>,
+                    <p
+                      className="series-summary"
+                    >
+                      Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.
+                    </p>,
+                    <h3
+                      className="seasons-heading"
+                    >
+                      Seasons
+                    </h3>,
+                    <section
+                      className="series-seasons"
+                    >
+                      <h5
+                        className="season-selected"
+                        onClick={[Function]}
+                        value={1}
+                      >
+                        1
+                      </h5>
+                    </section>,
+                  ],
+                  "className": "seasons",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Cake Boss",
+                      "className": "series-title",
+                    },
+                    "ref": null,
+                    "rendered": "Cake Boss",
+                    "type": "h3",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
+                      "className": "series-summary",
+                    },
+                    "ref": null,
+                    "rendered": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Seasons",
+                      "className": "seasons-heading",
+                    },
+                    "ref": null,
+                    "rendered": "Seasons",
+                    "type": "h3",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h5
+                          className="season-selected"
+                          onClick={[Function]}
+                          value={1}
+                        >
+                          1
+                        </h5>,
+                      ],
+                      "className": "series-seasons",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": "e5b23010-13fb-11e9-89f7-d3620f9a50d9",
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": 1,
+                          "className": "season-selected",
+                          "onClick": [Function],
+                          "value": 1,
+                        },
+                        "ref": null,
+                        "rendered": 1,
+                        "type": "h5",
+                      },
+                    ],
+                    "type": "section",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <img
+                    alt="arrow"
+                    className="collapse-modal-icon"
+                    src="/add.svg"
+                  />,
+                  "className": "collapse-modal",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "arrow",
+                    "className": "collapse-modal-icon",
+                    "src": "/add.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="image-wrapper"
+                    >
+                      <img
+                        alt="series poster"
+                        className="series-image"
+                        src="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+                      />
+                    </div>,
+                    <div
+                      className="series-episodes"
+                    >
+                      <Connect(Episode)
+                        episode={
+                          Object {
+                            "airdate": "2018-12-12",
+                            "episode": 1,
+                            "favorite": Object {
+                              "favorite": false,
+                              "watched": false,
+                              "watchlist": false,
+                            },
+                            "runtime": 30,
+                            "summary": "A show about cakes",
+                            "title": "Cakes",
+                          }
+                        }
+                      />
+                    </div>,
+                  ],
+                  "className": "episodes",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <img
+                        alt="series poster"
+                        className="series-image"
+                        src="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+                      />,
+                      "className": "image-wrapper",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "series poster",
+                        "className": "series-image",
+                        "src": "http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <Connect(Episode)
+                          episode={
+                            Object {
+                              "airdate": "2018-12-12",
+                              "episode": 1,
+                              "favorite": Object {
+                                "favorite": false,
+                                "watched": false,
+                                "watchlist": false,
+                              },
+                              "runtime": 30,
+                              "summary": "A show about cakes",
+                              "title": "Cakes",
+                            }
+                          }
+                        />,
+                      ],
+                      "className": "series-episodes",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": "e5b25720-13fb-11e9-89f7-d3620f9a50d9",
+                        "nodeType": "class",
+                        "props": Object {
+                          "episode": Object {
+                            "airdate": "2018-12-12",
+                            "episode": 1,
+                            "favorite": Object {
+                              "favorite": false,
+                              "watched": false,
+                              "watchlist": false,
+                            },
+                            "runtime": 30,
+                            "summary": "A show about cakes",
+                            "title": "Cakes",
+                          },
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "article",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "section",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <section
+          className="tv-show-modal"
+        >
+          <div
+            className="modal"
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="card background"
+                className="series-background"
+                src="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
+              />
+              <div
+                className="overlay"
+              />
+            </div>
+            <article
+              className="series-info"
+            >
+              <div
+                className="seasons"
+              >
+                <h3
+                  className="series-title"
+                >
+                  Cake Boss
+                </h3>
+                <p
+                  className="series-summary"
+                >
+                  Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.
+                </p>
+                <h3
+                  className="seasons-heading"
+                >
+                  Seasons
+                </h3>
+                <section
+                  className="series-seasons"
+                >
+                  <h5
+                    className="season-selected"
+                    onClick={[Function]}
+                    value={1}
+                  >
+                    1
+                  </h5>
+                </section>
+              </div>
+              <button
+                className="collapse-modal"
+                onClick={[Function]}
+              >
+                <img
+                  alt="arrow"
+                  className="collapse-modal-icon"
+                  src="/add.svg"
+                />
+              </button>
+              <div
+                className="episodes"
+              >
+                <div
+                  className="image-wrapper"
+                >
+                  <img
+                    alt="series poster"
+                    className="series-image"
+                    src="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+                  />
+                </div>
+                <div
+                  className="series-episodes"
+                >
+                  <Connect(Episode)
+                    episode={
+                      Object {
+                        "airdate": "2018-12-12",
+                        "episode": 1,
+                        "favorite": Object {
+                          "favorite": false,
+                          "watched": false,
+                          "watchlist": false,
+                        },
+                        "runtime": 30,
+                        "summary": "A show about cakes",
+                        "title": "Cakes",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>,
+        "className": "tv-show-modal-container",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="modal"
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="card background"
+                className="series-background"
+                src="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
+              />
+              <div
+                className="overlay"
+              />
+            </div>
+            <article
+              className="series-info"
+            >
+              <div
+                className="seasons"
+              >
+                <h3
+                  className="series-title"
+                >
+                  Cake Boss
+                </h3>
+                <p
+                  className="series-summary"
+                >
+                  Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.
+                </p>
+                <h3
+                  className="seasons-heading"
+                >
+                  Seasons
+                </h3>
+                <section
+                  className="series-seasons"
+                >
+                  <h5
+                    className="season-selected"
+                    onClick={[Function]}
+                    value={1}
+                  >
+                    1
+                  </h5>
+                </section>
+              </div>
+              <button
+                className="collapse-modal"
+                onClick={[Function]}
+              >
+                <img
+                  alt="arrow"
+                  className="collapse-modal-icon"
+                  src="/add.svg"
+                />
+              </button>
+              <div
+                className="episodes"
+              >
+                <div
+                  className="image-wrapper"
+                >
+                  <img
+                    alt="series poster"
+                    className="series-image"
+                    src="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+                  />
+                </div>
+                <div
+                  className="series-episodes"
+                >
+                  <Connect(Episode)
+                    episode={
+                      Object {
+                        "airdate": "2018-12-12",
+                        "episode": 1,
+                        "favorite": Object {
+                          "favorite": false,
+                          "watched": false,
+                          "watchlist": false,
+                        },
+                        "runtime": 30,
+                        "summary": "A show about cakes",
+                        "title": "Cakes",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </article>
+          </div>,
+          "className": "tv-show-modal",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="image-container"
+              >
+                <img
+                  alt="card background"
+                  className="series-background"
+                  src="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
+                />
+                <div
+                  className="overlay"
+                />
+              </div>,
+              <article
+                className="series-info"
+              >
+                <div
+                  className="seasons"
+                >
+                  <h3
+                    className="series-title"
+                  >
+                    Cake Boss
+                  </h3>
+                  <p
+                    className="series-summary"
+                  >
+                    Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.
+                  </p>
+                  <h3
+                    className="seasons-heading"
+                  >
+                    Seasons
+                  </h3>
+                  <section
+                    className="series-seasons"
+                  >
+                    <h5
+                      className="season-selected"
+                      onClick={[Function]}
+                      value={1}
+                    >
+                      1
+                    </h5>
+                  </section>
+                </div>
+                <button
+                  className="collapse-modal"
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="arrow"
+                    className="collapse-modal-icon"
+                    src="/add.svg"
+                  />
+                </button>
+                <div
+                  className="episodes"
+                >
+                  <div
+                    className="image-wrapper"
+                  >
+                    <img
+                      alt="series poster"
+                      className="series-image"
+                      src="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+                    />
+                  </div>
+                  <div
+                    className="series-episodes"
+                  >
+                    <Connect(Episode)
+                      episode={
+                        Object {
+                          "airdate": "2018-12-12",
+                          "episode": 1,
+                          "favorite": Object {
+                            "favorite": false,
+                            "watched": false,
+                            "watchlist": false,
+                          },
+                          "runtime": 30,
+                          "summary": "A show about cakes",
+                          "title": "Cakes",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </article>,
+            ],
+            "className": "modal",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt="card background"
+                    className="series-background"
+                    src="http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg"
+                  />,
+                  <div
+                    className="overlay"
+                  />,
+                ],
+                "className": "image-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "card background",
+                    "className": "series-background",
+                    "src": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "overlay",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="seasons"
+                  >
+                    <h3
+                      className="series-title"
+                    >
+                      Cake Boss
+                    </h3>
+                    <p
+                      className="series-summary"
+                    >
+                      Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.
+                    </p>
+                    <h3
+                      className="seasons-heading"
+                    >
+                      Seasons
+                    </h3>
+                    <section
+                      className="series-seasons"
+                    >
+                      <h5
+                        className="season-selected"
+                        onClick={[Function]}
+                        value={1}
+                      >
+                        1
+                      </h5>
+                    </section>
+                  </div>,
+                  <button
+                    className="collapse-modal"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="arrow"
+                      className="collapse-modal-icon"
+                      src="/add.svg"
+                    />
+                  </button>,
+                  <div
+                    className="episodes"
+                  >
+                    <div
+                      className="image-wrapper"
+                    >
+                      <img
+                        alt="series poster"
+                        className="series-image"
+                        src="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+                      />
+                    </div>
+                    <div
+                      className="series-episodes"
+                    >
+                      <Connect(Episode)
+                        episode={
+                          Object {
+                            "airdate": "2018-12-12",
+                            "episode": 1,
+                            "favorite": Object {
+                              "favorite": false,
+                              "watched": false,
+                              "watchlist": false,
+                            },
+                            "runtime": 30,
+                            "summary": "A show about cakes",
+                            "title": "Cakes",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>,
+                ],
+                "className": "series-info",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h3
+                        className="series-title"
+                      >
+                        Cake Boss
+                      </h3>,
+                      <p
+                        className="series-summary"
+                      >
+                        Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.
+                      </p>,
+                      <h3
+                        className="seasons-heading"
+                      >
+                        Seasons
+                      </h3>,
+                      <section
+                        className="series-seasons"
+                      >
+                        <h5
+                          className="season-selected"
+                          onClick={[Function]}
+                          value={1}
+                        >
+                          1
+                        </h5>
+                      </section>,
+                    ],
+                    "className": "seasons",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Cake Boss",
+                        "className": "series-title",
+                      },
+                      "ref": null,
+                      "rendered": "Cake Boss",
+                      "type": "h3",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
+                        "className": "series-summary",
+                      },
+                      "ref": null,
+                      "rendered": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Seasons",
+                        "className": "seasons-heading",
+                      },
+                      "ref": null,
+                      "rendered": "Seasons",
+                      "type": "h3",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <h5
+                            className="season-selected"
+                            onClick={[Function]}
+                            value={1}
+                          >
+                            1
+                          </h5>,
+                        ],
+                        "className": "series-seasons",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": "e5b23010-13fb-11e9-89f7-d3620f9a50d9",
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": 1,
+                            "className": "season-selected",
+                            "onClick": [Function],
+                            "value": 1,
+                          },
+                          "ref": null,
+                          "rendered": 1,
+                          "type": "h5",
+                        },
+                      ],
+                      "type": "section",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <img
+                      alt="arrow"
+                      className="collapse-modal-icon"
+                      src="/add.svg"
+                    />,
+                    "className": "collapse-modal",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "arrow",
+                      "className": "collapse-modal-icon",
+                      "src": "/add.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div
+                        className="image-wrapper"
+                      >
+                        <img
+                          alt="series poster"
+                          className="series-image"
+                          src="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+                        />
+                      </div>,
+                      <div
+                        className="series-episodes"
+                      >
+                        <Connect(Episode)
+                          episode={
+                            Object {
+                              "airdate": "2018-12-12",
+                              "episode": 1,
+                              "favorite": Object {
+                                "favorite": false,
+                                "watched": false,
+                                "watchlist": false,
+                              },
+                              "runtime": 30,
+                              "summary": "A show about cakes",
+                              "title": "Cakes",
+                            }
+                          }
+                        />
+                      </div>,
+                    ],
+                    "className": "episodes",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <img
+                          alt="series poster"
+                          className="series-image"
+                          src="http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg"
+                        />,
+                        "className": "image-wrapper",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "series poster",
+                          "className": "series-image",
+                          "src": "http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <Connect(Episode)
+                            episode={
+                              Object {
+                                "airdate": "2018-12-12",
+                                "episode": 1,
+                                "favorite": Object {
+                                  "favorite": false,
+                                  "watched": false,
+                                  "watchlist": false,
+                                },
+                                "runtime": 30,
+                                "summary": "A show about cakes",
+                                "title": "Cakes",
+                              }
+                            }
+                          />,
+                        ],
+                        "className": "series-episodes",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": "e5b25720-13fb-11e9-89f7-d3620f9a50d9",
+                          "nodeType": "class",
+                          "props": Object {
+                            "episode": Object {
+                              "airdate": "2018-12-12",
+                              "episode": 1,
+                              "favorite": Object {
+                                "favorite": false,
+                                "watched": false,
+                                "watchlist": false,
+                              },
+                              "runtime": 30,
+                              "summary": "A show about cakes",
+                              "title": "Cakes",
+                            },
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "article",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "section",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

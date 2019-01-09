@@ -5,6 +5,8 @@ import { Route } from 'react-router-dom'
 import { shallow } from 'enzyme'
 import { fetchTvShows } from '../../thunks/fetchTvShows.js'
 
+jest.mock('../../thunks/fetchTvShows.js')
+
 describe('App', () => {
   let wrapper
   let mockFetchTvShows
@@ -19,9 +21,9 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render 5 routes', () => {
+  it('should render 6 routes', () => {
 
-    expect(wrapper.find(Route).length).toEqual(5)
+    expect(wrapper.find(Route).length).toEqual(6)
   })
 
   it('should fire fetchTvShows on componentDidMount', () => {
@@ -39,7 +41,7 @@ describe('App', () => {
 
       mappedProps.fetchTvShows(mockUrl)
 
-      expect(mockDispatch).toHaveBeenCalledWith(expect.any(Function))
+      expect(mockDispatch).toHaveBeenCalledWith(fetchTvShows(mockUrl))
     })
   })
 })

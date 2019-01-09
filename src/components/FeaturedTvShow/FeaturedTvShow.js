@@ -1,12 +1,10 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './FeaturedTvShow.css'
+import PropTypes from 'prop-types'
 
-export default class FeaturedTvShow extends Component {
-
-  render() {
-    const {title, runtime, premiered, rating, summary, image, id} = this.props
+export const FeaturedTvShow = (props) => {
+    const {title, runtime, premiered, rating, summary, image, id} = props
     return (
       <section className='featured-tv-show'>
         <article className='featured-info'>
@@ -19,9 +17,19 @@ export default class FeaturedTvShow extends Component {
             <button className='view-series-btn'>View Series</button>
           </Link>
         </article>
-        <img className='featured-img' src={image} />
+        <img alt='series-poster' className='featured-img' src={image} />
       </section>
     )
-  }
+}
+
+FeaturedTvShow.propTypes = {
+  id: PropTypes.number,
+  title: PropTypes.string,
+  runtime: PropTypes.number,
+  premiered: PropTypes.string,
+  schedule: PropTypes.object,
+  network: PropTypes.string,
+  summary: PropTypes.string,
+  image: PropTypes.string
 }
 

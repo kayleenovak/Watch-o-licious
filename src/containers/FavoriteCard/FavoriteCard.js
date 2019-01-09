@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addToTracked, removeFromTracked, toggleFavorite, toggleWatched, toggleWatchList } from '../../actions/index.js'
 import { handleTrackedEpisode } from '../../helpers/handleToggleTracked.js'
 import './FavoriteCard.css'
 import { Link } from 'react-router-dom'
@@ -25,7 +24,7 @@ export class FavoriteCard extends Component {
     return (
       <section className='fav-card'>
         <div className='fav-card-background'></div>
-        <img src={matchedTvShow.image} className='fav-card-image'/>
+        <img alt='series' src={matchedTvShow.image} className='fav-card-image'/>
         <article className='fav-card-info'>
           <h3 className='episode-information'>Episode: {title}</h3>
           <h5 className='episode-series'>{matchedTvShow.title}</h5>
@@ -34,9 +33,9 @@ export class FavoriteCard extends Component {
           </Link>
           <p className='episode-runtime'>Runtime: {runtime}</p>
           <p className='episode-airdate'>Air date: {airdate}</p>
-          <button className='fav-card-btns' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='favorite'>{favoriteText}</button>
-          <button className='fav-card-btns' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watchlist'>{watchlist}</button>
-          <button className='fav-card-btns' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watched'>{watched}</button>
+          <button className='fav-card-btns favorite-btn' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='favorite'>{favoriteText}</button>
+          <button className='fav-card-btns watch-list-btn' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watchlist'>{watchlist}</button>
+          <button className='fav-card-btns watched-btn' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watched'>{watched}</button>
         </article>
       </section>
     )

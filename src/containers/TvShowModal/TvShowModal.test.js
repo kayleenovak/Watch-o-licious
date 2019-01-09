@@ -1,22 +1,29 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { TvShowModal, mapStateToProps, mapDispatchToProps } from './TvShowModal.js'
-import { fetchShowInfo } from '../../thunks/fetchTvShowInfo.js'
+import { fetchTvShowInfo } from '../../thunks/fetchTvShowInfo.js'
 import { removeShow } from '../../actions/index.js'
 import { mockCleanCakeShows } from '../../mockCleanData.js'
-import Episode from '../../components/Episode/Episode.js'
+import Episode from '../Episode/Episode.js'
+import { Loading } from '../../components/Loading/Loading.js'
+
+jest.mock('../../thunks/fetchTvShowInfo.js')
 
 describe('TvShowModal', () => {
   let emptyWrapper
   let wrapper
   let mockFetch
   let mockRemoveShow
+  let mockHistory
+  let mockEmptyShows
+  let mockTvShows
+  let mockTvEpisodes
 
   beforeEach(() => {
-    const mockHistory = []
-    const mockEmptyShows = []
-    const mockTvShows = mockCleanCakeShows
-    const mockTvEpisodes = [{
+    mockHistory = []
+    mockEmptyShows = []
+    mockTvShows = mockCleanCakeShows
+    mockTvEpisodes = [{
       season: 1,
       episodes: [{
         title: 'Cakes',
@@ -38,18 +45,23 @@ describe('TvShowModal', () => {
     emptyWrapper = shallow(<TvShowModal tvShows={mockEmptyShows} fetchShowInfo={mockFetch} removeShow={mockRemoveShow} />)
   })
 
-  it('should return an empty div if there are no tvShows in props', () => {
+  it('should match the snapshot', () => {
 
-    expect(emptyWrapper.find('div').length).toEqual(1)
+    expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a section with h3(2), p(1), button(1), div(2)', () => {
+  it('should return an empty div if there are no tvShows in props', () => {
 
-    expect(wrapper.find('section').length).toEqual(1)
+    expect(emptyWrapper.find(Loading).length).toEqual(1)
+  })
+
+  it('should render section(2) with h3(2), p(1), button(1), div(8)', () => {
+
+    expect(wrapper.find('section').length).toEqual(2)
     expect(wrapper.find('h3').length).toEqual(2)
     expect(wrapper.find('p').length).toEqual(1)
     expect(wrapper.find('button').length).toEqual(1)
-    expect(wrapper.find('div').length).toEqual(7)
+    expect(wrapper.find('div').length).toEqual(8)
   })
 
   it('should invoke findTvShow, displaySeasons, and displayEpisodes if there are tvShows and episodes', () => {
@@ -96,12 +108,73 @@ describe('TvShowModal', () => {
   })
 
   it('displaySeasons to return an h5 for each season', () => {
+    const mockTvEpisodes = [{
+      season: 1,
+      episodes: [{
+        title: 'Cakes',
+        episode: 1,
+        runtime: 30,
+        summary: 'A show about cakes',
+        airdate: '2018-12-12',
+        favorite: {
+          favorite: false,
+          watchlist: false,
+          watched: false
+        }
+      }]
+    },
+    {
+      season: 2,
+      episodes: [{
+        title: 'Cakes',
+        episode: 1,
+        runtime: 30,
+        summary: 'A show about cakes',
+        airdate: '2018-12-12',
+        favorite: {
+          favorite: false,
+          watchlist: false,
+          watched: false
+        }
+      }]
+    }]
+    wrapper = shallow(<TvShowModal history={mockHistory} id={921} tvShowEpisodes={mockTvEpisodes} tvShows={mockTvShows} fetchShowInfo={mockFetch} removeShow={mockRemoveShow} />)
 
-    expect(wrapper.find('h5').length).toEqual(1)
+    expect(wrapper.find('h5').length).toEqual(2)
   })
 
-  it('displayEpisodes should return an episode for each episode', () => {
-
+  it('displayEpisodes should return an episode for each episode for the current season', () => {
+    const mockTvEpisodes = [{
+      season: 1,
+      episodes: [{
+        title: 'Cakes',
+        episode: 1,
+        runtime: 30,
+        summary: 'A show about cakes',
+        airdate: '2018-12-12',
+        favorite: {
+          favorite: false,
+          watchlist: false,
+          watched: false
+        }
+      }]
+    },
+    {
+      season: 2,
+      episodes: [{
+        title: 'Cakes',
+        episode: 1,
+        runtime: 30,
+        summary: 'A show about cakes',
+        airdate: '2018-12-12',
+        favorite: {
+          favorite: false,
+          watchlist: false,
+          watched: false
+        }
+      }]
+    }]
+    wrapper = shallow(<TvShowModal history={mockHistory} id={921} tvShowEpisodes={mockTvEpisodes} tvShows={mockTvShows} fetchShowInfo={mockFetch} removeShow={mockRemoveShow} />)
     expect(wrapper.find(Episode).length).toEqual(1)
   })
 
@@ -137,12 +210,21 @@ describe('TvShowModal', () => {
   describe('mapDispatchToProps', () => {
     it('should call dispatch with the correct params', () => {
       const mockDispatch = jest.fn()
+      const mockTracked = []
       
       const mappedProps = mapDispatchToProps(mockDispatch)
-      mappedProps.fetchShowInfo(1)
+      mappedProps.fetchShowInfo(1, mockTracked)
+
+      expect(mockDispatch).toHaveBeenCalledWith(fetchTvShowInfo(1, mockTracked))
+    })
+
+    it('should call dispatch with the correct params', () => {
+      const mockDispatch = jest.fn()
+      
+      const mappedProps = mapDispatchToProps(mockDispatch)
       mappedProps.removeShow()
 
-      expect(mockDispatch).toHaveBeenCalledTimes(2)
+      expect(mockDispatch).toHaveBeenCalledWith(removeShow())
     })
   })
 })

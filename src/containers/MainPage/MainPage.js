@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import FeaturedTvShow from '../FeaturedTvShow/FeaturedTvShow.js'
+import { FeaturedTvShow } from '../../components/FeaturedTvShow/FeaturedTvShow.js'
 import CardContainer from '../CardContainer/CardContainer.js'
+import { Loading } from '../../components/Loading/Loading.js'
+
 
 export class MainPage extends Component {
 
@@ -13,7 +15,9 @@ export class MainPage extends Component {
   }
 
   render() {
-    if(this.props.tvShows) {
+    if(this.props.isLoading === true) {
+      return <Loading />
+    } else if (this.props.tvShows) {
       const randomTvShow = this.randomFeaturedTvShow()
       return (
         <div className='main-page'>
@@ -23,14 +27,18 @@ export class MainPage extends Component {
           <CardContainer />
         </div>
       )
+    } else if (this.props.hasErrored === true) {
+      return <div>Error</div>
     } else {
-      return <div>Loading...</div>
+      return <div>Error</div>
     }
   }
 }
 
 export const mapStateToProps = (state) => ({
-  tvShows: state.tvShows
+  tvShows: state.tvShows,
+  isLoading: state.isLoading,
+  hasErrored: state.hasErrored
 })
 
 export default connect(mapStateToProps)(MainPage)
