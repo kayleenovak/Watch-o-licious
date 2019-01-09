@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { fetchTvShowInfo } from '../../thunks/fetchTvShowInfo.js'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 import { removeShow } from '../../actions/index.js'
 import Episode from '../Episode/Episode.js'
@@ -114,4 +115,13 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(TvShowModal))
+
+TvShowModal.propTypes = {
+tvShows: PropTypes.array.isRequired,
+tvShowEpisodes: PropTypes.array.isRequired,
+tracked: PropTypes.array.isRequired,
+fetchShowInfo: PropTypes.func.isRequired,
+removeShow: PropTypes.func.isRequired,
+id: PropTypes.string.isRequired
+}
 

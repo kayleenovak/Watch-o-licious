@@ -8,12 +8,12 @@ ShallowWrapper {
       [MockFunction] {
         "calls": Array [
           Array [
-            921,
-            undefined,
+            "921",
+            Array [],
           ],
           Array [
-            undefined,
-            undefined,
+            "921",
+            Array [],
           ],
         ],
         "results": Array [
@@ -29,8 +29,9 @@ ShallowWrapper {
       }
     }
     history={Array []}
-    id={921}
+    id="921"
     removeShow={[MockFunction]}
+    tracked={Array []}
     tvShowEpisodes={
       Array [
         Object {
@@ -632,7 +633,7 @@ ShallowWrapper {
                     "rendered": Array [
                       Object {
                         "instance": null,
-                        "key": "e5b23010-13fb-11e9-89f7-d3620f9a50d9",
+                        "key": "c1b0b680-1425-11e9-9a2e-a5cdf5f7c51b",
                         "nodeType": "host",
                         "props": Object {
                           "children": 1,
@@ -776,7 +777,7 @@ ShallowWrapper {
                     "rendered": Array [
                       Object {
                         "instance": null,
-                        "key": "e5b25720-13fb-11e9-89f7-d3620f9a50d9",
+                        "key": "c1b0dd90-1425-11e9-9a2e-a5cdf5f7c51b",
                         "nodeType": "class",
                         "props": Object {
                           "episode": Object {
@@ -1342,7 +1343,7 @@ ShallowWrapper {
                       "rendered": Array [
                         Object {
                           "instance": null,
-                          "key": "e5b23010-13fb-11e9-89f7-d3620f9a50d9",
+                          "key": "c1b0b680-1425-11e9-9a2e-a5cdf5f7c51b",
                           "nodeType": "host",
                           "props": Object {
                             "children": 1,
@@ -1486,7 +1487,7 @@ ShallowWrapper {
                       "rendered": Array [
                         Object {
                           "instance": null,
-                          "key": "e5b25720-13fb-11e9-89f7-d3620f9a50d9",
+                          "key": "c1b0dd90-1425-11e9-9a2e-a5cdf5f7c51b",
                           "nodeType": "class",
                           "props": Object {
                             "episode": Object {

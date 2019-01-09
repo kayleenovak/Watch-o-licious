@@ -56,7 +56,7 @@ export const mapDispatchToProps = (dispatch) => ({
 export default connect(mapStateToProps, mapDispatchToProps)(Episode)
 
 Episode.propTypes = {
-  episode: PropTypes.object,
+  episode: PropTypes.object.isRequired,
   trackedEpisodes: PropTypes.array,
   handleTracked: PropTypes.func.isRequired 
 }

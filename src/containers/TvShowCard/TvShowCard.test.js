@@ -9,7 +9,7 @@ jest.mock('../../thunks/fetchTvShowInfo')
 describe('TvShowCard', () => {
   it('should return an article with an image, h3, 2 p elements and to match the snapshot', () => {
     const mockFetch = jest.fn()
-    const wrapper = shallow(<TvShowCard title={'Cake Boss'} fetchShowInfo={ mockFetch }/>)
+    const wrapper = shallow(<TvShowCard title={'Cake Boss'} network={'FOX'} img={'www.img.com'} id={1} fetchShowInfo={ mockFetch }/>)
 
     expect(wrapper.find('article').length).toEqual(1)
     expect(wrapper.find('h3').length).toEqual(1)

@@ -5,6 +5,9 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TvShowCard
     fetchShowInfo={[MockFunction]}
+    id={1}
+    img="www.img.com"
+    network="FOX"
     title="Cake Boss"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -23,7 +26,7 @@ ShallowWrapper {
       "children": Array [
         <Link
           replace={false}
-          to="/tvshow/undefined"
+          to="/tvshow/1"
         >
           <div
             className="tv-card-img"
@@ -43,6 +46,7 @@ ShallowWrapper {
           className="tv-card-network"
         >
           Network: 
+          FOX
         </p>,
       ],
       "className": "tv-show-card",
@@ -51,7 +55,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "1",
         "nodeType": "class",
         "props": Object {
           "children": <div
@@ -63,7 +67,7 @@ ShallowWrapper {
             />
           </div>,
           "replace": false,
-          "to": "/tvshow/undefined",
+          "to": "/tvshow/1",
         },
         "ref": null,
         "rendered": Object {
@@ -114,14 +118,14 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             "Network: ",
-            undefined,
+            "FOX",
           ],
           "className": "tv-card-network",
         },
         "ref": null,
         "rendered": Array [
           "Network: ",
-          undefined,
+          "FOX",
         ],
         "type": "p",
       },
@@ -137,7 +141,7 @@ ShallowWrapper {
         "children": Array [
           <Link
             replace={false}
-            to="/tvshow/undefined"
+            to="/tvshow/1"
           >
             <div
               className="tv-card-img"
@@ -157,6 +161,7 @@ ShallowWrapper {
             className="tv-card-network"
           >
             Network: 
+            FOX
           </p>,
         ],
         "className": "tv-show-card",
@@ -165,7 +170,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "1",
           "nodeType": "class",
           "props": Object {
             "children": <div
@@ -177,7 +182,7 @@ ShallowWrapper {
               />
             </div>,
             "replace": false,
-            "to": "/tvshow/undefined",
+            "to": "/tvshow/1",
           },
           "ref": null,
           "rendered": Object {
@@ -228,14 +233,14 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "Network: ",
-              undefined,
+              "FOX",
             ],
             "className": "tv-card-network",
           },
           "ref": null,
           "rendered": Array [
             "Network: ",
-            undefined,
+            "FOX",
           ],
           "type": "p",
         },

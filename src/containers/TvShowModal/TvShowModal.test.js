@@ -18,10 +18,13 @@ describe('TvShowModal', () => {
   let mockEmptyShows
   let mockTvShows
   let mockTvEpisodes
+  let mockTracked
+  let mockEmptyEpisodes
 
   beforeEach(() => {
     mockHistory = []
     mockEmptyShows = []
+    mockTracked = []
     mockTvShows = mockCleanCakeShows
     mockTvEpisodes = [{
       season: 1,
@@ -40,9 +43,10 @@ describe('TvShowModal', () => {
     }]
     mockFetch = jest.fn()
     mockRemoveShow = jest.fn()
+    mockEmptyEpisodes = []
 
-    wrapper = shallow(<TvShowModal history={mockHistory} id={921} tvShowEpisodes={mockTvEpisodes} tvShows={mockTvShows} fetchShowInfo={mockFetch} removeShow={mockRemoveShow} />)
-    emptyWrapper = shallow(<TvShowModal tvShows={mockEmptyShows} fetchShowInfo={mockFetch} removeShow={mockRemoveShow} />)
+    wrapper = shallow(<TvShowModal tracked={mockTracked} history={mockHistory} id={'921'} tvShowEpisodes={mockTvEpisodes} tvShows={mockTvShows} fetchShowInfo={mockFetch} removeShow={mockRemoveShow} />)
+    emptyWrapper = shallow(<TvShowModal id={'921'} tvShowEpisodes={mockEmptyEpisodes} tracked={mockTracked} tvShows={mockEmptyShows} fetchShowInfo={mockFetch} removeShow={mockRemoveShow} />)
   })
 
   it('should match the snapshot', () => {
@@ -138,7 +142,7 @@ describe('TvShowModal', () => {
         }
       }]
     }]
-    wrapper = shallow(<TvShowModal history={mockHistory} id={921} tvShowEpisodes={mockTvEpisodes} tvShows={mockTvShows} fetchShowInfo={mockFetch} removeShow={mockRemoveShow} />)
+    wrapper = shallow(<TvShowModal history={mockHistory} tracked={mockTracked} id={'921'} tvShowEpisodes={mockTvEpisodes} tvShows={mockTvShows} fetchShowInfo={mockFetch} removeShow={mockRemoveShow} />)
 
     expect(wrapper.find('h5').length).toEqual(2)
   })
@@ -174,7 +178,7 @@ describe('TvShowModal', () => {
         }
       }]
     }]
-    wrapper = shallow(<TvShowModal history={mockHistory} id={921} tvShowEpisodes={mockTvEpisodes} tvShows={mockTvShows} fetchShowInfo={mockFetch} removeShow={mockRemoveShow} />)
+    wrapper = shallow(<TvShowModal history={mockHistory} tracked={mockTracked} id={'921'} tvShowEpisodes={mockTvEpisodes} tvShows={mockTvShows} fetchShowInfo={mockFetch} removeShow={mockRemoveShow} />)
     expect(wrapper.find(Episode).length).toEqual(1)
   })
 

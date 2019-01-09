@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { handleTrackedEpisode } from '../../helpers/handleToggleTracked.js'
 import './FavoriteCard.css'
 import { Link } from 'react-router-dom'
@@ -42,6 +43,7 @@ export class FavoriteCard extends Component {
   }
 }
 
+
 export const mapStateToProps = (state) => ({
   tvShows: state.tvShows,
   tracked: state.tracked
@@ -52,3 +54,10 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(FavoriteCard)
+
+FavoriteCard.propTypes = {
+  episode: PropTypes.object.isRequired,
+  tvShows: PropTypes.array.isRequired,
+  tracked: PropTypes.array,
+  handleTracked: PropTypes.func.isRequired
+}

@@ -178,8 +178,8 @@ describe('Episode', () => {
         episode={ mockEpisode }
       />)
     })
-    it('expandEipsodshould toggle the state of expanded', () => {
-      const wrapper = shallow(<Episode handleTracked = { mockHandleTracked }/>)
+    it('expandEpisodshould toggle the state of expanded', () => {
+      const wrapper = shallow(<Episode handleTracked = { mockHandleTracked } episode={ mockEpisode } />)
 
       wrapper.instance().expandEpisode()
 

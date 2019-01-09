@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { fetchTvShowInfo } from '../../thunks/fetchTvShowInfo.js'
 import './TvShowCard.css'
@@ -24,3 +25,11 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(null, mapDispatchToProps)(TvShowCard)
+
+TvShowCard.propTypes = {
+  fetchShowInfo: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  network: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  id: PropTypes.number.isRequired,
+}

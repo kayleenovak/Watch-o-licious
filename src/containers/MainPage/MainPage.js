@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { FeaturedTvShow } from '../../components/FeaturedTvShow/FeaturedTvShow.js'
 import CardContainer from '../CardContainer/CardContainer.js'
@@ -42,3 +43,9 @@ export const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps)(MainPage)
+
+MainPage.propTypes = {
+  tvShows: PropTypes.array,
+  isLoading: PropTypes.bool,
+  hasErrored: PropTypes.bool
+}
