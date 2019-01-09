@@ -1,4 +1,4 @@
-export const tvShowCleaner = (tvShow, id) => {
+export const tvShowCleaner = (tvShow, id, tracked) => {
   const seasons = tvShow.reduce((acc, episode) => {
     if (!acc.includes(episode.season)) {
       acc.push(episode.season)
@@ -29,6 +29,14 @@ export const tvShowCleaner = (tvShow, id) => {
             watchlist: false,
             watched: false
           }
+        }
+        if(tracked) {
+          tracked.forEach(trackedShow => {
+            console.log(trackedShow)
+            if (trackedShow.url === episode.url) {
+              cleanEpisode.tracked = trackedShow.tracked
+            }
+          })
         }
         cleanSeason.episodes.push(cleanEpisode)
       }

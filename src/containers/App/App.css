@@ -9,5 +9,9 @@
     ),
     url('/background.png');
     background-size: cover;
+    min-height: 900px;
     height: 100%;
 }
+
+[data-reactroot] 
+        {height: 100% !important; }

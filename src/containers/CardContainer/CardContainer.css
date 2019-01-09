@@ -1,4 +1,5 @@
-.card-container {
+.card-container,
+.tracked-episodes {
   max-width: 100vw;
   display: flex;
   flex-wrap: wrap;

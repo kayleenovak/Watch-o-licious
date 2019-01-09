@@ -15,7 +15,8 @@ export class TvShowModal extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchShowInfo(this.props.id)
+    console.log(this.props.tracked)
+    this.props.fetchShowInfo(this.props.id, this.props.tracked)
   }
 
   findTvShow = () => {
@@ -100,11 +101,12 @@ export class TvShowModal extends Component {
 
 export const mapStateToProps = (state) => ({
   tvShows: state.tvShows,
-  tvShowEpisodes: state.tvShowEpisodes
+  tvShowEpisodes: state.tvShowEpisodes,
+  tracked: state.tracked
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchShowInfo: (id) => dispatch(fetchTvShowInfo(id)),
+  fetchShowInfo: (id, tracked) => dispatch(fetchTvShowInfo(id, tracked)),
   removeShow: () => dispatch(removeShow())
 })
 
