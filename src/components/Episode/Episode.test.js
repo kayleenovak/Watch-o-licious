@@ -1,6 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { Episode, mapDispatchToProps, mapStateToProps } from './Episode.js'
+import { handleTrackedEpisode } from '../../helpers/handleToggleTracked'
+
+jest.mock('../../helpers/handleToggleTracked')
 
 describe('Episode', () => {
   let wrapper
@@ -278,7 +281,7 @@ describe('Episode', () => {
 
       mappedProps.handleTracked(mockEvent, mockEpisode, mockTrackedShows)
 
-      expect(mockDispatch).toHaveBeenCalledWith(expect.any(Function))
+      expect(mockDispatch).toHaveBeenCalledWith(handleTrackedEpisode(mockEvent, mockEpisode, mockTrackedShows))
     })
   })
 })
