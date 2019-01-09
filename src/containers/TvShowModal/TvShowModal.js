@@ -5,6 +5,7 @@ import { withRouter, Redirect } from 'react-router-dom'
 import { removeShow } from '../../actions/index.js'
 import Episode from '../../components/Episode/Episode.js'
 import './TvShowModal.css'
+import { Loading } from '../../components/Loading/Loading.js'
 
 export class TvShowModal extends Component {
   constructor() {
@@ -93,7 +94,7 @@ export class TvShowModal extends Component {
         </div>
       )
     } else {
-      return <div>Loading...</div>
+      return <Loading />
     }
   }
 }

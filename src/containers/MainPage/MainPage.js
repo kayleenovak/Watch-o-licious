@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import FeaturedTvShow from '../FeaturedTvShow/FeaturedTvShow.js'
 import CardContainer from '../CardContainer/CardContainer.js'
+import { Loading } from '../../components/Loading/Loading.js'
+
 
 export class MainPage extends Component {
 
@@ -13,7 +15,7 @@ export class MainPage extends Component {
   }
 
   render() {
-    if(this.props.tvShows) {
+    if(this.props.tvShows.length) {
       const randomTvShow = this.randomFeaturedTvShow()
       return (
         <div className='main-page'>
@@ -24,7 +26,7 @@ export class MainPage extends Component {
         </div>
       )
     } else {
-      return <div>Loading...</div>
+      return <Loading />
     }
   }
 }

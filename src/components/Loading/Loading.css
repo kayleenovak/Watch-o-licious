@@ -1,0 +1,40 @@
+.loading-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.loading-cupcake {
+  margin-top: 50px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #aea7b9;
+  border: 2px solid #999;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+}
+
+.loading-message {
+  font-size: 35px;
+  color: white;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
