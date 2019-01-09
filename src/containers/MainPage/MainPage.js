@@ -17,7 +17,7 @@ export class MainPage extends Component {
   render() {
     if(this.props.isLoading === true) {
       return <Loading />
-    } else if (this.props.tvShows){
+    } else if (this.props.tvShows) {
       const randomTvShow = this.randomFeaturedTvShow()
       return (
         <div className='main-page'>

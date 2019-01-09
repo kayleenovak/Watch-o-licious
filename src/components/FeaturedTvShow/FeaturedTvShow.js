@@ -23,13 +23,13 @@ export const FeaturedTvShow = (props) => {
 }
 
 FeaturedTvShow.propTypes = {
-  id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  runtime: PropTypes.number.isRequired,
-  premiered: PropTypes.string.isRequired,
+  id: PropTypes.number,
+  title: PropTypes.string,
+  runtime: PropTypes.number,
+  premiered: PropTypes.string,
   schedule: PropTypes.object,
-  network: PropTypes.string.isRequired,
-  summary: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
+  network: PropTypes.string,
+  summary: PropTypes.string,
+  image: PropTypes.string
 }
 

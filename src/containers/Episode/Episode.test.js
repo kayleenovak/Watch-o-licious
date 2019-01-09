@@ -14,7 +14,7 @@ describe('Episode', () => {
   beforeEach(() => {
     mockHandleTracked = jest.fn()
     mockEpisode = {
-      showId: '6407',
+      showId: 6407,
       url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
       title: 'Holiday Cookie Madness',
       episode: 1,
@@ -28,7 +28,7 @@ describe('Episode', () => {
       }
     }
     mockTrackedShows = [{
-      showId: '6407',
+      showId: 6407,
       url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
       title: 'Holiday Cookie Madness',
       episode: 1,
@@ -43,7 +43,7 @@ describe('Episode', () => {
     }]
     wrapper = shallow(<Episode 
       handleTracked={ mockHandleTracked }
-      tracked={ mockTrackedShows }
+      trackedEpisodes={ mockTrackedShows }
       episode={ mockEpisode }
     />)
   })
@@ -117,7 +117,7 @@ describe('Episode', () => {
     beforeEach(() => {
       mockHandleTracked = jest.fn()
       const mockEpisode = {
-        showId: '6407',
+        showId: 6407,
         url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
         title: 'Holiday Cookie Madness',
         episode: 1,
@@ -131,7 +131,7 @@ describe('Episode', () => {
         }
       }
       mockTrueEpisode = {
-        showId: '6407',
+        showId: 6407,
         url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
         title: 'Holiday Cookie Madness',
         episode: 1,
@@ -145,7 +145,7 @@ describe('Episode', () => {
         }
       }
       const mockTrackedShows = [{
-        showId: '6407',
+        showId: 6407,
         url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
         title: 'Holiday Cookie Madness',
         episode: 1,
@@ -159,7 +159,7 @@ describe('Episode', () => {
         }
       }]
       mockTrueTrackedShows = [{
-        showId: '6407',
+        showId: 6407,
         url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
         title: 'Holiday Cookie Madness',
         episode: 1,
@@ -179,7 +179,7 @@ describe('Episode', () => {
       />)
     })
     it('expandEipsodshould toggle the state of expanded', () => {
-      const wrapper = shallow(<Episode />)
+      const wrapper = shallow(<Episode handleTracked = { mockHandleTracked }/>)
 
       wrapper.instance().expandEpisode()
 
@@ -232,7 +232,7 @@ describe('Episode', () => {
         tracked: []
       }
       const expected = {
-        tracked: []
+        trackedEpisodes: []
       }
 
       const result = mapStateToProps(mockState)
@@ -250,7 +250,7 @@ describe('Episode', () => {
         }
       }
       const mockEpisode = {
-        showId: '6407',
+        showId: 6407,
         url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
         title: 'Holiday Cookie Madness',
         episode: 1,
@@ -264,7 +264,7 @@ describe('Episode', () => {
         }
       }
       const mockTrackedShows = [{
-        showId: '6407',
+        showId: 6407,
         url: 'http://www.tvmaze.com/episodes/377894/holiday-baking-championship-1x01-holiday-cookie-madness',
         title: 'Holiday Cookie Madness',
         episode: 1,

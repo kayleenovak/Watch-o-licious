@@ -8,6 +8,7 @@ import TvShowModal from '../TvShowModal/TvShowModal.js'
 import CardContainer from '../CardContainer/CardContainer'
 import { Header } from '../../components/Header/Header.js'
 import { NoMatch } from '../../components/NoMatch/NoMatch.js'
+import PropTypes from 'prop-types'
 
 export class App extends Component {
 
@@ -41,4 +42,8 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default withRouter(connect(null, mapDispatchToProps)(App))
+
+App.propTypes = {
+  fetchTvShows: PropTypes.func.isRequired
+}
 

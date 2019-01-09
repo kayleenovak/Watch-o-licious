@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { handleTrackedEpisode } from '../../helpers/handleToggleTracked.js'
 import './Episode.css'
 
@@ -30,9 +31,9 @@ export class Episode extends Component {
         <section className={episodeStyle}>
           <h3 className='episode-title'>Episode {episode}: {title}</h3>
           <div className='episode-btn-wrapper'>
-            <button className={tracked.favorites ? 'tracked-favorite' : 'favorite-button'} onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='favorite'>{favoriteText}</button>
-            <button className={tracked.watched ? 'tracked-watched' : 'watched-button'} onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watched'>{watched}</button>
-            <button className={tracked.watchlist ? 'tracked-watchlist' : 'watchlist-button'} onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watchlist'>{watchlist}</button>
+            <button className={tracked.favorites ? 'tracked-favorite' : 'favorite-button'} onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.trackedEpisodes)} value='favorite'>{favoriteText}</button>
+            <button className={tracked.watched ? 'tracked-watched' : 'watched-button'} onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.trackedEpisodes)} value='watched'>{watched}</button>
+            <button className={tracked.watchlist ? 'tracked-watchlist' : 'watchlist-button'} onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.trackedEpisodes)} value='watchlist'>{watchlist}</button>
           <img alt='expand-arrow' src='/down-arrow.svg' className={arrow} onClick={() => this.expandEpisode()}/>
           </div>
           {
@@ -45,7 +46,7 @@ export class Episode extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  tracked: state.tracked
+  trackedEpisodes: state.tracked
 })
 
 export const mapDispatchToProps = (dispatch) => ({
@@ -53,3 +54,9 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Episode)
+
+Episode.propTypes = {
+  episode: PropTypes.object,
+  trackedEpisodes: PropTypes.array,
+  handleTracked: PropTypes.func.isRequired 
+}

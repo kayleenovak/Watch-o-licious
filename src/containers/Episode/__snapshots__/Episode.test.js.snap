@@ -9,7 +9,7 @@ ShallowWrapper {
         "airdate": "2014-11-09",
         "episode": 1,
         "runtime": 60,
-        "showId": "6407",
+        "showId": 6407,
         "summary": "This is a summary",
         "title": "Holiday Cookie Madness",
         "tracked": Object {
@@ -21,13 +21,13 @@ ShallowWrapper {
       }
     }
     handleTracked={[MockFunction]}
-    tracked={
+    trackedEpisodes={
       Array [
         Object {
           "airdate": "2014-11-09",
           "episode": 1,
           "runtime": 60,
-          "showId": "6407",
+          "showId": 6407,
           "summary": "This is a summary",
           "title": "Holiday Cookie Madness",
           "tracked": Object {
