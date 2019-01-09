@@ -92,4 +92,120 @@ describe('tvShowCleaner', () => {
 
     expect(result).toEqual(cleanedTvShows)
   })
+
+  it('should return an updated tracked if it is in the tracked array', () => {
+    const mockTracked = [
+      {
+        showId: 20,
+        title: 'Pilot',
+        "url": "http://www.tvmaze.com/episodes/1/under-the-dome-1x01-pilot",
+        episode: 1,
+        runtime: 60,
+        summary: "When the residents of Chester's Mill find themselves trapped under a massive transparent dome with no way out, they struggle to survive as resources rapidly dwindle and panic quickly escalates.",
+        airdate: '2013-06-24',
+        tracked: {
+          favorites: true,
+          watchlist: false,
+          watched: false
+        }
+      }
+    ]
+    const expected = [
+      {
+        season: 1,
+        episodes: [{
+          showId: 20,
+          title: 'Pilot',
+          "url": "http://www.tvmaze.com/episodes/1/under-the-dome-1x01-pilot",
+          episode: 1,
+          runtime: 60,
+          summary: "When the residents of Chester's Mill find themselves trapped under a massive transparent dome with no way out, they struggle to survive as resources rapidly dwindle and panic quickly escalates.",
+          airdate: '2013-06-24',
+          tracked: {
+            favorites: true,
+            watchlist: false,
+            watched: false
+          }
+        }]
+      },
+      {
+        season: 2,
+        episodes: [{
+          showId: 20,
+          title: 'Pilot',
+          "url": "http://www.tvmaze.com/episodes/1/under-the-dome-1x01-pilot",
+          episode: 1,
+          runtime: 60,
+          summary: undefined,
+          airdate: '2013-06-24',
+          tracked: {
+            favorites: true,
+            watchlist: false,
+            watched: false
+          }
+        }]
+      }
+    ]
+    const result = tvShowCleaner(uncleanTvShows, 20, mockTracked)
+
+    expect(result).toEqual(expected)
+  })
+
+  it('should not update the episode if it is not in the tracked array', () => {
+    const mockTracked = [
+      {
+        showId: 20,
+        title: 'Pilot',
+        "url": "http://www.blah.com/episodes/1/under-the-dome-1x01-pilot",
+        episode: 1,
+        runtime: 60,
+        summary: "When the residents of Chester's Mill find themselves trapped under a massive transparent dome with no way out, they struggle to survive as resources rapidly dwindle and panic quickly escalates.",
+        airdate: '2013-06-24',
+        tracked: {
+          favorites: true,
+          watchlist: false,
+          watched: false
+        }
+      }
+    ]
+    const expected = [
+      {
+        season: 1,
+        episodes: [{
+          showId: 20,
+          title: 'Pilot',
+          "url": "http://www.tvmaze.com/episodes/1/under-the-dome-1x01-pilot",
+          episode: 1,
+          runtime: 60,
+          summary: "When the residents of Chester's Mill find themselves trapped under a massive transparent dome with no way out, they struggle to survive as resources rapidly dwindle and panic quickly escalates.",
+          airdate: '2013-06-24',
+          tracked: {
+            favorites: false,
+            watchlist: false,
+            watched: false
+          }
+        }]
+      },
+      {
+        season: 2,
+        episodes: [{
+          showId: 20,
+          title: 'Pilot',
+          "url": "http://www.tvmaze.com/episodes/1/under-the-dome-1x01-pilot",
+          episode: 1,
+          runtime: 60,
+          summary: undefined,
+          airdate: '2013-06-24',
+          tracked: {
+            favorites: false,
+            watchlist: false,
+            watched: false
+          }
+        }]
+      }
+    ]
+    const result = tvShowCleaner(uncleanTvShows, 20, mockTracked)
+
+    expect(result).toEqual(expected)
+  })
 })
