@@ -15,7 +15,6 @@ export class TvShowModal extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.tracked)
     this.props.fetchShowInfo(this.props.id, this.props.tracked)
   }
 

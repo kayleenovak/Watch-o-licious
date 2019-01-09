@@ -19,7 +19,7 @@
   box-shadow: 0px 1px 0px 0px #1c1b18;
   background: linear-gradient(to bottom, #aea7b9 5%, #74707a 100%);
   background-color: #aea7b9;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 2px solid #292929;
   display: inline-block;
   cursor: pointer;
@@ -41,4 +41,19 @@
 .header-btn:active {
   position: relative;
   top: 1px;
+}
+
+.active {
+  background: #442c3e;
+  border-radius:10px;
+  border:2px solid #442c3e;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:14px;
+  font-weight:bold;
+  padding:8px 16px;
+  text-decoration:none;
+  text-shadow:0px 1px 1px #442C3E;
 }

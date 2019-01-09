@@ -42,11 +42,15 @@ export class CardContainer extends Component {
     if(pathname === '/favorites' || pathname === '/watched' || pathname === '/watchlist') {
       const locationString = this.splitLocation(pathname)
       const trackedEpisodes = this.findTrackedEpisodes(locationString)
-      return (
-        <section className='tracked-episodes'>
-          {trackedEpisodes}
-        </section>
-      )
+      if(trackedEpisodes.length) {
+        return (
+          <section className='tracked-episodes'>
+            {trackedEpisodes}
+          </section>
+        )
+      } else {
+        return <div className='no-shows'>You have no {locationString} shows</div>
+      }
     } else {
       const tvCards = this.displayTvShows()
       return (

@@ -3,7 +3,6 @@ import { tvShowCleaner } from '../cleaners/tvShowCleaner.js'
 import { fetchCall } from '../APICalls/fetchCall.js'
 
 export const fetchTvShowInfo = (id, tracked) => {
-  console.log(tracked)
   const tvShowUrl = 'http://api.tvmaze.com/shows/' + id + '/episodes'
   return async (dispatch) => {
     try {

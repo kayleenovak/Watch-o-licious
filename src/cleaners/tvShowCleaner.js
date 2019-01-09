@@ -32,7 +32,6 @@ export const tvShowCleaner = (tvShow, id, tracked) => {
         }
         if(tracked) {
           tracked.forEach(trackedShow => {
-            console.log(trackedShow)
             if (trackedShow.url === episode.url) {
               cleanEpisode.tracked = trackedShow.tracked
             }
