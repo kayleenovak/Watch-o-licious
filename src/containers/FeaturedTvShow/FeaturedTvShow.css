@@ -12,6 +12,8 @@
   font-size: 35px;
   margin: 0 0 15px 0;
   font-family: 'Montserrat', sans-serif;
+  color: white;
+  margin-left: 5px;
 }
 
 .featured-summary {
@@ -19,16 +21,20 @@
   border-radius: 3px;
   cursor: default;
   overflow: auto;
-  height: 150px;
+  max-height: 150px;
   transition: border 500ms;
   padding: 5px;
   border: 2px solid transparent;
+  color: white;
 }
 
 .featured-runtime,
 .featured-date,
 .featured-rating {
   margin-left: 5px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 .featured-summary:hover {

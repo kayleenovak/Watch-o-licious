@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  font-family: 'Shadows Into Light Two', cursive;
+  color: #A6d4d3;
+  font-size: 45px;
+  margin: 10px 50px 0px 0px;
+}
+
+.cupcake {
+  height: 65px;
+  margin: 10px 0px 0px 10px;
+}
+
+.header-btn {
+  box-shadow: 0px 1px 0px 0px #1c1b18;
+  background: linear-gradient(to bottom, #aea7b9 5%, #74707a 100%);
+  background-color: #aea7b9;
+  border-radius: 15px;
+  border: 2px solid #292929;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #424242;
+  margin: 20px 5px 0 15px;
+}
+.header-btn:hover {
+  background: linear-gradient(to bottom, #74707a 5%, #aea7b9 100%);
+  background-color: #74707a;
+}
+.header-btn:active {
+  position: relative;
+  top: 1px;
+}
