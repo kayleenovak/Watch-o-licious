@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MainPage
+    hasErrored={false}
+    isLoading={false}
+    tvShows={
+      Array [
+        Object {
+          "id": 921,
+          "image": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg",
+          "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/6/16129.jpg",
+          "network": "TLC",
+          "premiered": "2009-05-25",
+          "rating": null,
+          "runtime": 30,
+          "schedule": Object {
+            "days": Array [
+              "Monday",
+            ],
+            "time": "21:00",
+          },
+          "summary": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
+          "title": "Cake Boss",
+        },
+        Object {
+          "id": 27786,
+          "image": "http://static.tvmaze.com/uploads/images/medium_portrait/110/275113.jpg",
+          "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/110/275113.jpg",
+          "network": "Channel 4",
+          "premiered": "2017-05-01",
+          "rating": null,
+          "runtime": 30,
+          "schedule": Object {
+            "days": Array [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+            ],
+            "time": "17:30",
+          },
+          "summary": "Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth.",
+          "title": "Extreme Cake Makers",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <FeaturedTvShow
+          id={27786}
+          image="http://static.tvmaze.com/uploads/images/medium_portrait/110/275113.jpg"
+          largeImage="http://static.tvmaze.com/uploads/images/original_untouched/110/275113.jpg"
+          network="Channel 4"
+          premiered="2017-05-01"
+          rating={null}
+          runtime={30}
+          schedule={
+            Object {
+              "days": Array [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+              ],
+              "time": "17:30",
+            }
+          }
+          summary="Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth."
+          title="Extreme Cake Makers"
+        />,
+        <withRouter(Connect(CardContainer)) />,
+      ],
+      "className": "main-page",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "id": 27786,
+          "image": "http://static.tvmaze.com/uploads/images/medium_portrait/110/275113.jpg",
+          "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/110/275113.jpg",
+          "network": "Channel 4",
+          "premiered": "2017-05-01",
+          "rating": null,
+          "runtime": 30,
+          "schedule": Object {
+            "days": Array [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+            ],
+            "time": "17:30",
+          },
+          "summary": "Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth.",
+          "title": "Extreme Cake Makers",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <FeaturedTvShow
+            id={27786}
+            image="http://static.tvmaze.com/uploads/images/medium_portrait/110/275113.jpg"
+            largeImage="http://static.tvmaze.com/uploads/images/original_untouched/110/275113.jpg"
+            network="Channel 4"
+            premiered="2017-05-01"
+            rating={null}
+            runtime={30}
+            schedule={
+              Object {
+                "days": Array [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                ],
+                "time": "17:30",
+              }
+            }
+            summary="Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth."
+            title="Extreme Cake Makers"
+          />,
+          <withRouter(Connect(CardContainer)) />,
+        ],
+        "className": "main-page",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "id": 27786,
+            "image": "http://static.tvmaze.com/uploads/images/medium_portrait/110/275113.jpg",
+            "largeImage": "http://static.tvmaze.com/uploads/images/original_untouched/110/275113.jpg",
+            "network": "Channel 4",
+            "premiered": "2017-05-01",
+            "rating": null,
+            "runtime": 30,
+            "schedule": Object {
+              "days": Array [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+              ],
+              "time": "17:30",
+            },
+            "summary": "Welcome to the world of extreme cake making, where sugar craft specialists up and down the country dream up ever more elaborate ways to satisfy our sweet tooth.",
+            "title": "Extreme Cake Makers",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
