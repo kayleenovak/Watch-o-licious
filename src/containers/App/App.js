@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import TvShowModal from '../TvShowModal/TvShowModal.js'
 import CardContainer from '../CardContainer/CardContainer'
 import Header from '../../components/Header/Header.js'
+import { NoMatch } from '../../components/NoMatch/NoMatch.js'
 
 export class App extends Component {
 
@@ -15,20 +16,22 @@ export class App extends Component {
   }
 
   render() {
+    console.log(this.props.location)
     return (
       <div className="app">
-        <Header />
-        <Switch>
-          <Route exact path='/' component={ MainPage } />
-          <Route exact path='/tvshow/:id' render={({ match }) => {
-            const { id } = match.params
-            return <TvShowModal id={ id } />
-            }} 
-          />
-          <Route exact to='/favorites' component={ CardContainer } />
-          <Route exact to='/watched' component={ CardContainer } />
-          <Route exact to='/watchlist' component={ CardContainer } />
-        </Switch>
+          <Header />
+          <Switch>
+            <Route exact path='/' component={ MainPage } />
+            <Route exact path='/tvshow/:id' render={({ match }) => {
+              const { id } = match.params
+              return <TvShowModal id={ id } />
+              }} 
+            />
+            <Route exact path='/favorites' component={ CardContainer } />
+            <Route exact path='/watched' component={ CardContainer } />
+            <Route exact path='/watchlist' component={ CardContainer } />
+            <Route component={NoMatch} />
+          </Switch>
       </div>
     );
   }

@@ -63,7 +63,7 @@ describe('FavoriteCard', () => {
     expect(wrapper.find('img').length).toEqual(1)
     expect(wrapper.find('h3').length).toEqual(1)
     expect(wrapper.find('h5').length).toEqual(1)
-    expect(wrapper.find('button').length).toEqual(3)
+    expect(wrapper.find('button').length).toEqual(4)
   })
 
   it('should invoke handleTracked on click of the favorite button', () => {

@@ -34,9 +34,9 @@ export class FavoriteCard extends Component {
           </Link>
           <p className='episode-runtime'>Runtime: {runtime}</p>
           <p className='episode-airdate'>Air date: {airdate}</p>
-          <button className='fav-card-btns' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='favorite'>{favoriteText}</button>
-          <button className='fav-card-btns' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watchlist'>{watchlist}</button>
-          <button className='fav-card-btns' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watched'>{watched}</button>
+          <button className='fav-card-btns favorite-btn' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='favorite'>{favoriteText}</button>
+          <button className='fav-card-btns watch-list-btn' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watchlist'>{watchlist}</button>
+          <button className='fav-card-btns watched-btn' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watched'>{watched}</button>
         </article>
       </section>
     )

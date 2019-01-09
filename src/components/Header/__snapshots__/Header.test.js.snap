@@ -18,149 +18,188 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          to="/favorites"
+        <img
+          className="cupcake"
+          src="/cupcake.svg"
+        />,
+        <h1
+          className="heading"
         >
-          <button>
+          Watch-o-licious
+        </h1>,
+        <section
+          className="buttons"
+        >
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="header-btn"
+            to="/favorites"
+          >
             Favorites
-          </button>
-        </NavLink>,
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          to="/watched"
-        >
-          <button>
+          </NavLink>
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="header-btn"
+            to="/watched"
+          >
             Watched
-          </button>
-        </NavLink>,
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          to="/watchlist"
-        >
-          <button>
+          </NavLink>
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="header-btn"
+            to="/watchlist"
+          >
             Watch List
-          </button>
-        </NavLink>,
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          to="/"
-        >
-          <button>
+          </NavLink>
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="header-btn"
+            exact={true}
+            to="/"
+          >
             Home
-          </button>
-        </NavLink>,
+          </NavLink>
+        </section>,
       ],
+      "className": "header",
     },
     "ref": null,
     "rendered": Array [
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
-          "children": <button>
-            Favorites
-          </button>,
-          "to": "/favorites",
+          "className": "cupcake",
+          "src": "/cupcake.svg",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Favorites",
-          },
-          "ref": null,
-          "rendered": "Favorites",
-          "type": "button",
-        },
-        "type": [Function],
+        "rendered": null,
+        "type": "img",
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
-          "children": <button>
-            Watched
-          </button>,
-          "to": "/watched",
+          "children": "Watch-o-licious",
+          "className": "heading",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Watched",
-          },
-          "ref": null,
-          "rendered": "Watched",
-          "type": "button",
-        },
-        "type": [Function],
+        "rendered": "Watch-o-licious",
+        "type": "h1",
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
-          "children": <button>
-            Watch List
-          </button>,
-          "to": "/watchlist",
+          "children": Array [
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="header-btn"
+              to="/favorites"
+            >
+              Favorites
+            </NavLink>,
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="header-btn"
+              to="/watched"
+            >
+              Watched
+            </NavLink>,
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="header-btn"
+              to="/watchlist"
+            >
+              Watch List
+            </NavLink>,
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="header-btn"
+              exact={true}
+              to="/"
+            >
+              Home
+            </NavLink>,
+          ],
+          "className": "buttons",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Watch List",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": "Favorites",
+              "className": "header-btn",
+              "to": "/favorites",
+            },
+            "ref": null,
+            "rendered": "Favorites",
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": "Watch List",
-          "type": "button",
-        },
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
-          "children": <button>
-            Home
-          </button>,
-          "to": "/",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Home",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": "Watched",
+              "className": "header-btn",
+              "to": "/watched",
+            },
+            "ref": null,
+            "rendered": "Watched",
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": "Home",
-          "type": "button",
-        },
-        "type": [Function],
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": "Watch List",
+              "className": "header-btn",
+              "to": "/watchlist",
+            },
+            "ref": null,
+            "rendered": "Watch List",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": "Home",
+              "className": "header-btn",
+              "exact": true,
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": "Home",
+            "type": [Function],
+          },
+        ],
+        "type": "section",
       },
     ],
     "type": "div",
@@ -172,149 +211,188 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            to="/favorites"
+          <img
+            className="cupcake"
+            src="/cupcake.svg"
+          />,
+          <h1
+            className="heading"
           >
-            <button>
+            Watch-o-licious
+          </h1>,
+          <section
+            className="buttons"
+          >
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="header-btn"
+              to="/favorites"
+            >
               Favorites
-            </button>
-          </NavLink>,
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            to="/watched"
-          >
-            <button>
+            </NavLink>
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="header-btn"
+              to="/watched"
+            >
               Watched
-            </button>
-          </NavLink>,
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            to="/watchlist"
-          >
-            <button>
+            </NavLink>
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="header-btn"
+              to="/watchlist"
+            >
               Watch List
-            </button>
-          </NavLink>,
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            to="/"
-          >
-            <button>
+            </NavLink>
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="header-btn"
+              exact={true}
+              to="/"
+            >
               Home
-            </button>
-          </NavLink>,
+            </NavLink>
+          </section>,
         ],
+        "className": "header",
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
-            "children": <button>
-              Favorites
-            </button>,
-            "to": "/favorites",
+            "className": "cupcake",
+            "src": "/cupcake.svg",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Favorites",
-            },
-            "ref": null,
-            "rendered": "Favorites",
-            "type": "button",
-          },
-          "type": [Function],
+          "rendered": null,
+          "type": "img",
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
-            "children": <button>
-              Watched
-            </button>,
-            "to": "/watched",
+            "children": "Watch-o-licious",
+            "className": "heading",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Watched",
-            },
-            "ref": null,
-            "rendered": "Watched",
-            "type": "button",
-          },
-          "type": [Function],
+          "rendered": "Watch-o-licious",
+          "type": "h1",
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
-            "children": <button>
-              Watch List
-            </button>,
-            "to": "/watchlist",
+            "children": Array [
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="header-btn"
+                to="/favorites"
+              >
+                Favorites
+              </NavLink>,
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="header-btn"
+                to="/watched"
+              >
+                Watched
+              </NavLink>,
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="header-btn"
+                to="/watchlist"
+              >
+                Watch List
+              </NavLink>,
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="header-btn"
+                exact={true}
+                to="/"
+              >
+                Home
+              </NavLink>,
+            ],
+            "className": "buttons",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Watch List",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "Favorites",
+                "className": "header-btn",
+                "to": "/favorites",
+              },
+              "ref": null,
+              "rendered": "Favorites",
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": "Watch List",
-            "type": "button",
-          },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
-            "children": <button>
-              Home
-            </button>,
-            "to": "/",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Home",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "Watched",
+                "className": "header-btn",
+                "to": "/watched",
+              },
+              "ref": null,
+              "rendered": "Watched",
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": "Home",
-            "type": "button",
-          },
-          "type": [Function],
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "Watch List",
+                "className": "header-btn",
+                "to": "/watchlist",
+              },
+              "ref": null,
+              "rendered": "Watch List",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "Home",
+                "className": "header-btn",
+                "exact": true,
+                "to": "/",
+              },
+              "ref": null,
+              "rendered": "Home",
+              "type": [Function],
+            },
+          ],
+          "type": "section",
         },
       ],
       "type": "div",

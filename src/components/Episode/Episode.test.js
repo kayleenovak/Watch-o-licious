@@ -50,23 +50,23 @@ describe('Episode', () => {
     expect(wrapper).toMatchSnapshot()
   })
   
-  it('should return a section and an h3 if the state is false', () => {
+  it('should return a section, h3, button(3), div(1), img(1) if the state is false', () => {
     expect(wrapper.find('section').length).toEqual(1)
     expect(wrapper.find('button').length).toEqual(3)
     expect(wrapper.find('h3').length).toEqual(1)
-    expect(wrapper.find('div').length).toEqual(0)
-    expect(wrapper.find('img').length).toEqual(2)
+    expect(wrapper.find('div').length).toEqual(1)
+    expect(wrapper.find('img').length).toEqual(1)
   })
 
-  it('should return a section, h3, div, and two p elements if the state is true', () => {
+  it('should return a section, h3, div(2), img(1) and two p elements if the state is true', () => {
     wrapper.instance().expandEpisode()
 
     expect(wrapper.find('section').length).toEqual(1)
     expect(wrapper.find('button').length).toEqual(3)
     expect(wrapper.find('h3').length).toEqual(1)
-    expect(wrapper.find('div').length).toEqual(1)
+    expect(wrapper.find('div').length).toEqual(2)
     expect(wrapper.find('p').length).toEqual(3)
-    expect(wrapper.find('img').length).toEqual(2)
+    expect(wrapper.find('img').length).toEqual(1)
   })
 
   it('should invoke handleTracked on click of the favorite, watched, and watchlist buttons', () => {
@@ -204,7 +204,7 @@ describe('Episode', () => {
     it('should render remove from watched in the watched button if tracked.watched is true', () => {
       const trueWrapper = shallow(<Episode episode={ mockTrueEpisode } tracked={ mockTrueTrackedShows } handleTracked={ mockHandleTracked }/>)
       
-      expect(trueWrapper.find('.watched-button').text()).toEqual('Remove from Watched')
+      expect(trueWrapper.find('.tracked-watched').text()).toEqual('Remove from Watched')
     })
 
     it('should render add to watch list in the watch list button if tracked.watchlist is false', () => {
@@ -215,7 +215,7 @@ describe('Episode', () => {
     it('should render remove from watched in the watched button if tracked.watched is true', () => {
       const trueWrapper = shallow(<Episode episode={ mockTrueEpisode } tracked={ mockTrueTrackedShows } handleTracked={ mockHandleTracked }/>)
       
-      expect(trueWrapper.find('.watchlist-button').text()).toEqual('Remove from Watch List')
+      expect(trueWrapper.find('.tracked-watchlist').text()).toEqual('Remove from Watch List')
     })
 
 

@@ -62,36 +62,36 @@ ShallowWrapper {
           : 
           Holiday Cookie Madness
         </h3>,
-        <button
-          className="favorite-button"
-          onClick={[Function]}
-          value="favorite"
+        <div
+          className="episode-btn-wrapper"
         >
+          <button
+            className="favorite-button"
+            onClick={[Function]}
+            value="favorite"
+          >
+            Favorite
+          </button>
+          <button
+            className="watched-button"
+            onClick={[Function]}
+            value="watched"
+          >
+            Add to Watched
+          </button>
+          <button
+            className="watchlist-button"
+            onClick={[Function]}
+            value="watchlist"
+          >
+            Add to Watch List
+          </button>
           <img
-            className="favorite-icon"
-            src="/unfavorite.svg"
+            className="arrow"
+            onClick={[Function]}
+            src="/down-arrow.svg"
           />
-          sss
-        </button>,
-        <button
-          className="watched-button"
-          onClick={[Function]}
-          value="watched"
-        >
-          Add to Watched
-        </button>,
-        <button
-          className="watchlist-button"
-          onClick={[Function]}
-          value="watchlist"
-        >
-          Add to Watch List
-        </button>,
-        <img
-          className="arrow"
-          onClick={[Function]}
-          src="/down-arrow.svg"
-        />,
+        </div>,
         null,
       ],
       "className": "collapsed-episode",
@@ -126,15 +126,34 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            <button
+              className="favorite-button"
+              onClick={[Function]}
+              value="favorite"
+            >
+              Favorite
+            </button>,
+            <button
+              className="watched-button"
+              onClick={[Function]}
+              value="watched"
+            >
+              Add to Watched
+            </button>,
+            <button
+              className="watchlist-button"
+              onClick={[Function]}
+              value="watchlist"
+            >
+              Add to Watch List
+            </button>,
             <img
-              className="favorite-icon"
-              src="/unfavorite.svg"
+              className="arrow"
+              onClick={[Function]}
+              src="/down-arrow.svg"
             />,
-            "sss",
           ],
-          "className": "favorite-button",
-          "onClick": [Function],
-          "value": "favorite",
+          "className": "episode-btn-wrapper",
         },
         "ref": null,
         "rendered": Array [
@@ -143,57 +162,58 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": "favorite-icon",
-              "src": "/unfavorite.svg",
+              "children": "Favorite",
+              "className": "favorite-button",
+              "onClick": [Function],
+              "value": "favorite",
+            },
+            "ref": null,
+            "rendered": "Favorite",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add to Watched",
+              "className": "watched-button",
+              "onClick": [Function],
+              "value": "watched",
+            },
+            "ref": null,
+            "rendered": "Add to Watched",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add to Watch List",
+              "className": "watchlist-button",
+              "onClick": [Function],
+              "value": "watchlist",
+            },
+            "ref": null,
+            "rendered": "Add to Watch List",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "arrow",
+              "onClick": [Function],
+              "src": "/down-arrow.svg",
             },
             "ref": null,
             "rendered": null,
             "type": "img",
           },
-          "sss",
         ],
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Add to Watched",
-          "className": "watched-button",
-          "onClick": [Function],
-          "value": "watched",
-        },
-        "ref": null,
-        "rendered": "Add to Watched",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Add to Watch List",
-          "className": "watchlist-button",
-          "onClick": [Function],
-          "value": "watchlist",
-        },
-        "ref": null,
-        "rendered": "Add to Watch List",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "arrow",
-          "onClick": [Function],
-          "src": "/down-arrow.svg",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
+        "type": "div",
       },
       null,
     ],
@@ -214,36 +234,36 @@ ShallowWrapper {
             : 
             Holiday Cookie Madness
           </h3>,
-          <button
-            className="favorite-button"
-            onClick={[Function]}
-            value="favorite"
+          <div
+            className="episode-btn-wrapper"
           >
+            <button
+              className="favorite-button"
+              onClick={[Function]}
+              value="favorite"
+            >
+              Favorite
+            </button>
+            <button
+              className="watched-button"
+              onClick={[Function]}
+              value="watched"
+            >
+              Add to Watched
+            </button>
+            <button
+              className="watchlist-button"
+              onClick={[Function]}
+              value="watchlist"
+            >
+              Add to Watch List
+            </button>
             <img
-              className="favorite-icon"
-              src="/unfavorite.svg"
+              className="arrow"
+              onClick={[Function]}
+              src="/down-arrow.svg"
             />
-            sss
-          </button>,
-          <button
-            className="watched-button"
-            onClick={[Function]}
-            value="watched"
-          >
-            Add to Watched
-          </button>,
-          <button
-            className="watchlist-button"
-            onClick={[Function]}
-            value="watchlist"
-          >
-            Add to Watch List
-          </button>,
-          <img
-            className="arrow"
-            onClick={[Function]}
-            src="/down-arrow.svg"
-          />,
+          </div>,
           null,
         ],
         "className": "collapsed-episode",
@@ -278,15 +298,34 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
+              <button
+                className="favorite-button"
+                onClick={[Function]}
+                value="favorite"
+              >
+                Favorite
+              </button>,
+              <button
+                className="watched-button"
+                onClick={[Function]}
+                value="watched"
+              >
+                Add to Watched
+              </button>,
+              <button
+                className="watchlist-button"
+                onClick={[Function]}
+                value="watchlist"
+              >
+                Add to Watch List
+              </button>,
               <img
-                className="favorite-icon"
-                src="/unfavorite.svg"
+                className="arrow"
+                onClick={[Function]}
+                src="/down-arrow.svg"
               />,
-              "sss",
             ],
-            "className": "favorite-button",
-            "onClick": [Function],
-            "value": "favorite",
+            "className": "episode-btn-wrapper",
           },
           "ref": null,
           "rendered": Array [
@@ -295,57 +334,58 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": "favorite-icon",
-                "src": "/unfavorite.svg",
+                "children": "Favorite",
+                "className": "favorite-button",
+                "onClick": [Function],
+                "value": "favorite",
+              },
+              "ref": null,
+              "rendered": "Favorite",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Add to Watched",
+                "className": "watched-button",
+                "onClick": [Function],
+                "value": "watched",
+              },
+              "ref": null,
+              "rendered": "Add to Watched",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Add to Watch List",
+                "className": "watchlist-button",
+                "onClick": [Function],
+                "value": "watchlist",
+              },
+              "ref": null,
+              "rendered": "Add to Watch List",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "arrow",
+                "onClick": [Function],
+                "src": "/down-arrow.svg",
               },
               "ref": null,
               "rendered": null,
               "type": "img",
             },
-            "sss",
           ],
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Add to Watched",
-            "className": "watched-button",
-            "onClick": [Function],
-            "value": "watched",
-          },
-          "ref": null,
-          "rendered": "Add to Watched",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Add to Watch List",
-            "className": "watchlist-button",
-            "onClick": [Function],
-            "value": "watchlist",
-          },
-          "ref": null,
-          "rendered": "Add to Watch List",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "arrow",
-            "onClick": [Function],
-            "src": "/down-arrow.svg",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "img",
+          "type": "div",
         },
         null,
       ],
