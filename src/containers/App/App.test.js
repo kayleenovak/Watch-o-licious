@@ -5,6 +5,8 @@ import { Route } from 'react-router-dom'
 import { shallow } from 'enzyme'
 import { fetchTvShows } from '../../thunks/fetchTvShows.js'
 
+jest.mock('../../thunks/fetchTvShows.js')
+
 describe('App', () => {
   let wrapper
   let mockFetchTvShows
@@ -39,7 +41,7 @@ describe('App', () => {
 
       mappedProps.fetchTvShows(mockUrl)
 
-      expect(mockDispatch).toHaveBeenCalledWith(expect.any(Function))
+      expect(mockDispatch).toHaveBeenCalledWith(fetchTvShows(mockUrl))
     })
   })
 })

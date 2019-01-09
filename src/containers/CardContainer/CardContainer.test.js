@@ -62,6 +62,8 @@ describe('CardContainer', () => {
     wrapper.instance().forceUpdate()
 
     expect(wrapper.find(FavoriteCard).length).toEqual(1)
+    expect(spySplitLocaton).toHaveBeenCalled()
+    expect(spyTrackedEpisodes).toHaveBeenCalled()
   })
 
   it('should render one Favorite Card if the location is watched', () => {
@@ -72,6 +74,8 @@ describe('CardContainer', () => {
     wrapper.instance().forceUpdate()
 
     expect(wrapper.find(FavoriteCard).length).toEqual(1)
+    expect(spySplitLocaton).toHaveBeenCalled()
+    expect(spyTrackedEpisodes).toHaveBeenCalled()
   })
 
   it('should render one Favorite Card if the location is watchlist', () => {
@@ -82,6 +86,29 @@ describe('CardContainer', () => {
     wrapper.instance().forceUpdate()
 
     expect(wrapper.find(FavoriteCard).length).toEqual(1)
+    expect(spySplitLocaton).toHaveBeenCalled()
+    expect(spyTrackedEpisodes).toHaveBeenCalled()
+  })
+
+  it('should render a div if the location is favorites with no favorite cards', () => {
+    const mockEmptyShows = []
+    const wrapper = shallow(<CardContainer trackedEpisodes={ mockEmptyShows } tvShows={ mockCleanCakeShows } location={ mockFavoriteLocation }/>)
+
+    expect(wrapper.find('div').length).toEqual(1)
+  })
+
+  it('should render a div if the location is watched with no favorite cards', () => {
+    const mockEmptyShows = []
+    const wrapper = shallow(<CardContainer trackedEpisodes={ mockEmptyShows } tvShows={ mockCleanCakeShows } location={ mockWatchedLocation }/>)
+
+    expect(wrapper.find('div').length).toEqual(1)
+  })
+
+  it('should render a div if the location is watchlist with no favorite cards', () => {
+    const mockEmptyShows = []
+    const wrapper = shallow(<CardContainer trackedEpisodes={ mockEmptyShows } tvShows={ mockCleanCakeShows } location={ mockWatchListLocation }/>)
+
+    expect(wrapper.find('div').length).toEqual(1)
   })
 
   it('splitLocation should return a location without /', () => {
@@ -96,10 +123,12 @@ describe('CardContainer', () => {
     const mockState = {
       tvShows: mockCleanCakeShows,
       isLoading,
-      hasErrored
+      hasErrored,
+      tracked: []
     }
     const expected = {
-      tvShows: mockCleanCakeShows
+      tvShows: mockCleanCakeShows,
+      trackedEpisodes: []
     }
 
     const result = mapStateToProps(mockState)
