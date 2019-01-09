@@ -1,12 +1,20 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { NoMatch } from './NoMatch'
-import { Redirect } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 describe('NoMatch', () => {
+
+  it('should match the snapshot', () => {
+    const wrapper = shallow(<NoMatch />)
+
+    expect(wrapper).toMatchSnapshot()
+  })
   it('should return a Redirect', () => {
     const wrapper = shallow(<NoMatch />)
 
-    expect(wrapper.find(Redirect).length).toBe(1)
+    expect(wrapper.find(NavLink).length).toBe(1)
+    expect(wrapper.find('h3').length).toBe(1)
+    expect(wrapper.find('section').length).toBe(1)
   })
 })

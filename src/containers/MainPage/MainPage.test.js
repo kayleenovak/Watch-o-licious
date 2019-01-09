@@ -28,7 +28,9 @@ describe('MainPage', () => {
         hasErrored: false
       }
       const expected = {
-        tvShows: mockCleanCakeShows
+        tvShows: mockCleanCakeShows,
+        isLoading: false,
+        hasErrored: false
       }
       
       const result = mapStateToProps(mockState)

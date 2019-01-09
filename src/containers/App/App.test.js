@@ -19,9 +19,9 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render 5 routes', () => {
+  it('should render 6 routes', () => {
 
-    expect(wrapper.find(Route).length).toEqual(5)
+    expect(wrapper.find(Route).length).toEqual(6)
   })
 
   it('should fire fetchTvShows on componentDidMount', () => {

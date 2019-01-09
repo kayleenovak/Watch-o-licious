@@ -6,6 +6,7 @@ import { removeShow } from '../../actions/index.js'
 import Episode from '../../components/Episode/Episode.js'
 import './TvShowModal.css'
 import { Loading } from '../../components/Loading/Loading.js'
+const uuidv1 = require('uuid/v1');
 
 export class TvShowModal extends Component {
   constructor() {
@@ -36,7 +37,8 @@ export class TvShowModal extends Component {
 
   displaySeasons = () => {
     const seasons = this.props.tvShowEpisodes.map(season => {
-      return <h5 className={parseInt(this.state.season) === parseInt(season.season) ? 'season-selected' : 'series-season'} onClick={(e) => this.updateSeason(e)} value={season.season}>{season.season}</h5>
+      const uniqueKey = uuidv1()
+      return <h5 key={uniqueKey} className={parseInt(this.state.season) === parseInt(season.season) ? 'season-selected' : 'series-season'} onClick={(e) => this.updateSeason(e)} value={season.season}>{season.season}</h5>
     })
     return seasons
   }
@@ -46,7 +48,8 @@ export class TvShowModal extends Component {
       return season.season === parseInt(this.state.season)
     }) 
     const episodes = season.episodes.map(episode => {
-      return <Episode episode={episode}/>
+      const uniqueKey = uuidv1()
+      return <Episode episode={episode} key={uniqueKey}/>
     })
     return episodes
   }
