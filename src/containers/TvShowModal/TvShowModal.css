@@ -1,7 +1,18 @@
+.tv-show-modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
 .tv-show-modal {
   position: relative;
   height: 600px;
   width: 1000px;
+}
+
+.modal {
+  box-shadow: 5px 5px 20px black;
 }
 
 .image-container {
@@ -14,8 +25,8 @@
 .overlay {
   position: absolute;
   top: 0;
-  background: #0094A4;
-  opacity: .5;
+  background: #442c3e;
+  opacity: .7;
   width: 100%;
   height: 100%;
 }

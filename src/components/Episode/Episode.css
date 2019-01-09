@@ -5,8 +5,18 @@
 
 .collapsed-episode {
   height: 80px;
-  background: #442C3E;
+  background: rgba(174, 167, 185, .5);
+  border: 2px solid transparent;
   border-bottom: 2px solid #AEA7B9;
+}
+
+.collapsed-episode:hover,
+.expanded-episode:hover {
+  border: 2px solid white;
+}
+
+.collapsed-episode:hover {
+  background: rgba(174, 167, 185);
 }
 
 .episode-title {

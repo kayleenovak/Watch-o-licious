@@ -62,31 +62,35 @@ export class TvShowModal extends Component {
       const seasons = this.displaySeasons()
       const episodes = this.displayEpisodes()
       return (
-        <section className='tv-show-modal'>
-          <div className='image-container'>
-            <img className='series-background' src={tvShowInfo.image} />
-            <div className='overlay'></div>
-          </div>
-          <article className='series-info'>
-            <div className='seasons'>
-              <h3 className='series-title'>{tvShowInfo.title}</h3>
-              <p className='series-summary'>{tvShowInfo.summary}</p>
-              <button onClick={() => this.collapseModal()} className='collapse-modal'>X</button>
-              <div>
-                <h3>Seasons</h3>
-                {seasons}
+        <div className='tv-show-modal-container'>
+          <section className='tv-show-modal'>
+            <div className='modal'>
+              <div className='image-container'>
+                <img className='series-background' src={tvShowInfo.image} />
+                <div className='overlay'></div>
               </div>
+              <article className='series-info'>
+                <div className='seasons'>
+                  <h3 className='series-title'>{tvShowInfo.title}</h3>
+                  <p className='series-summary'>{tvShowInfo.summary}</p>
+                  <button onClick={() => this.collapseModal()} className='collapse-modal'>X</button>
+                  <div>
+                    <h3>Seasons</h3>
+                    {seasons}
+                  </div>
+                </div>
+                <div className='episodes'>
+                  <div className='image-wrapper'>
+                    <img src={tvShowInfo.largeImage} className='series-image'/>
+                  </div>
+                  <div className='series-episodes'>
+                    {episodes}
+                  </div>
+                </div>
+              </article>
             </div>
-            <div className='episodes'>
-              <div className='image-wrapper'>
-                <img src={tvShowInfo.largeImage} className='series-image'/>
-              </div>
-              <div className='series-episodes'>
-                {episodes}
-              </div>
-            </div>
-          </article>
-        </section>
+          </section>
+        </div>
       )
     } else {
       return <div>Loading...</div>

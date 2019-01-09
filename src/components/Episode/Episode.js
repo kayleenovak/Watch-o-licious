@@ -30,7 +30,7 @@ export class Episode extends Component {
       return (
         <section className={episodeStyle}>
           <h3 className='episode-title'>Episode {episode}: {title}</h3>
-          <button className='favorite-button' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='favorite'><img className='favorite-icon' src={favoriteIcon} />sss</button>
+          <button className='favorite-button' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='favorite'><img className='favorite-icon' src={favoriteIcon} />Favorite</button>
           <button className='watched-button' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watched'>{watched}</button>
           <button className='watchlist-button' onClick={(e) => this.props.handleTracked(e, this.props.episode, this.props.tracked)} value='watchlist'>{watchlist}</button>
           <img src='/down-arrow.svg' className={arrow} onClick={() => this.expandEpisode()}/>
