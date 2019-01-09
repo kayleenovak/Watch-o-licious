@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
 import { Route, Switch, withRouter } from 'react-router-dom'
-import MainPage from '../../containers/MainPage/MainPage'
-import { fetchTvShows } from '../../thunks/fetchTvShows.js'
 import { connect } from 'react-redux'
-import TvShowModal from '../TvShowModal/TvShowModal.js'
-import CardContainer from '../CardContainer/CardContainer'
+import PropTypes from 'prop-types'
+import { fetchTvShows } from '../../thunks/fetchTvShows.js'
 import { Header } from '../../components/Header/Header.js'
 import { NoMatch } from '../../components/NoMatch/NoMatch.js'
-import PropTypes from 'prop-types'
+import MainPage from '../../containers/MainPage/MainPage'
+import TvShowModal from '../TvShowModal/TvShowModal.js'
+import CardContainer from '../CardContainer/CardContainer'
+import './App.css';
 
 export class App extends Component {
 

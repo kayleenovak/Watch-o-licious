@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import TvShowCard from '../TvShowCard/TvShowCard'
-import './CardContainer.css'
 import FavoriteCard from '../FavoriteCard/FavoriteCard.js'
+import './CardContainer.css'
 const uuidv1 = require('uuid/v1');
 
 

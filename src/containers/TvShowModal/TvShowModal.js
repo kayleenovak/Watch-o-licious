@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { fetchTvShowInfo } from '../../thunks/fetchTvShowInfo.js'
 import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
-import { removeShow } from '../../actions/index.js'
+import PropTypes from 'prop-types'
 import Episode from '../Episode/Episode.js'
-import './TvShowModal.css'
 import { Loading } from '../../components/Loading/Loading.js'
+import { removeShow } from '../../actions/index.js'
+import { fetchTvShowInfo } from '../../thunks/fetchTvShowInfo.js'
+import './TvShowModal.css'
 const uuidv1 = require('uuid/v1');
 
 export class TvShowModal extends Component {

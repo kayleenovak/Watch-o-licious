@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { FeaturedTvShow } from '../../components/FeaturedTvShow/FeaturedTvShow.js'
-import CardContainer from '../CardContainer/CardContainer.js'
 import { Loading } from '../../components/Loading/Loading.js'
+import CardContainer from '../CardContainer/CardContainer.js'
 
 
 export class MainPage extends Component {

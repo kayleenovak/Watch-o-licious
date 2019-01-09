@@ -19,7 +19,6 @@ export class Episode extends Component {
   }
 
   render() {
-    if(this.props.episode) {
       const { episode, runtime, summary, title, airdate, tracked } = this.props.episode
       const episodeStyle = this.state.expanded ? 'expanded-episode' : 'collapsed-episode' 
       const arrow = this.state.expanded ? 'arrow-up' : 'arrow'
@@ -41,7 +40,6 @@ export class Episode extends Component {
           }
         </section>
       )
-    }
   }
 }
 

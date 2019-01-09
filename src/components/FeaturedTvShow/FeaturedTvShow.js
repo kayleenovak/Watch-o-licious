@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './FeaturedTvShow.css'
 import PropTypes from 'prop-types'
+import './FeaturedTvShow.css'
 
 export const FeaturedTvShow = (props) => {
     const {title, runtime, premiered, rating, summary, image, id} = props
