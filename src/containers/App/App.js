@@ -6,7 +6,7 @@ import { fetchTvShows } from '../../thunks/fetchTvShows.js'
 import { connect } from 'react-redux'
 import TvShowModal from '../TvShowModal/TvShowModal.js'
 import CardContainer from '../CardContainer/CardContainer'
-import Header from '../../components/Header/Header.js'
+import { Header } from '../../components/Header/Header.js'
 import { NoMatch } from '../../components/NoMatch/NoMatch.js'
 
 export class App extends Component {

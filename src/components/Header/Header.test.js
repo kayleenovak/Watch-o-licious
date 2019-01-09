@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './Header.js'
+import { Header } from './Header.js'
 import { shallow } from 'enzyme'
 import { NavLink } from 'react-router-dom'
 
