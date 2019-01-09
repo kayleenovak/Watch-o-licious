@@ -1,0 +1,476 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeaturedTvShow should render a section with an h3, 4 p, and 1 image and match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FeaturedTvShow
+    0={
+      Object {
+        "id": 921,
+        "image": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16129.jpg",
+        "network": "TLC",
+        "premiered": "2009-05-25",
+        "rating": null,
+        "runtime": 30,
+        "schedule": Object {
+          "days": Array [
+            "Monday",
+          ],
+          "time": "21:00",
+        },
+        "summary": "Cake Boss is a popular docu-series following beloved baker Buddy Valastro, his larger-than-life family and burgeoning businesses.",
+        "title": "Cake Boss",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <article
+          className="featured-info"
+        >
+          <h3
+            className="featured-title"
+          />
+          <p
+            className="featured-summary"
+          />
+          <p
+            className="featured-runtime"
+          >
+            Runtime: 
+             minutes
+          </p>
+          <p
+            className="featured-date"
+          >
+            Premiere date: 
+          </p>
+          <p
+            className="featured-rating"
+          />
+          <Link
+            replace={false}
+            to="/tvshow/undefined"
+          >
+            <button
+              className="view-series-btn"
+            >
+              View Series
+            </button>
+          </Link>
+        </article>,
+        <img
+          alt="series-poster"
+          className="featured-img"
+        />,
+      ],
+      "className": "featured-tv-show",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3
+              className="featured-title"
+            />,
+            <p
+              className="featured-summary"
+            />,
+            <p
+              className="featured-runtime"
+            >
+              Runtime: 
+               minutes
+            </p>,
+            <p
+              className="featured-date"
+            >
+              Premiere date: 
+            </p>,
+            <p
+              className="featured-rating"
+            />,
+            <Link
+              replace={false}
+              to="/tvshow/undefined"
+            >
+              <button
+                className="view-series-btn"
+              >
+                View Series
+              </button>
+            </Link>,
+          ],
+          "className": "featured-info",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "featured-title",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "featured-summary",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Runtime: ",
+                undefined,
+                " minutes",
+              ],
+              "className": "featured-runtime",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Runtime: ",
+              undefined,
+              " minutes",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Premiere date: ",
+                undefined,
+              ],
+              "className": "featured-date",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Premiere date: ",
+              undefined,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "featured-rating",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <button
+                className="view-series-btn"
+              >
+                View Series
+              </button>,
+              "replace": false,
+              "to": "/tvshow/undefined",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "View Series",
+                "className": "view-series-btn",
+              },
+              "ref": null,
+              "rendered": "View Series",
+              "type": "button",
+            },
+            "type": [Function],
+          },
+        ],
+        "type": "article",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "series-poster",
+          "className": "featured-img",
+          "src": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <article
+            className="featured-info"
+          >
+            <h3
+              className="featured-title"
+            />
+            <p
+              className="featured-summary"
+            />
+            <p
+              className="featured-runtime"
+            >
+              Runtime: 
+               minutes
+            </p>
+            <p
+              className="featured-date"
+            >
+              Premiere date: 
+            </p>
+            <p
+              className="featured-rating"
+            />
+            <Link
+              replace={false}
+              to="/tvshow/undefined"
+            >
+              <button
+                className="view-series-btn"
+              >
+                View Series
+              </button>
+            </Link>
+          </article>,
+          <img
+            alt="series-poster"
+            className="featured-img"
+          />,
+        ],
+        "className": "featured-tv-show",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="featured-title"
+              />,
+              <p
+                className="featured-summary"
+              />,
+              <p
+                className="featured-runtime"
+              >
+                Runtime: 
+                 minutes
+              </p>,
+              <p
+                className="featured-date"
+              >
+                Premiere date: 
+              </p>,
+              <p
+                className="featured-rating"
+              />,
+              <Link
+                replace={false}
+                to="/tvshow/undefined"
+              >
+                <button
+                  className="view-series-btn"
+                >
+                  View Series
+                </button>
+              </Link>,
+            ],
+            "className": "featured-info",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "featured-title",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "featured-summary",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Runtime: ",
+                  undefined,
+                  " minutes",
+                ],
+                "className": "featured-runtime",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Runtime: ",
+                undefined,
+                " minutes",
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Premiere date: ",
+                  undefined,
+                ],
+                "className": "featured-date",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Premiere date: ",
+                undefined,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "featured-rating",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <button
+                  className="view-series-btn"
+                >
+                  View Series
+                </button>,
+                "replace": false,
+                "to": "/tvshow/undefined",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "View Series",
+                  "className": "view-series-btn",
+                },
+                "ref": null,
+                "rendered": "View Series",
+                "type": "button",
+              },
+              "type": [Function],
+            },
+          ],
+          "type": "article",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "series-poster",
+            "className": "featured-img",
+            "src": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

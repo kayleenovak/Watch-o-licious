@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './FeaturedTvShow.css'
 
-export default class FeaturedTvShow extends Component {
-
-  render() {
-    const {title, runtime, premiered, rating, summary, image, id} = this.props
+export const FeaturedTvShow = (props) => {
+    const {title, runtime, premiered, rating, summary, image, id} = props
     return (
       <section className='featured-tv-show'>
         <article className='featured-info'>
@@ -21,6 +19,5 @@ export default class FeaturedTvShow extends Component {
         <img alt='series-poster' className='featured-img' src={image} />
       </section>
     )
-  }
 }
 

@@ -1,10 +1,10 @@
 import React from 'react'
-import FeaturedTvShow from './FeaturedTvShow.js'
+import { FeaturedTvShow } from './FeaturedTvShow.js'
 import { shallow } from 'enzyme'
 import { mockCleanCakeShows } from '../../mockCleanData.js'
 
 describe('FeaturedTvShow', () => {
-  it('should render a section with an h3, 4 p, and 1 image', async () => {
+  it('should render a section with an h3, 4 p, and 1 image and match the snapshot', async () => {
     const featuredTvShow = [{
         id: 921,
         title: 'Cake Boss',
@@ -28,5 +28,6 @@ describe('FeaturedTvShow', () => {
     expect(wrapper.find('h3').length).toEqual(1)
     expect(wrapper.find('p').length).toEqual(4)
     expect(wrapper.find('img').length).toEqual(1)
+    expect(wrapper).toMatchSnapshot()
   })
 })

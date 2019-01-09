@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import FeaturedTvShow from '../FeaturedTvShow/FeaturedTvShow.js'
+import { FeaturedTvShow } from '../FeaturedTvShow/FeaturedTvShow.js'
 import CardContainer from '../CardContainer/CardContainer.js'
 import { Loading } from '../../components/Loading/Loading.js'
 
