@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addToTracked, removeFromTracked, toggleFavorite, toggleWatched, toggleWatchList } from '../../actions/index.js'
 import { handleTrackedEpisode } from '../../helpers/handleToggleTracked.js'
 import './FavoriteCard.css'
 import { Link } from 'react-router-dom'
@@ -25,7 +24,7 @@ export class FavoriteCard extends Component {
     return (
       <section className='fav-card'>
         <div className='fav-card-background'></div>
-        <img src={matchedTvShow.image} className='fav-card-image'/>
+        <img alt='series' src={matchedTvShow.image} className='fav-card-image'/>
         <article className='fav-card-info'>
           <h3 className='episode-information'>Episode: {title}</h3>
           <h5 className='episode-series'>{matchedTvShow.title}</h5>

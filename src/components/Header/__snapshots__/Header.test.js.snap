@@ -19,6 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <img
+          alt="cupcake"
           className="cupcake"
           src="/cupcake.svg"
         />,
@@ -74,6 +75,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "alt": "cupcake",
           "className": "cupcake",
           "src": "/cupcake.svg",
         },
@@ -212,6 +214,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <img
+            alt="cupcake"
             className="cupcake"
             src="/cupcake.svg"
           />,
@@ -267,6 +270,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "alt": "cupcake",
             "className": "cupcake",
             "src": "/cupcake.svg",
           },

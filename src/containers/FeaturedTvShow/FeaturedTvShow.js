@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import './FeaturedTvShow.css'
 
@@ -19,7 +18,7 @@ export default class FeaturedTvShow extends Component {
             <button className='view-series-btn'>View Series</button>
           </Link>
         </article>
-        <img className='featured-img' src={image} />
+        <img alt='series-poster' className='featured-img' src={image} />
       </section>
     )
   }

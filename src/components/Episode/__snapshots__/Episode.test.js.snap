@@ -87,6 +87,7 @@ ShallowWrapper {
             Add to Watch List
           </button>
           <img
+            alt="expand-arrow"
             className="arrow"
             onClick={[Function]}
             src="/down-arrow.svg"
@@ -148,6 +149,7 @@ ShallowWrapper {
               Add to Watch List
             </button>,
             <img
+              alt="expand-arrow"
               className="arrow"
               onClick={[Function]}
               src="/down-arrow.svg"
@@ -204,6 +206,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "alt": "expand-arrow",
               "className": "arrow",
               "onClick": [Function],
               "src": "/down-arrow.svg",
@@ -259,6 +262,7 @@ ShallowWrapper {
               Add to Watch List
             </button>
             <img
+              alt="expand-arrow"
               className="arrow"
               onClick={[Function]}
               src="/down-arrow.svg"
@@ -320,6 +324,7 @@ ShallowWrapper {
                 Add to Watch List
               </button>,
               <img
+                alt="expand-arrow"
                 className="arrow"
                 onClick={[Function]}
                 src="/down-arrow.svg"
@@ -376,6 +381,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "alt": "expand-arrow",
                 "className": "arrow",
                 "onClick": [Function],
                 "src": "/down-arrow.svg",

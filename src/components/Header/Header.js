@@ -6,7 +6,7 @@ export default class Header extends Component {
   render() {
     return (
       <div className='header'>
-        <img src='/cupcake.svg' className='cupcake' />
+        <img alt='cupcake' src='/cupcake.svg' className='cupcake' />
         <h1 className='heading'>Watch-o-licious</h1>
         <section className='buttons'>
           <NavLink className='header-btn' to='/favorites'>Favorites</NavLink>

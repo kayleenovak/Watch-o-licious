@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom'
 import TvShowCard from '../TvShowCard/TvShowCard'
 import './CardContainer.css'
 import FavoriteCard from '../FavoriteCard/FavoriteCard.js'
+const uuidv1 = require('uuid/v1');
 
 export class CardContainer extends Component {
 
@@ -18,7 +19,8 @@ export class CardContainer extends Component {
   displayTvShows = () => {
     const shuffledTvShows = this.shuffleTvShows(this.props.tvShows)
     const tvCards = shuffledTvShows.map(tvShow => {
-      return <TvShowCard {...tvShow} />
+      const uniqueKey = uuidv1()
+      return <TvShowCard {...tvShow} key={uniqueKey} />
     })
     return tvCards
   }
@@ -32,7 +34,8 @@ export class CardContainer extends Component {
     const trackedEpisodes = this.props.trackedEpisodes.filter(episode => {
         return episode.tracked[locationString] === true
       }).map(episode => {
-        return <FavoriteCard episode={episode}/>
+        const uniqueKey = uuidv1()
+        return <FavoriteCard episode={episode} key={uniqueKey} />
       })
     return trackedEpisodes
   }

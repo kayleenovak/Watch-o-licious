@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import FeaturedTvShow from '../FeaturedTvShow/FeaturedTvShow.js'
 import CardContainer from '../CardContainer/CardContainer.js'
 import { Loading } from '../../components/Loading/Loading.js'
-const uuidv1 = require('uuid/v1')
 
 
 export class MainPage extends Component {

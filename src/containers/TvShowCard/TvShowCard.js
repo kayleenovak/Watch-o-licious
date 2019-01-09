@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom'
 
 export class TvShowCard extends Component {
   render() {
-    const { title, network, image, fetchShowInfo } = this.props
+    const { title, network, image } = this.props
     return (
       <article className='tv-show-card'>
         <Link to={`/tvshow/${this.props.id}`} key={this.props.id}>
           <div className='tv-card-img'>
-            <img src={image} className='tv-card-image'/>
+            <img alt='series poster' src={image} className='tv-card-image'/>
           </div>
         </Link>
         <h3 className='tv-card-title'>{title}</h3>

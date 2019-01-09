@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { fetchTvShowInfo } from '../../thunks/fetchTvShowInfo.js'
 import { connect } from 'react-redux'
-import { withRouter, Redirect } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { removeShow } from '../../actions/index.js'
 import Episode from '../../components/Episode/Episode.js'
 import './TvShowModal.css'
@@ -70,7 +70,7 @@ export class TvShowModal extends Component {
           <section className='tv-show-modal'>
             <div className='modal'>
               <div className='image-container'>
-                <img className='series-background' src={tvShowInfo.image} />
+                <img alt='card background' className='series-background' src={tvShowInfo.image} />
                 <div className='overlay'></div>
               </div>
               <article className='series-info'>
@@ -82,10 +82,10 @@ export class TvShowModal extends Component {
                     {seasons}
                   </section>
                 </div>
-                <button onClick={() => this.collapseModal()} className='collapse-modal'><img src='/add.svg' className='collapse-modal-icon' /></button>
+                <button onClick={() => this.collapseModal()} className='collapse-modal'><img alt='arrow' src='/add.svg' className='collapse-modal-icon' /></button>
                 <div className='episodes'>
                   <div className='image-wrapper'>
-                    <img src={tvShowInfo.largeImage} className='series-image'/>
+                    <img alt='series poster' src={tvShowInfo.largeImage} className='series-image'/>
                   </div>
                   <div className='series-episodes'>
                     {episodes}

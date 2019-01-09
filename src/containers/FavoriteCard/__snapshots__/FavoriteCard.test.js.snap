@@ -64,6 +64,7 @@ ShallowWrapper {
           className="fav-card-background"
         />,
         <img
+          alt="series"
           className="fav-card-image"
           src="www.thisimgage.com"
         />,
@@ -144,6 +145,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "alt": "series",
           "className": "fav-card-image",
           "src": "www.thisimgage.com",
         },
@@ -367,6 +369,7 @@ ShallowWrapper {
             className="fav-card-background"
           />,
           <img
+            alt="series"
             className="fav-card-image"
             src="www.thisimgage.com"
           />,
@@ -447,6 +450,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "alt": "series",
             "className": "fav-card-image",
             "src": "www.thisimgage.com",
           },
