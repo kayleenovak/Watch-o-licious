@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './FeaturedTvShow.css'
+import PropTypes from 'prop-types'
 
 export const FeaturedTvShow = (props) => {
     const {title, runtime, premiered, rating, summary, image, id} = props
@@ -19,5 +20,16 @@ export const FeaturedTvShow = (props) => {
         <img alt='series-poster' className='featured-img' src={image} />
       </section>
     )
+}
+
+FeaturedTvShow.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  runtime: PropTypes.number.isRequired,
+  premiered: PropTypes.string.isRequired,
+  schedule: PropTypes.object,
+  network: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
 }
 
