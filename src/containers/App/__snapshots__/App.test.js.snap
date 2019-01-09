@@ -47,17 +47,20 @@ ShallowWrapper {
           <Route
             component={[Function]}
             exact={true}
-            to="/favorites"
+            path="/favorites"
           />
           <Route
             component={[Function]}
             exact={true}
-            to="/watched"
+            path="/watched"
           />
           <Route
             component={[Function]}
             exact={true}
-            to="/watchlist"
+            path="/watchlist"
+          />
+          <Route
+            component={[Function]}
           />
         </Switch>,
       ],
@@ -93,17 +96,20 @@ ShallowWrapper {
             <Route
               component={[Function]}
               exact={true}
-              to="/favorites"
+              path="/favorites"
             />,
             <Route
               component={[Function]}
               exact={true}
-              to="/watched"
+              path="/watched"
             />,
             <Route
               component={[Function]}
               exact={true}
-              to="/watchlist"
+              path="/watchlist"
+            />,
+            <Route
+              component={[Function]}
             />,
           ],
         },
@@ -142,7 +148,7 @@ ShallowWrapper {
             "props": Object {
               "component": [Function],
               "exact": true,
-              "to": "/favorites",
+              "path": "/favorites",
             },
             "ref": null,
             "rendered": null,
@@ -155,7 +161,7 @@ ShallowWrapper {
             "props": Object {
               "component": [Function],
               "exact": true,
-              "to": "/watched",
+              "path": "/watched",
             },
             "ref": null,
             "rendered": null,
@@ -168,7 +174,18 @@ ShallowWrapper {
             "props": Object {
               "component": [Function],
               "exact": true,
-              "to": "/watchlist",
+              "path": "/watchlist",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -202,17 +219,20 @@ ShallowWrapper {
             <Route
               component={[Function]}
               exact={true}
-              to="/favorites"
+              path="/favorites"
             />
             <Route
               component={[Function]}
               exact={true}
-              to="/watched"
+              path="/watched"
             />
             <Route
               component={[Function]}
               exact={true}
-              to="/watchlist"
+              path="/watchlist"
+            />
+            <Route
+              component={[Function]}
             />
           </Switch>,
         ],
@@ -248,17 +268,20 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 exact={true}
-                to="/favorites"
+                path="/favorites"
               />,
               <Route
                 component={[Function]}
                 exact={true}
-                to="/watched"
+                path="/watched"
               />,
               <Route
                 component={[Function]}
                 exact={true}
-                to="/watchlist"
+                path="/watchlist"
+              />,
+              <Route
+                component={[Function]}
               />,
             ],
           },
@@ -297,7 +320,7 @@ ShallowWrapper {
               "props": Object {
                 "component": [Function],
                 "exact": true,
-                "to": "/favorites",
+                "path": "/favorites",
               },
               "ref": null,
               "rendered": null,
@@ -310,7 +333,7 @@ ShallowWrapper {
               "props": Object {
                 "component": [Function],
                 "exact": true,
-                "to": "/watched",
+                "path": "/watched",
               },
               "ref": null,
               "rendered": null,
@@ -323,7 +346,18 @@ ShallowWrapper {
               "props": Object {
                 "component": [Function],
                 "exact": true,
-                "to": "/watchlist",
+                "path": "/watchlist",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
               },
               "ref": null,
               "rendered": null,

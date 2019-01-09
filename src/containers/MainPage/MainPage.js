@@ -15,7 +15,9 @@ export class MainPage extends Component {
   }
 
   render() {
-    if(this.props.tvShows.length) {
+    if(this.props.isLoading === true) {
+      return <Loading />
+    } else if (this.props.tvShows){
       const randomTvShow = this.randomFeaturedTvShow()
       return (
         <div className='main-page'>
@@ -25,14 +27,16 @@ export class MainPage extends Component {
           <CardContainer />
         </div>
       )
-    } else {
-      return <Loading />
+    } else if (this.props.hasErrored === true) {
+      return <div>Error</div>
     }
   }
 }
 
 export const mapStateToProps = (state) => ({
-  tvShows: state.tvShows
+  tvShows: state.tvShows,
+  isLoading: state.isLoading,
+  hasErrored: state.hasErrored
 })
 
 export default connect(mapStateToProps)(MainPage)
