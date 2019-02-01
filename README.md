@@ -1,7 +1,7 @@
 # Watch-o-licious
 
 ## Set Up
- - Clone down this repo, run `git clone https://github.com/Dhanciles/watch-o-licious.git` in your terminal
+ - Clone down this repo, run `git clone https://github.com/kayleenovak/watch-o-licious.git` in your terminal
  - Run `cd watch-o-licious` in your terminal
  - Run `npm install` in your terminal
  - Run `npm start` in your terminal
